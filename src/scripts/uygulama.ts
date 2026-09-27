@@ -747,7 +747,7 @@ export function baslat(): void {
       karneGuncelle();
     }
     duyur(`Tur bitti. ${bitti.ozet.textContent} ${puan} puan kazandın.`);
-    window.setTimeout(() => yildizSerpintisi(sahne, 18), kayitVardi ? 250 : 60);
+    window.setTimeout(() => yildizSerpintisi(sahne, 12), kayitVardi ? 250 : 60);
     bitti.baslik.focus();
   }
 
