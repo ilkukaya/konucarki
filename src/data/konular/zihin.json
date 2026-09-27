@@ -1,0 +1,192 @@
+[
+  {
+    "id": "ar-001",
+    "slug": "capa-etkisi",
+    "baslik": "Çapa etkisi",
+    "alan": "zihin",
+    "zorluk": 1,
+    "ipucu": "Pazarda satıcı önce yüksek bir fiyat söyler, sonra biraz indirir; sen de kârlı çıktığını sanırsın. Aklın duyduğu ilk rakama takılır ve sonraki tahminlerini onun etrafında kurar, o rakam konuyla hiç ilgisiz olsa bile.",
+    "sorular": [
+      "İlk duyulan rakam neden sonraki tahminleri bu kadar etkiliyor?",
+      "Pazarlıkta ya da indirim etiketlerinde bu etkiye Türkiye'den bir örnek bulabilir misin?",
+      "Konuyu iyi bilen uzmanlar da çapaya takılır mı, yoksa etki azalır mı?",
+      "Bu etkiden korunmak için önerilen yollar gerçekten işe yarıyor mu?"
+    ],
+    "arama": "çapa etkisi karar verme",
+    "ilgili": ["cerceveleme-etkisi", "onay-yanliligi", "kayiptan-kacinma"]
+  },
+  {
+    "id": "ar-002",
+    "slug": "onay-yanliligi",
+    "baslik": "Onay yanlılığı",
+    "alan": "zihin",
+    "zorluk": 1,
+    "ipucu": "Tuttuğun takım kaybedince hakemi suçlarsın, rakip kaybedince maçın gayet adil olduğunu düşünürsün. Zihin, zaten inandığı şeyi destekleyen bilgiyi kolayca görür, karşıt olanı ise gözden kaçırır ya da küçümser. Sosyal medya akışın bu eğilimi besliyor olabilir mi?",
+    "sorular": [
+      "İnsanlar karşıt kanıtı aramak yerine neden görmezden gelir?",
+      "Arama motorları ve sosyal medya akışları bu yanlılığı güçlendiriyor mu?",
+      "Bilim insanları kendi çalışmalarında bu yanlılığa karşı hangi yöntemleri kullanıyor?",
+      "Her inancı sürekli sorgulamak da bir sorun olabilir mi?"
+    ],
+    "arama": "onay yanlılığı",
+    "ilgili": ["grup-dusuncesi", "bilissel-celiski", "capa-etkisi"]
+  },
+  {
+    "id": "ar-003",
+    "slug": "batik-maliyet-yanilgisi",
+    "baslik": "Batık maliyet yanılgısı",
+    "alan": "zihin",
+    "zorluk": 1,
+    "ipucu": "Beğenmediğin filmin ortasında salondan kalkmazsın, çünkü bileti çoktan ödemişsin. Geri gelmeyecek bir harcama, bundan sonra ne yapacağına karar verirken aklını kurcalamaya devam eder. Yıllardır yarım duran bir inşaat da aynı mantıkla mı sürüp gider?",
+    "sorular": [
+      "Geri alınamayacak bir harcama neden sonraki kararlarımızı etkiliyor?",
+      "Kurumlar ve büyük projeler de bu yanılgıya düşer mi? Bir örnek bulabilir misin?",
+      "İşi yarım bırakmamak bazen doğru bir karar olabilir mi? Hangi durumlarda?"
+    ],
+    "arama": "batık maliyet yanılgısı",
+    "ilgili": ["kayiptan-kacinma", "bilissel-celiski", "kazananin-laneti"]
+  },
+  {
+    "id": "ar-004",
+    "slug": "planlama-yanilgisi",
+    "baslik": "Planlama yanılgısı",
+    "alan": "zihin",
+    "zorluk": 2,
+    "ipucu": "Ödevi son gece yetiştireceğini düşünürsün, sabaha karşı hâlâ yarısındasındır; üstelik geçen dönem de aynısı olmuştu. İnsan kendi işinin ne kadar süreceğini hep iyimser tahmin eder ve geçmişte yaşadıkları bile bu tahmini pek düzeltmez.",
+    "sorular": [
+      "İnsanlar başkalarının işini mi yoksa kendi işlerini mi daha gerçekçi tahmin eder?",
+      "Büyük inşaat ve altyapı projelerindeki süre ve bütçe aşımları bu yanılgıyla açıklanabilir mi?",
+      "İşi küçük parçalara bölmek tahmini gerçekten iyileştirir mi?",
+      "Aşırı iyimserliğin bir faydası da olabilir mi?"
+    ],
+    "arama": "planlama yanılgısı",
+    "ilgili": ["batik-maliyet-yanilgisi", "capa-etkisi", "aliskanlik-dongusu"]
+  },
+  {
+    "id": "ar-005",
+    "slug": "aralikli-tekrar",
+    "baslik": "Aralıklı tekrar",
+    "alan": "zihin",
+    "zorluk": 1,
+    "ipucu": "Sınavdan önceki gece bütün konuyu tek oturuşta yutarsın, birkaç gün sonra aklında pek bir şey kalmaz. Aynı konuyu araya boşluk koyarak tekrar etmek ise çoğu zaman daha kalıcı iz bırakır. Tam unutmak üzereyken hatırlamaya çalışmanın gizli bir faydası mı var?",
+    "sorular": [
+      "Unutma eğrisi nedir ve aralıklı tekrar onunla nasıl ilişkilidir?",
+      "Kelime kartı uygulamaları bu yöntemi nasıl kullanıyor?",
+      "Her tür bilgi için aynı işe yarar mı, yoksa bazı konularda sınırlı mı kalır?"
+    ],
+    "arama": "aralıklı tekrar öğrenme",
+    "ilgili": ["bilissel-yuk-kurami", "yanlis-ani", "aliskanlik-dongusu"]
+  },
+  {
+    "id": "ar-006",
+    "slug": "yanlis-ani",
+    "baslik": "Yanlış anı",
+    "alan": "zihin",
+    "zorluk": 2,
+    "ipucu": "Çocukken kalabalık bir çarşıda kaybolduğunu ailen o kadar çok anlatmıştır ki, o anı kendi gözlerinle görmüş gibi hatırlarsın. Oysa bellek bir video kaydı gibi çalışmaz, her hatırlayışta yeniden kurulur. Bu da hiç yaşanmamış ayrıntıların sessizce araya girmesine kapı açar.",
+    "sorular": [
+      "Bellek her hatırlayışta neden yeniden kuruluyor?",
+      "Yönlendirici sorular tanık ifadelerini nasıl etkileyebilir?",
+      "Bir anının gerçek mi, sonradan mı eklendiğini ayırt etmenin yolu var mı?",
+      "Bu bulgular insan belleğine hiç güvenilmemesi gerektiği anlamına mı gelir?"
+    ],
+    "arama": "yanlış anı bellek",
+    "ilgili": ["onay-yanliligi", "aralikli-tekrar", "bilissel-celiski"]
+  },
+  {
+    "id": "ar-007",
+    "slug": "secenek-bollugu-paradoksu",
+    "baslik": "Seçenek bolluğu paradoksu",
+    "alan": "zihin",
+    "zorluk": 2,
+    "ipucu": "Markette raf raf dizilmiş deterjanların önünde uzun uzun durur, sonunda hep aldığını alırsın. Seçenek çoğaldıkça özgürlük artar gibi görünür; ama karar vermek zorlaşır, verdikten sonra da içini bir pişmanlık kemirebilir.",
+    "sorular": [
+      "Seçenek sayısı arttıkça memnuniyet neden düşebiliyor?",
+      "Bu etkiyi gösteren deneyler başka ülkelerde ve ortamlarda da tekrarlanabildi mi?",
+      "Market, yemek uygulaması ya da dizi platformlarında bu paradoksa örnek bulabilir misin?",
+      "Hangi insanlar ya da durumlar bu etkiden daha az etkilenir?"
+    ],
+    "arama": "seçenek paradoksu karar",
+    "ilgili": ["bilissel-yuk-kurami", "kayiptan-kacinma", "cerceveleme-etkisi"]
+  },
+  {
+    "id": "ar-008",
+    "slug": "aliskanlik-dongusu",
+    "baslik": "Alışkanlık döngüsü",
+    "alan": "zihin",
+    "zorluk": 2,
+    "ipucu": "Sabah ekran yanar yanmaz elin kendiliğinden bildirimlere gider, farkına bile varmazsın. Bir işaret, ardından gelen davranış ve sonunda küçük bir ödül: bu zincir tekrarlandıkça beyin onu otomatiğe bağlar. Kötü bir alışkanlığı bırakmak neden bu kadar zor, iyisini kurmak neden bu kadar uzun sürüyor?",
+    "sorular": [
+      "İşaret, rutin ve ödül zinciri beyinde nasıl otomatik hale geliyor?",
+      "Bir alışkanlığın yerleşmesi için gereken süre hakkındaki popüler iddialar ne kadar doğru?",
+      "Uygulamalar ve oyunlar bu döngüyü bilerek mi tasarlıyor?",
+      "Bir alışkanlığı yalnızca irade gücüyle değiştirmek mümkün mü?"
+    ],
+    "arama": "alışkanlık döngüsü",
+    "ilgili": ["aralikli-tekrar", "bilissel-yuk-kurami", "planlama-yanilgisi"]
+  },
+  {
+    "id": "ar-009",
+    "slug": "bilissel-yuk-kurami",
+    "baslik": "Bilişsel yük kuramı",
+    "alan": "zihin",
+    "zorluk": 3,
+    "ipucu": "Yeni bir tarifi ilk kez denerken biri sana adres tarif etmeye kalkarsa ikisi de aklından uçup gider. Çalışan belleğin kapasitesi sınırlıdır ve öğretim bu sınırı zorladığında öğrenme tıkanır. Kalabalık ders kitabı sayfaları, yazı yığını slaytlar bu gözle bakınca nasıl görünüyor?",
+    "sorular": [
+      "Çalışan bellek ile uzun süreli bellek arasındaki fark nedir?",
+      "Kuram içsel, dışsal ve etkili yük arasında nasıl bir ayrım yapıyor?",
+      "Bir sunumu ya da ders notunu bu kurama göre nasıl sadeleştirirdin?",
+      "Kuram hangi yönlerden eleştiriliyor?"
+    ],
+    "arama": "bilişsel yük kuramı",
+    "ilgili": ["aralikli-tekrar", "secenek-bollugu-paradoksu", "aliskanlik-dongusu"]
+  },
+  {
+    "id": "ar-010",
+    "slug": "cerceveleme-etkisi",
+    "baslik": "Çerçeveleme etkisi",
+    "alan": "zihin",
+    "zorluk": 2,
+    "ipucu": "Kasaptaki kıyma, etiketinde ne kadar yağsız olduğu yazınca, ne kadar yağlı olduğu yazandan daha çekici görünür; oysa ikisi aynı bilgiyi verir. Bir bilginin nasıl sunulduğu, içeriği kadar kararlarımızı yönlendirir. Haber başlıkları da bu gücü kullanıyor olabilir mi?",
+    "sorular": [
+      "Aynı bilgi kazanç ya da kayıp olarak sunulduğunda kararlar neden değişiyor?",
+      "Reklamlarda ya da haber başlıklarında çerçevelemeye Türkiye'den bir örnek bulabilir misin?",
+      "Konuyu iyi bilen biri çerçevelemeden daha az mı etkilenir?",
+      "Çerçeveleme ile manipülasyon arasındaki çizgi nerede?"
+    ],
+    "arama": "çerçeveleme etkisi",
+    "ilgili": ["capa-etkisi", "kayiptan-kacinma", "secenek-bollugu-paradoksu"]
+  },
+  {
+    "id": "ar-011",
+    "slug": "bilissel-celiski",
+    "baslik": "Bilişsel çelişki",
+    "alan": "zihin",
+    "zorluk": 3,
+    "ipucu": "Sağlıklı beslendiğini söyleyen biri gece yarısı çiğ köfte dürümünü bitirince 'bir kereden bir şey olmaz' der. İnandığımızla yaptığımız çatıştığında içimizde bir huzursuzluk doğar; zihin de çoğu zaman davranışı değil, inancı esnetmeyi tercih eder.",
+    "sorular": [
+      "İnsanlar bu huzursuzluğu azaltmak için hangi yollara başvuruyor?",
+      "Zor elde ettiğimiz şeyleri daha değerli bulmamız bu kavramla nasıl açıklanıyor?",
+      "Kuramı destekleyen klasik deneyler neler, bugün nasıl eleştiriliyor?",
+      "Bu çelişki bazen gerçek bir davranış değişikliğine yol açabilir mi?"
+    ],
+    "arama": "bilişsel çelişki kuramı",
+    "ilgili": ["onay-yanliligi", "batik-maliyet-yanilgisi", "yanlis-ani"]
+  },
+  {
+    "id": "ar-012",
+    "slug": "kayiptan-kacinma",
+    "baslik": "Kayıptan kaçınma",
+    "alan": "zihin",
+    "zorluk": 3,
+    "ipucu": "Cebinden düşen parayı, aynı miktarda bulduğun paradan çok daha uzun süre dert edersin. Kaybetmenin acısı kazanmanın sevincinden ağır basıyor gibi görünür ve bu dengesizlik pazarlıktan birikime pek çok kararı etkiler. Ama bu etki her durumda gerçekten bu kadar güçlü mü?",
+    "sorular": [
+      "Kayıptan kaçınma beklenti kuramı içinde nasıl açıklanıyor?",
+      "Sahiplik etkisi ile kayıptan kaçınma arasında nasıl bir bağ var?",
+      "Bu etkinin gücünü sorgulayan hangi çalışmalar yapıldı, ne buldular?",
+      "Bu eğilimin evrimsel bir açıklaması olabilir mi?"
+    ],
+    "arama": "kayıptan kaçınma beklenti kuramı",
+    "ilgili": ["cerceveleme-etkisi", "batik-maliyet-yanilgisi", "capa-etkisi"]
+  }
+]

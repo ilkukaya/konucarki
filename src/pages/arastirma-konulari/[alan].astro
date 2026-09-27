@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import { alanlar, konular } from '../../data/index.ts';
+import { ZORLUK_ADI, type Alan } from '../../data/schema.ts';
+
+export function getStaticPaths() {
+  return alanlar.map((a) => ({ params: { alan: a.id }, props: { alan: a } }));
+}
+const { alan } = Astro.props as { alan: Alan };
+const liste = konular.filter((k) => k.alan === alan.id);
+const zorlukSirali = [...liste].sort((a, b) => a.zorluk - b.zorluk || a.baslik.localeCompare(b.baslik, 'tr'));
+const digerleri = alanlar.filter((a) => a.id !== alan.id);
+---
+<Base
+  baslik={`${alan.ad}: araştırma ve sunum konuları | Konu Çarkı`}
+  aciklama={`${alan.ad} alanında ${liste.length} araştırma konusu. ${alan.aciklama}`.slice(0, 155)}
+  kirinti={[{ ad: 'Araştırma konuları', yol: '/arastirma-konulari/' }, { ad: alan.ad, yol: `/arastirma-konulari/${alan.id}/` }]}
+>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>{alan.ad}</h1>
+      <p>{alan.aciklama}</p>
+    </header>
+    <p class="olcu">Konular kolaydan zora sıralı. Birini seç, sayfasındaki sorularla araştır, sonra notsuz anlat. Ya da <a href={`/?konu=${liste[0].slug}`}>ilk konuyla bir tur başlat</a>.</p>
+    <ul class="konu-listesi">
+      {zorlukSirali.map((k) => (
+        <li><a href={`/konu/${k.slug}/`}><span class="konu-ad">{k.baslik}</span><span class="zorluk" data-z={k.zorluk}>{ZORLUK_ADI[k.zorluk]}</span></a></li>
+      ))}
+    </ul>
+    <nav class="diger" aria-labelledby="diger-alanlar">
+      <h2 id="diger-alanlar">Diğer alanlar</h2>
+      <ul>
+        {digerleri.map((a) => <li><a href={`/arastirma-konulari/${a.id}/`}>{a.ad}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</Base>
+<style>
+  .diger {
+    margin-top: var(--b-8);
+  }
+  .diger h2 {
+    font-size: var(--t-1);
+  }
+  .diger ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--b-5);
+  }
+  .diger a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+</style>

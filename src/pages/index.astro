@@ -1,0 +1,200 @@
+---
+import Base from '../layouts/Base.astro';
+import Uygulama from '../components/Uygulama.astro';
+import { SITE } from '../config.ts';
+import { alanlar, konular, dogaclamaSorulari, atasozleri } from '../data/index.ts';
+import '../styles/uygulama.css';
+
+const site = Astro.site!;
+const webApp = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: SITE.ad,
+  url: new URL('/', site).href,
+  description: SITE.aciklama,
+  applicationCategory: 'EducationalApplication',
+  operatingSystem: 'Tüm modern tarayıcılar',
+  inLanguage: 'tr-TR',
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'TRY' },
+};
+
+const sss = [
+  {
+    s: 'Verilerimi topluyor musunuz?',
+    c: 'Hayır. Üyelik, form, çerez, analitik ya da reklam yok. Süre ayarların tarayıcının yerel depolamasında durur. Seri ve rozetler yalnızca sen izin verirsen, yine yalnızca bu cihazda tutulur. Ses kayıtların hiçbir yere yüklenmez. Ayrıntılar KVKK Aydınlatma Metni\'nde.',
+  },
+  {
+    s: 'Ses kaydı nereye gidiyor?',
+    c: 'Hiçbir yere. Kayıt tarayıcının belleğinde oluşur; dinleyebilir ya da dosya olarak indirebilirsin. Yeni tura geçtiğinde ya da sayfayı kapattığında bellekten silinir. Mikrofon izni yalnızca "Kaydet"e bastığında istenir.',
+  },
+  {
+    s: 'Neden araştırmadan sonra notları kapatıyoruz?',
+    c: 'Notlara bakarak anlatmak tanımaya dayanır; notsuz anlatmak ise hatırlamaya. Bilgiyi zihinden geri çağırmak, onu okumaktan çok daha kalıcı iz bırakır. Anlatırken takıldığın yer de tam olarak henüz anlamadığın yerdir.',
+  },
+  {
+    s: 'Sınıfta nasıl kullanabilirim?',
+    c: 'Tam ekran düğmesiyle konuyu ve sayacı projeksiyona yansıt. Doğaçlama modunda her öğrenci bir dakika konuşur, sonraki öğrenci çarkı çevirir. Araştırma modunu ödev olarak da verebilirsin: konu sayfasının bağlantısını paylaşman yeterli.',
+  },
+  {
+    s: 'Mülakat ya da sözlü sınav pratiği için uygun mu?',
+    c: 'Doğaçlama modundaki "İş ve mülakat" ile "Okul ve sınavlar" kategorileri tam bunun için. Hazırlık süresini kapatıp konuşma süresini bir dakikaya indirirsen gerçek bir mülakattaki baskıya yakın bir ortam oluşur.',
+  },
+  {
+    s: 'Konu ipuçları doğru mu?',
+    c: 'İpuçları kapıyı aralamak için yazıldı; bilerek tarih, sayı ve kesin iddia içermez. Asıl bilgiyi sen kaynaklardan bulacaksın. Yine de bir yanlış görürsen iletişim sayfasındaki adrese yazabilirsin.',
+  },
+  {
+    s: 'Pas hakkı ne işe yarıyor?',
+    c: 'Her oturumda üç pas hakkın var. Gelen konu hiç içine sinmediyse pas geçip yeniden çevirirsin. Hak bitince konu senindir; yine de çevirmeye devam edebilirsin, ceza yok.',
+  },
+];
+---
+<Base baslik="Konu Çarkı: rastgele konu seç, araştır ve anlat" aciklama={SITE.aciklama} jsonLd={[webApp]} anaSayfa>
+  <div class="kap">
+    <header class="giris">
+      <h1>Bilmediğin bir konu gelsin. Araştır, sonra anlat.</h1>
+      <p class="soluk olcu">Rastgele konu seçici, doğaçlama konuşma pratiği ve atasözü turu. Türkçe, ücretsiz, üyeliksiz.</p>
+    </header>
+    <Uygulama />
+  </div>
+
+  <div class="kap tanitim">
+    <section class="adimlar" aria-labelledby="nasil">
+      <h2 id="nasil">Çevir · Araştır · Anlat</h2>
+      <ol>
+        <li>
+          <h3>Çevir</h3>
+          <p>Çark {alanlar.length} alandan birini seçer; o alandan bilmediğin bir konu gelir. Beğenmediysen üç pas hakkın var.</p>
+        </li>
+        <li>
+          <h3>Araştır</h3>
+          <p>Süre boyunca sitenin dışında, Türkçe kaynaklarda oku. Kartta seni yönlendiren sorular ve TDK, DergiPark, Vikipedi bağlantıları var.</p>
+        </li>
+        <li>
+          <h3>Anlat</h3>
+          <p>Süre dolunca notlarını kapat. Konuyu kendi sözlerinle, sesli ve süreli anlat. İstersen kaydet, dinle, eksiklerini gör.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="iki-sutun" aria-labelledby="kimler">
+      <div>
+        <h2 id="kimler">Kimler için?</h2>
+      </div>
+      <div class="yazi">
+        <p><strong>Öğrenciler</strong> sözlü sınav pratiği ve sunum konuları için. Bir konuyu başkasına anlatabiliyorsan, onu gerçekten öğrenmişsindir; Feynman tekniği de bu fikre dayanır.</p>
+        <p><strong>Öğretmenler</strong> sınıf içi konuşma etkinliği için. Tam ekranda konu ve sayaç büyük görünür, çark sırayla herkese döner.</p>
+        <p><strong>Mülakata hazırlananlar</strong> hazırlıksız soru karşısında toparlanmayı çalışmak için. Doğaçlama modunda {dogaclamaSorulari.length} soru var.</p>
+        <p><strong>Merak edenler</strong> için de. Kütüphanede <a href="/arastirma-konulari/">{konular.length} araştırma konusu</a> ve <a href="/atasozleri-ve-deyimler/">{atasozleri.length} atasözü ile deyim</a> var; hepsi Türkçe ve bu site için yazıldı.</p>
+        <p><a href="/nasil-calisir/">Yöntemin ayrıntıları ve öğretmenler için öneriler</a></p>
+      </div>
+    </section>
+
+    <section class="iki-sutun" aria-labelledby="sss">
+      <div>
+        <h2 id="sss">Sık sorulanlar</h2>
+      </div>
+      <div class="sss">
+        {sss.map((x) => (
+          <details>
+            <summary>{x.s}</summary>
+            <p>{x.c}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .giris {
+    padding-top: var(--b-6);
+  }
+  .giris h1 {
+    max-width: 22ch;
+    margin-bottom: var(--b-2);
+  }
+  .giris p {
+    margin: 0;
+  }
+  .tanitim {
+    padding-top: var(--b-8);
+  }
+  .adimlar {
+    border-top: 1px solid var(--murekkep);
+    padding-top: var(--b-5);
+  }
+  .adimlar ol {
+    list-style: none;
+    padding: 0;
+    margin: var(--b-5) 0 0;
+    display: grid;
+    gap: var(--b-5) var(--b-6);
+    counter-reset: a;
+  }
+  .adimlar li {
+    counter-increment: a;
+  }
+  .adimlar h3::before {
+    content: counter(a);
+    display: block;
+    font-size: var(--t-4);
+    color: var(--firuze);
+    line-height: 1;
+    margin-bottom: var(--b-2);
+    font-variant-numeric: tabular-nums;
+  }
+  @media (min-width: 48rem) {
+    .adimlar ol {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .iki-sutun {
+    margin-top: var(--b-8);
+    border-top: 1px solid var(--sis);
+    padding-top: var(--b-5);
+    display: grid;
+    gap: var(--b-4);
+  }
+  @media (min-width: 60rem) {
+    .iki-sutun {
+      grid-template-columns: 1fr 2fr;
+      gap: var(--b-7);
+    }
+  }
+  .sss details {
+    border-bottom: 1px solid var(--sis);
+  }
+  .sss details:first-child {
+    border-top: 1px solid var(--sis);
+  }
+  .sss summary {
+    cursor: pointer;
+    font-family: var(--f-baslik);
+    font-weight: 600;
+    font-size: var(--t-1);
+    padding: var(--b-3) 0;
+    min-height: 44px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--b-4);
+  }
+  .sss summary::-webkit-details-marker {
+    display: none;
+  }
+  .sss summary::after {
+    content: '+';
+    color: var(--firuze);
+    font-weight: 400;
+    flex: none;
+  }
+  .sss details[open] summary::after {
+    content: '−';
+  }
+  .sss p {
+    max-width: var(--olcu);
+    padding-bottom: var(--b-3);
+  }
+</style>

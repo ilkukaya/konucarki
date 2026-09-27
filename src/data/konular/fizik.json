@@ -1,0 +1,193 @@
+[
+  {
+    "id": "ar-109",
+    "slug": "doppler-etkisi",
+    "baslik": "Doppler etkisi",
+    "alan": "fizik",
+    "zorluk": 1,
+    "ipucu": "Ambulans yaklaşırken siren tizleşir, yanından geçip uzaklaşınca bir anda kalınlaşır. Oysa sirenin kendisi hiç değişmedi. Aynı ilke gökbilimcilerin uzak gökadaların hareketini okumasına, yoldaki hız radarlarına kadar uzanıyor.",
+    "sorular": [
+      "Hareket eden kaynak mı, dinleyen mi; bu fark sonucu değiştirir mi?",
+      "Işıkta kırmızıya ve maviye kayma ne anlama geliyor?",
+      "Doppler ultrasonu tıpta neyi ölçmek için kullanılıyor?",
+      "Kaynak ses hızına yaklaşınca basit Doppler hesabı neden yetersiz kalıyor?"
+    ],
+    "arama": "Doppler etkisi ses",
+    "ilgili": ["karanlik-madde", "gps-ve-gorelilik", "gokkusagi"]
+  },
+  {
+    "id": "ar-110",
+    "slug": "gokkusagi",
+    "baslik": "Gökkuşağının oluşumu",
+    "alan": "fizik",
+    "zorluk": 1,
+    "ipucu": "Karadeniz'de yağmur dinip güneş açınca yaylanın üstünde beliren o yay, havada asılı sayısız damlanın ortak işi. Her damla güneş ışığını kırar, içinde yansıtır ve renklerine ayırır. Güneşi arkana almadan neden hiç gökkuşağı göremediğini düşündün mü?",
+    "sorular": [
+      "Işığın kırılması ve renklerine ayrılması bir su damlasında nasıl gerçekleşir?",
+      "Gökkuşağı neden yay biçiminde, uçaktan bakınca tam daire olabilir mi?",
+      "Bazen görülen ikinci, daha soluk gökkuşağında renklerin sırası neden ters?",
+      "Yan yana duran iki kişi aynı gökkuşağını mı görür, yoksa herkesin gördüğü ayrı mı?"
+    ],
+    "arama": "gökkuşağı oluşumu kırılma",
+    "ilgili": ["fiber-optik", "doppler-etkisi", "kutup-isiklari"]
+  },
+  {
+    "id": "ar-111",
+    "slug": "gel-git",
+    "baslik": "Gel-git olayı",
+    "alan": "fizik",
+    "zorluk": 2,
+    "ipucu": "Ege kıyısında deniz gün içinde neredeyse hiç çekilmez, ama okyanus kıyısındaki bazı koylarda sabah yürüdüğün kumsal öğleden sonra su altında kalır. Bunun arkasında Ay'ın ve Güneş'in çekimi var. Asıl şaşırtıcı olan, suyun Ay'a bakan yüzle birlikte tam karşı tarafta da kabarması.",
+    "sorular": [
+      "Dünya'nın Ay'a bakmayan yüzünde de neden bir kabarma oluşur?",
+      "Akdeniz'de gel-git farkının az olmasının nedeni ne?",
+      "Gel-git sürtünmesi Dünya'nın dönüşünü ve Ay'ın uzaklığını nasıl etkiliyor?",
+      "Gel-git enerjisinden elektrik üretmenin önündeki engeller neler?"
+    ],
+    "arama": "gel-git Ay çekimi",
+    "ilgili": ["kara-delik", "karanlik-madde"]
+  },
+  {
+    "id": "ar-112",
+    "slug": "kara-delik",
+    "baslik": "Kara delik",
+    "alan": "fizik",
+    "zorluk": 2,
+    "ipucu": "Bir kara deliğin fotoğrafı çekildi denir ama aslında görünen, çevresindeki kızgın gazın parıltısı ve ortadaki karanlık gölge. Işığın bile kaçamadığı bir bölge nasıl ölçülür, nasıl tartılır? Cevap, çevresindeki yıldızların ve gazın nasıl davrandığında saklı.",
+    "sorular": [
+      "Olay ufku nedir ve bir cisim oradan geçerken dışarıdan bakan ne görür?",
+      "Kara delikler nasıl oluşur, hepsi aynı yoldan mı?",
+      "Hawking ışıması kara deliklerin buharlaşabileceğini söylüyor; bu fikir gözlemle doğrulandı mı?",
+      "Gökbilimciler görünmeyen bir cismin varlığından nasıl emin olabiliyor?"
+    ],
+    "arama": "kara delik olay ufku",
+    "ilgili": ["karanlik-madde", "gps-ve-gorelilik", "gel-git"]
+  },
+  {
+    "id": "ar-113",
+    "slug": "karanlik-madde",
+    "baslik": "Karanlık madde",
+    "alan": "fizik",
+    "zorluk": 3,
+    "ipucu": "Gökadalar öyle hızlı dönüyor ki gördüğümüz madde onları bir arada tutmaya yetmemeli. Ya orada göremediğimiz bir kütle var ya da kütleçekimi hakkında bildiklerimiz eksik. Bu görünmez şeyin ne olduğu hâlâ doğrudan yakalanabilmiş değil.",
+    "sorular": [
+      "Karanlık madde fikrini destekleyen gözlemler neler?",
+      "Karanlık madde ile karanlık enerji aynı şey mi?",
+      "Kütleçekimi yasalarını değiştirmeyi öneren alternatif kuramlar ne diyor, neden daha az kabul görüyor?",
+      "Yer altındaki dedektörler karanlık madde parçacığını neden hâlâ yakalayamadı?"
+    ],
+    "arama": "karanlık madde kanıtları",
+    "ilgili": ["kara-delik", "doppler-etkisi", "gel-git"]
+  },
+  {
+    "id": "ar-114",
+    "slug": "gps-ve-gorelilik",
+    "baslik": "GPS ve görelilik kuramı",
+    "alan": "fizik",
+    "zorluk": 3,
+    "ipucu": "Dolmuşta telefonundaki harita mavi noktayı doğru sokağa koyuyorsa bunu biraz da görelilik kuramına borçlusun. Uydulardaki saatler hem hızları hem de Dünya'dan uzak oluşları yüzünden yerdekilerden farklı işliyor. Bu fark düzeltilmeseydi konum hatası gün geçtikçe büyürdü.",
+    "sorular": [
+      "GPS alıcısı uydulardan gelen sinyallerle konumunu nasıl hesaplıyor?",
+      "Özel görelilik ile genel göreliliğin uydu saatlerine etkisi neden ters yönde?",
+      "Düzeltme yapılmasa hatanın ne kadar hızlı büyüyeceği iddiası nasıl hesaplanıyor, abartılı mı?",
+      "Yüksek binalar arasında konum neden sapıyor; görelilik dışında hangi hata kaynakları var?"
+    ],
+    "arama": "GPS görelilik düzeltmesi",
+    "ilgili": ["doppler-etkisi", "kara-delik", "uzay-enkazi"]
+  },
+  {
+    "id": "ar-115",
+    "slug": "yari-iletkenler",
+    "baslik": "Yarı iletkenler",
+    "alan": "fizik",
+    "zorluk": 2,
+    "ipucu": "Telefonundaki işlemci, kumdan elde edilen silisyumun bilerek ve ölçülü biçimde kirletilmesiyle çalışıyor. Yarı iletken ne bakır gibi iletir ne cam gibi yalıtır; akımı açıp kapatabilen bir musluk gibi davranır. Bu musluklardan küçücük bir alana olabildiğince çok sığdırmak, elektroniğin temel uğraşı.",
+    "sorular": [
+      "Katkılama nedir, n tipi ve p tipi yarı iletken nasıl oluşur?",
+      "Transistör bir anahtar gibi nasıl çalışır?",
+      "Transistörler küçüldükçe hangi fiziksel sınırlara dayanılıyor?",
+      "Isınma işlemciler için neden sorun, soğutma yetersiz kalınca ne olur?"
+    ],
+    "arama": "yarı iletken katkılama",
+    "ilgili": ["fiber-optik", "acik-anahtarli-sifreleme", "newton-soguma-yasasi"]
+  },
+  {
+    "id": "ar-116",
+    "slug": "fiber-optik",
+    "baslik": "Fiber optik",
+    "alan": "fizik",
+    "zorluk": 2,
+    "ipucu": "Evine gelen internet, saç teli kadar ince bir cam lifin içinde ışık olarak ilerliyor. Işık lifin çeperine çarptıkça dışarı kaçmadan içeri geri sekiyor. Havuzun dibinden yukarı bakınca su yüzeyinin ayna gibi parlaması da aynı ilkenin gündelik bir örneği.",
+    "sorular": [
+      "Tam iç yansıma hangi koşulda gerçekleşir?",
+      "Fiber kablo bakır kabloya göre neden daha fazla veri taşıyabiliyor?",
+      "Işık lif içinde ilerlerken neden zayıflar, uzun hatlarda bu nasıl çözülür?",
+      "Fiber optiğin kurulumda ve arıza onarımında zayıf kaldığı yanlar neler?"
+    ],
+    "arama": "tam iç yansıma fiber",
+    "ilgili": ["gokkusagi", "yari-iletkenler", "acik-anahtarli-sifreleme"]
+  },
+  {
+    "id": "ar-117",
+    "slug": "newton-soguma-yasasi",
+    "baslik": "Newton'un soğuma yasası",
+    "alan": "fizik",
+    "zorluk": 1,
+    "ipucu": "Demlenmiş çay önce hızla ılır, oda sıcaklığına yaklaştıkça soğuması yavaşlar. Sıcaklık farkı ne kadar büyükse ısı o kadar hızlı kaçıyor. Aynı basit ilişki fırından çıkan ekmeğin ne zaman kesilebileceğinden ev yalıtımına kadar pek çok hesaba giriyor.",
+    "sorular": [
+      "Soğuma hızı neden sıcaklık farkıyla orantılı kabul ediliyor?",
+      "Çay ince belli bardakta mı, kalın bir kupada mı daha çabuk soğur, neden?",
+      "Bu yasa hangi durumlarda iyi çalışmaz, çok büyük sıcaklık farklarında ne olur?",
+      "Sıcak su soğuk sudan daha hızlı donar mı? Mpemba etkisi tartışması neden sürüyor?"
+    ],
+    "arama": "Newton soğuma yasası",
+    "ilgili": ["yari-iletkenler", "fiber-optik"]
+  },
+  {
+    "id": "ar-118",
+    "slug": "kutup-isiklari",
+    "baslik": "Kutup ışıkları",
+    "alan": "fizik",
+    "zorluk": 1,
+    "ipucu": "Kuzey ülkelerinin gecelerinde gökyüzünde dalgalanan yeşil perdeler, Güneş'ten gelen yüklü parçacıkların atmosfere çarpmasıyla oluşuyor. Dünya'nın manyetik alanı bu parçacıkları kutuplara doğru yönlendiriyor. Güçlü bir Güneş fırtınasında bu ışıklar Türkiye'den de görülebilir mi?",
+    "sorular": [
+      "Kutup ışıklarında renkler neden farklı, yeşil ve kırmızı nereden geliyor?",
+      "Güneş fırtınaları uydulara ve elektrik şebekelerine nasıl zarar verebilir?",
+      "Kutup ışığı tahminleri ne kadar güvenilir, neden sık sık yanılıyor?"
+    ],
+    "arama": "kutup ışıkları manyetik alan",
+    "ilgili": ["uzay-enkazi", "gokkusagi"]
+  },
+  {
+    "id": "ar-119",
+    "slug": "uzay-enkazi",
+    "baslik": "Uzay enkazı",
+    "alan": "fizik",
+    "zorluk": 2,
+    "ipucu": "Dünya'nın çevresinde yalnızca çalışan uydular değil, görevi bitmiş uydular, roket parçaları, hatta boya pulları da dolanıyor. Yörüngede bu hızla giden küçük bir vida bile bir uyduyu delebilir. Çarpışmalar yeni parçalar doğurursa zincirleme bir kirlilik başlayabileceği konuşuluyor.",
+    "sorular": [
+      "Kessler sendromu nedir, ne kadar gerçekçi bir risk?",
+      "Enkaz nasıl izleniyor, uydular çarpışmadan nasıl kaçıyor?",
+      "Yörüngeyi temizlemek için önerilen yöntemler neler, neden hâlâ yaygın değil?",
+      "Uzay enkazından kim sorumlu tutulabilir, uluslararası kurallar yeterli mi?"
+    ],
+    "arama": "uzay enkazı Kessler sendromu",
+    "ilgili": ["gps-ve-gorelilik", "kutup-isiklari"]
+  },
+  {
+    "id": "ar-120",
+    "slug": "acik-anahtarli-sifreleme",
+    "baslik": "Açık anahtarlı şifreleme",
+    "alan": "fizik",
+    "zorluk": 3,
+    "ipucu": "Tarayıcıdaki küçük kilit, hiç tanışmadığın bir sunucuyla araya kimse giremeden konuşabildiğini gösteriyor. Hile şu: herkese dağıtılan bir anahtarla kilitlenen mesajı yalnızca sende kalan öteki anahtar açabiliyor. Asma kilidi herkese dağıtıp anahtarını cebinde tutmak gibi.",
+    "sorular": [
+      "Simetrik şifreleme ile açık anahtarlı şifreleme arasındaki fark ne?",
+      "Dijital imza, açık anahtar fikrini nasıl tersinden kullanıyor?",
+      "Kuantum bilgisayarlar bugünkü şifreleme yöntemlerini gerçekten tehdit ediyor mu?",
+      "Bir açık anahtarın gerçekten o kişiye ait olduğundan nasıl emin olunuyor, zayıf halka nerede?"
+    ],
+    "arama": "açık anahtarlı şifreleme",
+    "ilgili": ["yari-iletkenler", "fiber-optik"]
+  }
+]

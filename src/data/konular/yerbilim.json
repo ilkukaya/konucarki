@@ -1,0 +1,192 @@
+[
+  {
+    "id": "ar-061",
+    "slug": "peri-bacalari",
+    "baslik": "Peri bacalarının oluşumu",
+    "alan": "yerbilim",
+    "zorluk": 1,
+    "ipucu": "Kapadokya'nın peri bacaları, çok eski volkan patlamalarının bıraktığı kül katmanlarından doğdu. Kül sıkışıp tüf denen yumuşak bir kayaya dönüştü, üstünde daha sert bir tabaka kaldı. Yağmur ve rüzgâr yumuşak kısmı aşındırırken sert başlık altındakini şemsiye gibi korudu.",
+    "sorular": [
+      "Sert başlık düşünce peri bacasına ne oluyor, bu süreç neden durdurulamıyor?",
+      "Tüf ile bazalt arasındaki fark nedir, ikisi de volkandan geliyorsa neden bu kadar farklılar?",
+      "Jeologlar bir kayanın ne kadar hızlı aşındığını hangi yöntemlerle ölçüyor?"
+    ],
+    "arama": "peri bacası oluşumu",
+    "ilgili": ["kapadokya-yeralti-sehirleri", "sonmus-ve-uyuyan-volkanlar", "karst"]
+  },
+  {
+    "id": "ar-062",
+    "slug": "deprem-buyuklugu-ve-siddeti",
+    "baslik": "Deprem büyüklüğü ve şiddeti",
+    "alan": "yerbilim",
+    "zorluk": 1,
+    "ipucu": "Bir depremde iki ayrı şey ölçülür: fayın kırılırken açığa çıkardığı enerji ve yeryüzünde hissedilen sarsıntının etkisi. Büyüklük depremin kendisine ait tek bir değerdir, şiddet ise yerden yere değişir. Aynı deprem bir kasabada hafif, ötekinde yıkıcı hissedilebilir.",
+    "sorular": [
+      "Büyüklük ölçeğinde bir birimlik artış, açığa çıkan enerjide ne kadar farka karşılık geliyor?",
+      "Şiddet ölçeği hangi gözlemlere dayanıyor, neden Roma rakamlarıyla yazılıyor?",
+      "Sismograf kayıtlarından bir depremin büyüklüğü nasıl hesaplanıyor?",
+      "Zemin türü, aynı depremin iki mahallede farklı hissedilmesine nasıl yol açar?"
+    ],
+    "arama": "deprem büyüklüğü şiddeti farkı",
+    "ilgili": ["sismik-dalgalar", "zemin-sivilasmasi", "fay-turleri"]
+  },
+  {
+    "id": "ar-063",
+    "slug": "tsunami",
+    "baslik": "Tsunami",
+    "alan": "yerbilim",
+    "zorluk": 1,
+    "ipucu": "Tsunami, rüzgârın değil deniz tabanının ani hareketinin doğurduğu bir dalga dizisi. Denizaltı depremleri, heyelanlar ya da volkan patlamaları koca bir su kütlesini bir anda yerinden oynatabilir. Açık denizde fark edilmeyecek kadar alçak olan dalga, sığ kıyıya yaklaştıkça yükselir.",
+    "sorular": [
+      "Tsunami dalgası ile fırtınanın kabarttığı dalga arasındaki temel fark ne?",
+      "Dalga sığ suya girdiğinde neden yavaşlayıp yükseliyor?",
+      "Eski tsunamilerin izleri kıyıdaki çökel katmanlarında nasıl bulunuyor?",
+      "Denizdeki basınç sensörleri ve şamandıralar bir tsunamiyi nasıl algılıyor?"
+    ],
+    "arama": "tsunami oluşumu deniz tabanı",
+    "ilgili": ["fay-turleri", "sismik-dalgalar", "karadeniz-oksijensiz-derinlikler"]
+  },
+  {
+    "id": "ar-064",
+    "slug": "obruklar",
+    "baslik": "Obruklar",
+    "alan": "yerbilim",
+    "zorluk": 1,
+    "ipucu": "Konya Ovası'nda bazen bir tarlanın ortasında yuvarlak, derin bir çukur aniden açılıveriyor. Arkasında yeraltındaki kireçtaşı ve jipsin suyla yavaş yavaş erimesi, oluşan boşluğun sonunda çökmesi var. Yeraltı suyunun azalması, bu boşlukları taşıyan desteği zayıflatabiliyor.",
+    "sorular": [
+      "Kireçtaşı suda nasıl eriyor, bu tepkimede karbondioksitin rolü ne?",
+      "Yeraltı suyunun azalması çöküşleri neden hızlandırabilir?",
+      "Henüz çökmemiş bir boşluk yer radarı gibi jeofizik yöntemlerle nasıl bulunabilir?",
+      "Bazı obrukların dibinde oluşan göllerin suyu nereden geliyor?"
+    ],
+    "arama": "konya ovası obruk oluşumu",
+    "ilgili": ["karst", "travertenler", "zemin-sivilasmasi"]
+  },
+  {
+    "id": "ar-065",
+    "slug": "fay-turleri",
+    "baslik": "Fay türleri",
+    "alan": "yerbilim",
+    "zorluk": 2,
+    "ipucu": "Yer kabuğu gerildiğinde, sıkıştığında ya da yanlara itildiğinde kırılır; bu kırıklara fay denir. Gerilmede bir blok aşağı kayar, sıkışmada biri ötekinin üstüne çıkar, yanal kaymada ise bloklar yan yana sürtünerek geçer. Bir fayın türü, çevresindeki kuvvetlerin hikâyesini anlatır.",
+    "sorular": [
+      "Normal fay, ters fay ve doğrultu atımlı fay arazide hangi izlerden ayırt edilir?",
+      "Batı Anadolu'daki çöküntü ovaları hangi tür faylarla ilişkili?",
+      "Bir fayın ne kadar kaydığını dere yataklarındaki ötelenmelerden nasıl ölçeriz?"
+    ],
+    "arama": "fay türleri jeoloji",
+    "ilgili": ["kuzey-anadolu-fayi", "deprem-buyuklugu-ve-siddeti", "tsunami"]
+  },
+  {
+    "id": "ar-066",
+    "slug": "zemin-sivilasmasi",
+    "baslik": "Zemin sıvılaşması",
+    "alan": "yerbilim",
+    "zorluk": 2,
+    "ipucu": "Suya doygun, gevşek kumlu bir zemin güçlü bir sarsıntıda taneleri arasındaki teması yitirebilir. O an zemin katı gibi değil, koyu bir sıvı gibi davranır; yerden kum ve su fışkırır. Bina sağlam yapılmış olsa bile altındaki zemin onu taşıyamayıp yana yatırabilir.",
+    "sorular": [
+      "Taneler arasındaki su basıncı arttığında zemin taşıma gücünü neden kaybeder?",
+      "Kum kaynaması denen izler, geçmiş depremlerde sıvılaşma olduğunu nasıl gösteriyor?",
+      "Mühendisler bir zeminin sıvılaşmaya yatkın olup olmadığını hangi deneylerle anlıyor?",
+      "Göl ya da nehir kenarındaki genç zeminler neden daha çok dikkat gerektiriyor?"
+    ],
+    "arama": "zemin sıvılaşması deprem",
+    "ilgili": ["deprem-buyuklugu-ve-siddeti", "sismik-dalgalar", "obruklar"]
+  },
+  {
+    "id": "ar-067",
+    "slug": "travertenler",
+    "baslik": "Travertenler ve Pamukkale",
+    "alan": "yerbilim",
+    "zorluk": 2,
+    "ipucu": "Pamukkale'nin bembeyaz basamakları, yerin altından gelen sıcak suyun işi. Suda çözünmüş karbondioksit yüzeye çıkınca havaya karışır, su da taşıdığı kalsiyum karbonatı bırakmaya başlar. Böylece su aktığı yere ince katmanlar hâlinde yeni bir kaya biriktirir.",
+    "sorular": [
+      "Travertenin rengi neden bazı yerlerde beyaz, bazı yerlerde sarı ya da kırmızımsı?",
+      "Traverten katmanları geçmişteki su akışı ve iklim hakkında nasıl bilgi veriyor?",
+      "Sıcak su kaynakları ile faylar arasında nasıl bir bağ var?",
+      "Traverten ile mağaralardaki sarkıtlar aynı kimyayla mı oluşuyor?"
+    ],
+    "arama": "pamukkale traverten oluşumu",
+    "ilgili": ["karst", "fay-turleri", "efes-su-sistemi"]
+  },
+  {
+    "id": "ar-068",
+    "slug": "karst",
+    "baslik": "Karst ve mağara oluşumu",
+    "alan": "yerbilim",
+    "zorluk": 2,
+    "ipucu": "Kireçtaşı sert görünse de hafif asitli suyla yavaş yavaş eriyor. Bu erime yüzeyde çukurlar, yeraltında ise mağaralar ve bir yerde kaybolup başka yerden çıkan dereler bırakıyor. Toroslar'daki pek çok mağara ve düden bu sessiz aşındırmanın ürünü.",
+    "sorular": [
+      "Yağmur suyu kireçtaşını eritecek asitliği nereden kazanıyor?",
+      "Sarkıt ve dikitler nasıl oluşur, büyüme hızları nasıl ölçülür?",
+      "Yeraltında kaybolan bir derenin nereden çıktığını boya izleme deneyleriyle nasıl buluruz?",
+      "Karstik bölgelerde yeraltı suyu neden kolay kirlenir?"
+    ],
+    "arama": "karst mağara oluşumu",
+    "ilgili": ["obruklar", "travertenler", "peri-bacalari"]
+  },
+  {
+    "id": "ar-069",
+    "slug": "sonmus-ve-uyuyan-volkanlar",
+    "baslik": "Sönmüş ve uyuyan volkanlar",
+    "alan": "yerbilim",
+    "zorluk": 2,
+    "ipucu": "Erciyes, Hasan Dağı ve Nemrut gibi dağlar Anadolu'nun volkanik geçmişini gösteriyor. Bir volkana sönmüş mü yoksa uyuyor mu deneceği, ne zaman patladığına ve derinde hâlâ hareket olup olmadığına bakılarak kararlaştırılıyor. Sessiz bir dağın hikâyesi lav katmanlarında saklı.",
+    "sorular": [
+      "Bir volkanın sönmüş mü uyuyan mı olduğunu anlamak için hangi ölçümler yapılıyor?",
+      "Lav ve kül katmanlarının yaşı radyometrik yöntemlerle nasıl belirleniyor?",
+      "Nemrut Dağı'nın tepesindeki krater gölü nasıl oluşmuş?",
+      "Volkanik topraklar neden çoğu zaman verimli olur?"
+    ],
+    "arama": "anadolu volkanları erciyes nemrut",
+    "ilgili": ["peri-bacalari", "obsidiyen-ticareti", "sismik-dalgalar"]
+  },
+  {
+    "id": "ar-070",
+    "slug": "karadeniz-oksijensiz-derinlikler",
+    "baslik": "Karadeniz'in oksijensiz derinlikleri",
+    "alan": "yerbilim",
+    "zorluk": 3,
+    "ipucu": "Karadeniz'in üst kısmında nehirlerden gelen görece tatlı su, derinlerde ise İstanbul Boğazı'ndan giren tuzlu ve ağır su bulunuyor. İki tabaka neredeyse hiç karışmadığı için dipte oksijen tükenmiş, hidrojen sülfür birikmiş. Bu ortamda tahta batıklar şaşırtıcı biçimde sağlam kalabiliyor.",
+    "sorular": [
+      "Tuzlu su neden alta çöker, suyun yoğunluğunu neler belirler?",
+      "Oksijensiz dipte hangi canlılar yaşayabiliyor, bu mikroplar enerjiyi nereden buluyor?",
+      "Dip çamurundaki katmanlar denizin geçmişi hakkında nasıl kanıt sunuyor?",
+      "Tahtayı çürüten canlılar oksijensiz suda neden yaşayamıyor?"
+    ],
+    "arama": "karadeniz oksijensiz tabaka hidrojen sülfür",
+    "ilgili": ["tsunami", "uluburun-batigi"]
+  },
+  {
+    "id": "ar-071",
+    "slug": "sismik-dalgalar",
+    "baslik": "Sismik dalgalar: P ve S dalgaları",
+    "alan": "yerbilim",
+    "zorluk": 3,
+    "ipucu": "Deprem anında yerin içinde farklı dalgalar yayılır. Önce gelen P dalgaları kayayı sıkıştırıp gevşeterek ilerler ve sıvıdan da geçer; ardından gelen S dalgaları kayayı yana sarsar ve sıvıda yol alamaz. Bu fark sayesinde Dünya'nın dış çekirdeğinin sıvı olduğu anlaşıldı.",
+    "sorular": [
+      "S dalgalarının ulaşamadığı gölge bölgesi dış çekirdek hakkında neyi kanıtlıyor?",
+      "P ve S dalgalarının varış zamanı farkından depremin uzaklığı nasıl hesaplanır?",
+      "Yüzey dalgaları binalara neden daha çok zarar verebiliyor?",
+      "Deprem erken uyarı sistemleri P dalgasının hızından nasıl yararlanıyor?"
+    ],
+    "arama": "sismik dalgalar p s",
+    "ilgili": ["deprem-buyuklugu-ve-siddeti", "zemin-sivilasmasi", "kuzey-anadolu-fayi"]
+  },
+  {
+    "id": "ar-072",
+    "slug": "kuzey-anadolu-fayi",
+    "baslik": "Kuzey Anadolu Fayı",
+    "alan": "yerbilim",
+    "zorluk": 3,
+    "ipucu": "Anadolu'nun kuzeyi boyunca doğudan batıya uzanan bu fay, yanal atımlı bir fay. Anadolu bloğu batıya doğru ilerlerken kuzeydeki blokla yan yana sürtünüyor. Fayın hangi kesiminin ne zaman kırıldığı, sıradaki kırılmaları anlamak için inceleniyor.",
+    "sorular": [
+      "Sağ yanal fay ne demek, fayın bir yakasında durarak bunu nasıl anlarız?",
+      "GPS ölçümleri Anadolu'nun hareketini nasıl ortaya koyuyor?",
+      "Paleosismoloji hendeklerinde geçmiş depremlerin izleri nasıl okunuyor?",
+      "Anadolu bloğunu batıya doğru iten kuvvetler nereden geliyor?"
+    ],
+    "arama": "kuzey anadolu fay zonu",
+    "ilgili": ["fay-turleri", "sismik-dalgalar", "deprem-buyuklugu-ve-siddeti"]
+  }
+]

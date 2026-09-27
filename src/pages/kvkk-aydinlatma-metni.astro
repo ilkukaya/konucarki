@@ -1,0 +1,54 @@
+---
+import YasalSayfa from '../components/YasalSayfa.astro';
+import { SITE } from '../config.ts';
+---
+<YasalSayfa baslik="KVKK Aydınlatma Metni" ad="KVKK Aydınlatma Metni" yol="/kvkk-aydinlatma-metni/" aciklama="Konu Çarkı'nın 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aydınlatma metni. Site üyelik, form, çerez ve analitik kullanmaz.">
+  <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("Kanun") 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca hazırlanmıştır.</p>
+
+  <h2>1. Veri sorumlusu</h2>
+  <p>{SITE.veriSorumlusu}<br />İletişim: <a href={`mailto:${SITE.eposta}`}>{SITE.eposta}</a></p>
+
+  <h2>2. Hangi verileri işliyoruz?</h2>
+  <p>Konu Çarkı üyelik, form, çerez, analitik ya da reklam kullanmaz. Sesli kayıtların ve ilerleme bilgilerin (seri, rozetler, tur geçmişi) yalnızca kendi cihazında, tarayıcının yerel depolama alanında kalır ve bize hiçbir şekilde ulaşmaz.</p>
+  <p>İşlenen tek kişisel veriler şunlardır:</p>
+  <ol type="a">
+    <li><strong>Teknik sunucu kayıtları:</strong> Siteyi barındıran hizmet sağlayıcının güvenlik ve işletim amacıyla tuttuğu IP adresi, tarih ve saat, istenen sayfa ve tarayıcı bilgisi.</li>
+    <li><strong>E-posta yazışmaları:</strong> Bize e-posta gönderirsen e-posta adresin ve mesajının içeriği.</li>
+  </ol>
+
+  <h2>3. İşleme amaçları ve hukuki sebepler</h2>
+  <ol type="a">
+    <li>Sitenin güvenli çalışması ve kötüye kullanımın önlenmesi amacıyla teknik sunucu kayıtları, Kanun'un 5/2-f maddesi uyarınca veri sorumlusunun meşru menfaati hukuki sebebine dayanılarak işlenir.</li>
+    <li>Başvurularına ve mesajlarına yanıt vermek amacıyla e-posta verileri, Kanun'un 5/2-f maddesi uyarınca meşru menfaat hukuki sebebine dayanılarak işlenir.</li>
+  </ol>
+
+  <h2>4. Aktarım</h2>
+  <p>Site, {SITE.yerSaglayici} (Amerika Birleşik Devletleri) altyapısında barındırılır. Teknik sunucu kayıtları bu hizmet sağlayıcı tarafından yurt dışında işlenir. Aktarımın dayanağı: [AVUKATLA NETLEŞTİRİLECEK — Kanun md. 9 kapsamında standart sözleşme veya diğer dayanak].</p>
+  <p>Kişisel verilerin başka hiçbir üçüncü kişiyle paylaşılmaz.</p>
+
+  <h2>5. Toplama yöntemi</h2>
+  <p>Teknik sunucu kayıtları siteyi ziyaret ettiğinde otomatik yolla; e-posta verileri bize yazdığında e-posta yoluyla toplanır.</p>
+
+  <h2>6. Saklama süresi</h2>
+  <p>E-postalar, talebin sonuçlanmasından itibaren [X ay] süreyle saklanır ve ardından silinir. Teknik sunucu kayıtları, barındırma hizmet sağlayıcısının saklama süresi boyunca tutulur.</p>
+
+  <h2>7. Kanun'un 11. maddesi kapsamındaki hakların</h2>
+  <p>Kişisel veri sahibi olarak şu haklara sahipsin:</p>
+  <ul>
+    <li>Kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+    <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+    <li>İşlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+    <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+    <li>Eksik veya yanlış işlenmiş olması hâlinde düzeltilmesini isteme,</li>
+    <li>Kanun'un 7. maddesindeki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+    <li>Düzeltme, silme ve yok etme işlemlerinin, verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+    <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhine bir sonucun ortaya çıkmasına itiraz etme,</li>
+    <li>Kanuna aykırı olarak işlenmesi sebebiyle zarara uğraman hâlinde zararın giderilmesini talep etme.</li>
+  </ul>
+
+  <h2>8. Başvuru</h2>
+  <p>Haklarına ilişkin taleplerini, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun şekilde <a href={`mailto:${SITE.eposta}`}>{SITE.eposta}</a> adresine iletebilirsin. Başvurun, niteliğine göre en kısa sürede ve en geç otuz gün içinde ücretsiz olarak sonuçlandırılır.</p>
+
+  <h2>Cihazında kalan veriler</h2>
+  <p>Sayaç süreleri, mod ve tema gibi ayarlar ile, izin verirsen ilerleme bilgilerin yalnızca tarayıcının yerel depolama alanında tutulur. Bu veriler bize gönderilmez; bu nedenle bizim tarafımızdan işlenmez. Hepsini <a href="/ayarlar/">Ayarlar ve verilerim</a> sayfasından tek düğmeyle silebilirsin. Ayrıntılar için <a href="/cerez-politikasi/">Çerez Politikası</a>.</p>
+</YasalSayfa>

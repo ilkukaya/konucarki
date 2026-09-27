@@ -1,0 +1,38 @@
+---
+import YasalSayfa from '../components/YasalSayfa.astro';
+import { SITE } from '../config.ts';
+---
+<YasalSayfa baslik="İletişim ve künye" ad="İletişim" yol="/iletisim/" aciklama="Konu Çarkı ile iletişim ve 5651 sayılı Kanun kapsamında içerik sağlayıcı tanıtıcı bilgileri.">
+  <p>Bir konuda yanlış bir bilgi mi gördün, yeni bir konu mu önermek istiyorsun, ya da sadece nasıl kullandığını mı anlatmak istiyorsun? Yaz:</p>
+  <p class="eposta"><a href={`mailto:${SITE.eposta}`}>{SITE.eposta}</a></p>
+  <p>Sitede form yok; e-posta tek iletişim yolu. Yazdığında e-posta adresin ve mesajın yalnızca sana yanıt vermek için kullanılır. Ayrıntılar <a href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</a>'nde.</p>
+
+  <h2>Künye</h2>
+  <p class="kucuk soluk">5651 sayılı Kanun kapsamında içerik sağlayıcı tanıtıcı bilgileri</p>
+  <dl class="kunye">
+    <dt>Site adı</dt><dd>{SITE.ad}</dd>
+    <dt>İçerik sağlayıcı</dt><dd>{SITE.veriSorumlusu}</dd>
+    <dt>E-posta</dt><dd><a href={`mailto:${SITE.eposta}`}>{SITE.eposta}</a></dd>
+    <dt>Yer sağlayıcı</dt><dd>{SITE.yerSaglayici}</dd>
+  </dl>
+</YasalSayfa>
+<style>
+  .eposta {
+    font-family: var(--f-baslik);
+    font-size: var(--t-2);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  .kunye {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: var(--b-2) var(--b-5);
+  }
+  .kunye dt {
+    font-weight: 600;
+  }
+  .kunye dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+</style>

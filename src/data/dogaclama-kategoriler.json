@@ -1,0 +1,12 @@
+[
+  { "id": "is", "ad": "İş ve mülakat", "kisaAd": "İş", "aciklama": "Mülakatta karşına çıkabilecek, iş hayatını ve çalışma biçimini soran sorular." },
+  { "id": "okul", "ad": "Okul ve sınavlar", "kisaAd": "Okul", "aciklama": "Ders, sınav, öğretmen ve okul koridorlarından çıkan sorular." },
+  { "id": "aile", "ad": "Aile ve sofra", "kisaAd": "Aile", "aciklama": "Bayram sofrası, akraba ziyareti, evdeki küçük gelenekler." },
+  { "id": "arkadaslik", "ad": "Arkadaşlık", "kisaAd": "Arkadaşlık", "aciklama": "Dostluğun ne olduğu, nasıl kurulduğu ve nasıl korunduğu üzerine." },
+  { "id": "sehir", "ad": "Şehir ve ulaşım", "kisaAd": "Şehir", "aciklama": "Otobüs, vapur, trafik, mahalle: şehirde yaşamanın küçük dertleri ve güzellikleri." },
+  { "id": "mutfak", "ad": "Yemek ve mutfak", "kisaAd": "Mutfak", "aciklama": "Sevdiğin tatlar, mutfak alışkanlıkların ve yemek üzerine tatlı tartışmalar." },
+  { "id": "ekran", "ad": "Diziler, oyunlar, ekran", "kisaAd": "Ekran", "aciklama": "İzlediklerin, oynadıkların ve ekranla kurduğun ilişki." },
+  { "id": "para", "ad": "Para ve alışveriş", "kisaAd": "Para", "aciklama": "Harçlık, indirim, pazarlık: parayla ilgili gündelik kararlar." },
+  { "id": "hobi", "ad": "Spor ve hobiler", "kisaAd": "Hobi", "aciklama": "Boş zamanın, sevdiğin sporlar ve yeni bir şey öğrenme hevesi." },
+  { "id": "hayal", "ad": "Hayal et", "kisaAd": "Hayal et", "aciklama": "Gerçekliğin biraz dışına çık: eğlenceli, beklenmedik varsayımlar." }
+]

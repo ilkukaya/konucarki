@@ -1,0 +1,189 @@
+[
+  {
+    "id": "ar-097",
+    "slug": "unlu-uyumu",
+    "baslik": "Ünlü uyumu",
+    "alan": "dil",
+    "zorluk": 1,
+    "ipucu": "Kitaplar, kalemler, çocuklar... Türkçede ekler geldiği kelimeye göre kılık değiştirir ve sen bunu hiç düşünmeden yaparsın. Yabancı bir arkadaşın 'kitaplera' dediğinde kulağını neden tırmaladığını anlatabilir misin? Kuralın adını ve istisnalarını bulunca iş değişiyor.",
+    "sorular": [
+      "Büyük ünlü uyumu ile küçük ünlü uyumu arasındaki fark ne?",
+      "'Kitap', 'anne', 'kardeş' gibi kelimeler kurala neden uymuyor, bu kelimelerin hikâyesi ne?",
+      "'-yor' ve '-ken' gibi eklerin uyuma girmemesi kuralın gücünü zayıflatır mı?",
+      "Ünlü uyumu başka hangi dillerde var, Türkçeye özgü bir şey mi?"
+    ],
+    "arama": "büyük ünlü uyumu",
+    "ilgili": ["eklemeli-diller", "unsuz-benzesmesi", "odunc-kelimeler"]
+  },
+  {
+    "id": "ar-098",
+    "slug": "eklemeli-diller",
+    "baslik": "Eklemeli diller",
+    "alan": "dil",
+    "zorluk": 2,
+    "ipucu": "'Çekoslovakyalılaştıramadıklarımızdan' diye uzayıp giden o meşhur kelimeyi duymuşsundur. Türkçe kökü sabit tutar, arkasına ekleri vagon gibi dizer. Başka diller aynı anlamı ayrı kelimelerle ya da kelimenin içini değiştirerek kurar; aradaki farkı görmek dilin iskeletini ortaya çıkarıyor.",
+    "sorular": [
+      "Eklemeli, bükümlü ve yalınlayan diller arasındaki temel ayrım ne?",
+      "Türkçede eklerin sırası neden neredeyse hiç değişmez, bunun bir mantığı var mı?",
+      "Hiçbir dil tek bir türe tam uymuyorsa bu sınıflandırma ne kadar işe yarar?"
+    ],
+    "arama": "eklemeli dil yapısı",
+    "ilgili": ["unlu-uyumu", "sapir-whorf-hipotezi", "unsuz-benzesmesi"]
+  },
+  {
+    "id": "ar-099",
+    "slug": "unsuz-benzesmesi",
+    "baslik": "Ünsüz benzeşmesi",
+    "alan": "dil",
+    "zorluk": 1,
+    "ipucu": "'Kitapda' değil 'kitapta', 'gitdi' değil 'gitti' dersin. Sert bir ünsüzden sonra gelen ek de sertleşir; bunu dilbilgisi dersinden çok önce ağzın kendiliğinden yapar. Yazım hatası sanılan pek çok şeyin arkasında bu küçük ses kuralı yatıyor.",
+    "sorular": [
+      "'Fıstıkçı Şahap' kısaltması hangi sesleri anlatıyor ve neden tam da bu sesler?",
+      "Ünsüz benzeşmesi ile ünsüz yumuşaması arasındaki fark ne?",
+      "Konuşma dilinde kurala uymayan söyleyişler var mı, yazım sesi tam olarak yansıtabilir mi?"
+    ],
+    "arama": "ünsüz benzeşmesi türkçe",
+    "ilgili": ["unlu-uyumu", "eklemeli-diller", "argo"]
+  },
+  {
+    "id": "ar-100",
+    "slug": "islikli-dil",
+    "baslik": "Islıklı dil",
+    "alan": "dil",
+    "zorluk": 2,
+    "ipucu": "Giresun'un Kuşköy'ünde vadinin bir yamacından ötekine seslenmek için bağırmak yerine ıslık çalınıyor. Bu ıslık rastgele bir işaret değil, Türkçe kelimelerin ıslığa dökülmüş hali. Karşı yamaçtaki kişi cümleyi anlayıp aynı yoldan cevap verebiliyor.",
+    "sorular": [
+      "Islıkla konuşurken Türkçenin hangi özellikleri korunuyor, hangileri kayboluyor?",
+      "Kuşköy'ün coğrafyası bu iletişim biçiminin doğmasında nasıl bir etki yapmış olabilir?",
+      "Cep telefonu yaygınlaşınca ıslıklı dil nasıl etkilendi, korunması için neler yapılıyor?",
+      "Dünyada başka ıslıklı diller var mı, hepsi aynı şekilde mi işliyor?"
+    ],
+    "arama": "Kuşköy ıslık dili",
+    "ilgili": ["somut-olmayan-kulturel-miras", "unlu-uyumu", "eklemeli-diller"]
+  },
+  {
+    "id": "ar-101",
+    "slug": "filtre-balonu",
+    "baslik": "Filtre balonu",
+    "alan": "dil",
+    "zorluk": 1,
+    "ipucu": "Bir kez köpek videosu izlersin, akışın köpekle dolar. Asıl sorun şu: ekranında görmediğin şeyleri görmediğini de bilmiyorsun. İki kişi aynı kelimeyi aratsa bile farklı sonuçlarla karşılaşabiliyor; kendi balonunun duvarlarını fark etmek sanıldığı kadar kolay değil.",
+    "sorular": [
+      "Filtre balonu kavramı kişiselleştirmenin hangi yan etkisini anlatmaya çalışıyor?",
+      "Filtre balonunu yankı odasından ayıran ne?",
+      "Bazı araştırmalar etkinin sanıldığından zayıf olduğunu söylüyor; bu tartışmada kanıtlar ne diyor?",
+      "Bir kullanıcı kendi balonunu delmek için pratikte ne yapabilir?"
+    ],
+    "arama": "filtre balonu kişiselleştirme",
+    "ilgili": ["oneri-algoritmalari", "yanki-odasi", "dezenformasyon"]
+  },
+  {
+    "id": "ar-102",
+    "slug": "oneri-algoritmalari",
+    "baslik": "Öneri algoritmaları",
+    "alan": "dil",
+    "zorluk": 2,
+    "ipucu": "Dizi platformu akşam ne izleyeceğini senden iyi biliyormuş gibi davranıyor. Arkada seni sana benzeyen izleyicilerle eşleştiren ya da izlediklerine benzeyen içerikleri öne çıkaran sistemler çalışıyor. Neyi beğendiğini açıkça söylemesen de yarıda bıraktığın bölüm bile bir veri.",
+    "sorular": [
+      "İş birlikçi filtreleme ile içerik tabanlı öneri arasındaki fark ne?",
+      "Platforma yeni katılan birine ne önerileceği, yani soğuk başlangıç sorunu, nasıl çözülüyor?",
+      "Öneri sistemleri çeşitliliği azaltıp herkesi aynı popüler içeriğe mi itiyor?"
+    ],
+    "arama": "öneri sistemleri algoritma",
+    "ilgili": ["filtre-balonu", "yanki-odasi", "dezenformasyon"]
+  },
+  {
+    "id": "ar-103",
+    "slug": "yanki-odasi",
+    "baslik": "Yankı odası",
+    "alan": "dil",
+    "zorluk": 2,
+    "ipucu": "Mahallenin mesaj grubunda herkes aynı şeyi söylüyorsa o fikir sana dünyanın gerçeği gibi gelir. Yankı odasında karşıt ses ya hiç duyulmaz ya da duyulunca alay konusu olur. Duvarları örenler yalnızca algoritmalar değil; kimi takip ettiğin, kimi sessize aldığın da işin içinde.",
+    "sorular": [
+      "Yankı odası ile doğrulama yanlılığı arasında nasıl bir bağ var?",
+      "Sosyal medya yankı odalarını mı yaratıyor, yoksa zaten var olan bir eğilimi mi büyütüyor?",
+      "Farklı görüşlere maruz kalmak insanların fikrini hep yumuşatır mı, tersi de olabilir mi?"
+    ],
+    "arama": "yankı odası sosyal medya",
+    "ilgili": ["filtre-balonu", "oneri-algoritmalari", "dezenformasyon"]
+  },
+  {
+    "id": "ar-104",
+    "slug": "sapir-whorf-hipotezi",
+    "baslik": "Sapir-Whorf hipotezi",
+    "alan": "dil",
+    "zorluk": 3,
+    "ipucu": "Türkçede '-miş' ekiyle bir olayı kendin görmediğini, başkasından duyduğunu belli edersin. Peki bu ek, Türkçe konuşanları bilginin kaynağına karşı daha dikkatli mi yapıyor? Konuştuğumuz dilin düşünme biçimimizi ne kadar şekillendirdiği dilbilimde uzun süredir tartışılıyor.",
+    "sorular": [
+      "Hipotezin güçlü ve zayıf yorumu arasındaki fark ne, bugün hangisi daha çok kabul görüyor?",
+      "Renk adları üzerine yapılan deneyler dil ile algı arasındaki ilişki hakkında ne gösteriyor?",
+      "Dilin düşünceyi etkilediğini deneyle kanıtlamak neden bu kadar zor?",
+      "Türkçedeki duyulan geçmiş zaman üzerine yapılmış araştırmalar ne buluyor?"
+    ],
+    "arama": "Sapir-Whorf dilsel görecelik",
+    "ilgili": ["eklemeli-diller", "odunc-kelimeler", "argo"]
+  },
+  {
+    "id": "ar-105",
+    "slug": "odunc-kelimeler",
+    "baslik": "Ödünç kelimeler",
+    "alan": "dil",
+    "zorluk": 1,
+    "ipucu": "Pantolon, tren, kalem, çay... Sabah evden çıkıp otobüs durağına varana kadar farklı dillerden gelmiş bir sürü kelime kullanıyorsun. Ödünç kelime yeni evine yerleşirken sesini, anlamını, bazen de ekini değiştirir. Üstelik trafik tek yönlü değil; Türkçeden giden kelimeler de başka dillerde dolaşıyor.",
+    "sorular": [
+      "Bir kelimenin hangi dilden geldiğini etimoloji sözlükleri nasıl belirliyor?",
+      "Ödünç kelimeler Türkçenin ses kurallarına nasıl uyarlanıyor?",
+      "Yabancı kelimelere karşılık üretme çabaları ne kadar tutuyor, hangi karşılıklar yerleşiyor?",
+      "Bir kelimenin kökeninde uzmanlar anlaşamadığında bu belirsizlik nasıl ele alınıyor?"
+    ],
+    "arama": "Türkçede alıntı kelimeler",
+    "ilgili": ["unlu-uyumu", "argo", "eklemeli-diller"]
+  },
+  {
+    "id": "ar-106",
+    "slug": "argo",
+    "baslik": "Argo",
+    "alan": "dil",
+    "zorluk": 2,
+    "ipucu": "'Kanka', 'baymak', 'efsane' gibi sözler bir okul koridorunda ya da bir mahalle kahvesinde başlar, sonra herkesin ağzına düşer. Bazıları çabucak eskiyip unutulur, bazıları sözlüğe kadar girer. Gençlerin kendine ait bir dil kurma isteği argoyu besleyen damarlardan yalnızca biri.",
+    "sorular": [
+      "Argo, jargon ve ağız arasındaki fark ne?",
+      "Bir argo kelimenin standart dile geçip geçmediğine kim, nasıl karar veriyor?",
+      "Argo dili yozlaştırır mı, yoksa canlı mı tutar? Her iki görüşün dayanakları ne?"
+    ],
+    "arama": "argo sözcük türetme",
+    "ilgili": ["odunc-kelimeler", "eklemeli-diller", "unsuz-benzesmesi"]
+  },
+  {
+    "id": "ar-107",
+    "slug": "somut-olmayan-kulturel-miras",
+    "baslik": "Somut olmayan kültürel miras",
+    "alan": "dil",
+    "zorluk": 3,
+    "ipucu": "Ebru teknesindeki boya ya da Karagöz perdesindeki gölge bir vitrinde tek başına sergilenemez; onu yaşatan, ustanın elindeki bilgi. Bir mirası korumak bazen bir binayı değil, bir ustayla çırağı arasındaki bağı korumak demek. Peki kayda geçirmek bu bilgiyi gerçekten korur mu?",
+    "sorular": [
+      "Somut ve somut olmayan kültürel miras arasındaki ayrım neye göre yapılıyor?",
+      "Usta-çırak ilişkisi bir geleneğin aktarımında neden bu kadar belirleyici?",
+      "Bir geleneği listeye yazmak onu dondurur mu, yoksa değişmesine alan bırakır mı?",
+      "Türkiye'den hangi unsurlar UNESCO listelerine girdi ve bu süreç nasıl işliyor?"
+    ],
+    "arama": "somut olmayan kültürel miras",
+    "ilgili": ["islikli-dil", "argo", "odunc-kelimeler"]
+  },
+  {
+    "id": "ar-108",
+    "slug": "dezenformasyon",
+    "baslik": "Dezenformasyon",
+    "alan": "dil",
+    "zorluk": 3,
+    "ipucu": "Aile grubuna düşen 'acil, herkese yayın' mesajı çoğu zaman iyi niyetle iletilir. Yanlış bilgi ile kasıtla üretilmiş yanıltıcı bilgi aynı şey değil; biri hata, öteki bir hesap. Doğrulama platformlarının nasıl çalıştığına bakınca yalanın neden bazen doğrudan hızlı yayıldığı sorusu açılıyor.",
+    "sorular": [
+      "Yanlış bilgi ile dezenformasyon arasındaki fark ne, niyet neden belirleyici?",
+      "Duygusal ve şaşırtıcı içerikler neden daha kolay paylaşılıyor olabilir?",
+      "Doğrulama sonrası yapılan düzeltmeler insanların inancını değiştirmekte ne kadar başarılı?",
+      "Yanlış bilgiye karşı 'önceden aşılama' yaklaşımı nedir ve sınırları neler?"
+    ],
+    "arama": "dezenformasyon yayılma mekanizmaları",
+    "ilgili": ["yanki-odasi", "filtre-balonu", "oneri-algoritmalari"]
+  }
+]

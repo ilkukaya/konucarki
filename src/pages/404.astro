@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base baslik="Sayfa bulunamadı | Konu Çarkı" aciklama="Aradığın sayfa bulunamadı." noindex>
+  <div class="kap bulunamadi">
+    <h1>Bu sayfa çarkta yok.</h1>
+    <p class="soluk olcu">Bağlantı eskimiş ya da adres yanlış yazılmış olabilir. Çarkı çevir, sana başka bir konu gelsin.</p>
+    <p><a class="dugme buyuk" href="/">Çarka dön</a></p>
+    <p><a href="/arastirma-konulari/">Tüm araştırma konuları</a></p>
+  </div>
+</Base>
+<style>
+  .bulunamadi {
+    padding-block: var(--b-8);
+  }
+</style>

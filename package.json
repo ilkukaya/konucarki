@@ -1,0 +1,32 @@
+{
+  "name": "konucarki",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "validate": "tsx scripts/validate-content.ts",
+    "prebuild": "npm run validate",
+    "build": "astro build",
+    "postbuild": "tsx scripts/check-dist.ts",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource/source-sans-3": "^5.3.0",
+    "astro": "^7.3.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.2"
+  }
+}

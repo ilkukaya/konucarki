@@ -1,0 +1,15 @@
+---
+// Sekiz köşeli yıldız: iki kare üst üste. Sitenin tek süs motifi.
+interface Props { class?: string; boyut?: number }
+const { class: sinif, boyut = 28 } = Astro.props;
+---
+<svg class:list={['yildiz', sinif]} width={boyut} height={boyut} viewBox="-12 -12 24 24" aria-hidden="true" focusable="false">
+  <rect x="-7.5" y="-7.5" width="15" height="15" class="y-a" />
+  <rect x="-7.5" y="-7.5" width="15" height="15" class="y-b" transform="rotate(45)" />
+  <circle r="3" class="y-c" />
+</svg>
+<style>
+  .y-a { fill: var(--kobalt); }
+  .y-b { fill: var(--kobalt); }
+  .y-c { fill: var(--zemin); }
+</style>

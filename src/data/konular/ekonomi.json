@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ar-037",
+    "slug": "firsat-maliyeti",
+    "baslik": "Fırsat maliyeti",
+    "alan": "ekonomi",
+    "zorluk": 1,
+    "ipucu": "Cumartesi sabahı pazara gitmek yerine kursa gidersen, kaybettiğin şey yalnızca yol parası değildir. Vazgeçtiğin en iyi seçenek de bir bedel sayılır. Ekonomistler her kararın görünmeyen bir etiket taşıdığını söyler.",
+    "sorular": [
+      "Fırsat maliyeti ile muhasebedeki maliyet arasındaki fark nedir?",
+      "Üniversite okumanın fırsat maliyeti nasıl hesaplanabilir, neler hesaba katılmalı?",
+      "Zamanın ve emeğin para ile ölçülemeyen değerleri bu kavrama nasıl sığar?",
+      "Bu kavram gündelik kararları açıklamakta ne zaman yetersiz kalır?"
+    ],
+    "arama": "fırsat maliyeti nedir",
+    "ilgili": [
+      "olcek-ekonomisi",
+      "karsilastirmali-ustunluk",
+      "azalan-marjinal-fayda"
+    ]
+  },
+  {
+    "id": "ar-038",
+    "slug": "tuketici-fiyat-endeksi",
+    "baslik": "Tüketici fiyat endeksi",
+    "alan": "ekonomi",
+    "zorluk": 2,
+    "ipucu": "Açıklanan enflasyon rakamı ile senin market fişindeki artış neden hep farklı görünür? Bunun arkasında, ortalama bir hanenin aldıklarını temsil eden hayali bir alışveriş sepeti var. O sepete neyin gireceği, hangi ağırlıkla gireceği işin en tartışmalı kısmı.",
+    "sorular": [
+      "Enflasyon sepeti nasıl oluşturulur, ürünlerin ağırlıkları neye göre belirlenir?",
+      "Kişisel enflasyon ile resmî enflasyonun farklı çıkması hangi nedenlere dayanır?",
+      "Ürün kalitesindeki değişimler fiyat ölçümünde nasıl hesaba katılır?",
+      "Türkiye'de enflasyonu ölçen kurum hangisi, hangi yöntemi kullanıyor?"
+    ],
+    "arama": "TÜFE sepeti nasıl hesaplanır",
+    "ilgili": [
+      "kuculen-paket-enflasyonu",
+      "bilesik-faiz",
+      "gresham-yasasi"
+    ]
+  },
+  {
+    "id": "ar-039",
+    "slug": "bilesik-faiz",
+    "baslik": "Bileşik faiz",
+    "alan": "ekonomi",
+    "zorluk": 1,
+    "ipucu": "Faizin de faiz getirmesi kulağa basit gelir, ama zaman uzadıkça ortaya çıkan fark insanı şaşırtır. Aynı mantık ödenmeyen kredi kartı borcunda tersine çalışır ve borç kartopu gibi büyür. Sezgimiz düz çizgi bekler, hesap ise eğri çizer.",
+    "sorular": [
+      "Basit faiz ile bileşik faiz arasındaki fark zamanla neden açılır?",
+      "Kredi kartı borcunda bileşik faiz mantığı nasıl işler?",
+      "İnsanlar üstel büyümeyi tahmin ederken neden sistematik olarak yanılır?",
+      "Enflasyon, faizden elde edilen gerçek getiriyi nasıl etkiler?"
+    ],
+    "arama": "bileşik faiz nedir",
+    "ilgili": [
+      "tuketici-fiyat-endeksi",
+      "likidite",
+      "firsat-maliyeti"
+    ]
+  },
+  {
+    "id": "ar-040",
+    "slug": "azalan-marjinal-fayda",
+    "baslik": "Azalan marjinal fayda",
+    "alan": "ekonomi",
+    "zorluk": 2,
+    "ipucu": "Sıcak bir yaz gününde içtiğin ilk bardak su ile sonrakiler aynı keyfi vermez. Ekonomistler bu sıradan gözlemden fiyatları, tüketimi, hatta vergileri açıklayan bir ilke çıkarmış. Su ucuzken elmasın neden bu kadar pahalı olduğu sorusu da buraya bağlanıyor.",
+    "sorular": [
+      "Su ve elmas paradoksu azalan marjinal fayda ile nasıl çözülür?",
+      "Bu ilke kademeli vergi sistemlerini savunmak için nasıl kullanılır?",
+      "Koleksiyonculuk gibi arttıkça daha çok istenen şeyler bu ilkeye uyar mı?",
+      "Faydayı ölçmek mümkün mü, bu konuda hangi eleştiriler var?"
+    ],
+    "arama": "azalan marjinal fayda",
+    "ilgili": [
+      "arz-ve-talep",
+      "firsat-maliyeti",
+      "dissallik"
+    ]
+  },
+  {
+    "id": "ar-041",
+    "slug": "arz-ve-talep",
+    "baslik": "Arz ve talep",
+    "alan": "ekonomi",
+    "zorluk": 1,
+    "ipucu": "Pazar kapanmaya yakın domates ucuzlar, bayram öncesi otobüs bileti pahalanır. Kimse bu fiyatları tek başına belirlemez; alıcıyla satıcının çekişmesi bir denge noktası bulur. Peki bu denge her zaman adil mi, her zaman hızlı mı kurulur?",
+    "sorular": [
+      "Arz ve talep eğrileri neyi gösterir, denge fiyatı nasıl oluşur?",
+      "Fiyatlara tavan ya da taban konduğunda piyasada neler olabilir?",
+      "Bazı mallarda fiyat arttıkça talebin de artması nasıl açıklanır?",
+      "Türkiye'den mevsimsel fiyat değişimine bir örnek bulabilir misin?"
+    ],
+    "arama": "arz ve talep dengesi",
+    "ilgili": [
+      "azalan-marjinal-fayda",
+      "kuculen-paket-enflasyonu",
+      "dissallik"
+    ]
+  },
+  {
+    "id": "ar-042",
+    "slug": "dissallik",
+    "baslik": "Dışsallık",
+    "alan": "ekonomi",
+    "zorluk": 2,
+    "ipucu": "Üst kattaki komşunun gece yaptığı tadilat, faturasını ona değil sana kesiyor: uykusuzluk. Tersine, apartman bahçesine çiçek diken komşu herkesin gününü güzelleştiriyor ama bunun karşılığını almıyor. Piyasanın fiyatına yansımayan bu etkiler ekonominin kör noktası.",
+    "sorular": [
+      "Olumlu ve olumsuz dışsallıklara hangi gündelik örnekleri verebilirsin?",
+      "Karbon vergisi gibi uygulamalar dışsallık sorununu nasıl çözmeye çalışır?",
+      "Mülkiyet hakları tanımlanınca tarafların kendi arasında anlaşabileceği fikri ne kadar gerçekçi?",
+      "Trafik sıkışıklığı bir dışsallık olarak nasıl açıklanabilir?"
+    ],
+    "arama": "dışsallık ekonomi",
+    "ilgili": [
+      "kamu-mali",
+      "arz-ve-talep",
+      "azalan-marjinal-fayda"
+    ]
+  },
+  {
+    "id": "ar-043",
+    "slug": "kamu-mali",
+    "baslik": "Kamu malı",
+    "alan": "ekonomi",
+    "zorluk": 3,
+    "ipucu": "Deniz fenerinin ışığından geçen her gemi yararlanır ve ışığı kimseden esirgemek mümkün değildir. Sokak lambası, hava durumu tahmini, temiz hava da benzer. Parasını ödemeden faydalanmak bu kadar kolayken, bu tür şeyleri kim, nasıl üretecek?",
+    "sorular": [
+      "Bir malı kamu malı yapan iki temel özellik nedir?",
+      "Bedavacılık sorunu kamu mallarının üretimini nasıl zorlaştırır?",
+      "Kamu malı ile ortak kullanılan kaynak arasındaki fark nedir?",
+      "Deniz feneri örneğine iktisatçılar hangi itirazları getirdi?"
+    ],
+    "arama": "kamu malı bedavacılık sorunu",
+    "ilgili": [
+      "dissallik",
+      "likidite",
+      "karsilastirmali-ustunluk"
+    ]
+  },
+  {
+    "id": "ar-044",
+    "slug": "karsilastirmali-ustunluk",
+    "baslik": "Karşılaştırmalı üstünlük",
+    "alan": "ekonomi",
+    "zorluk": 3,
+    "ipucu": "Bir avukat, bilgisayara sekreterinden daha hızlı yazı yazsa bile bu işi ona bırakmak mantıklı olabilir. Her şeyde daha iyi olan bile iş bölümünden kazançlı çıkar. Ülkeler arası ticaretin temel fikirlerinden biri, bu sezgiye ters düşen hesaba dayanıyor.",
+    "sorular": [
+      "Mutlak üstünlük ile karşılaştırmalı üstünlük arasındaki fark nedir?",
+      "Bu fikir ülkelerin neden ticaret yaptığını nasıl açıklar?",
+      "Serbest ticaretin herkese yarar sağladığı görüşüne hangi eleştiriler yöneltiliyor?",
+      "Bir ev içindeki iş bölümünü bu kavramla nasıl anlatabilirsin?"
+    ],
+    "arama": "karşılaştırmalı üstünlük teorisi",
+    "ilgili": [
+      "firsat-maliyeti",
+      "arz-ve-talep",
+      "kamu-mali"
+    ]
+  },
+  {
+    "id": "ar-045",
+    "slug": "kuculen-paket-enflasyonu",
+    "baslik": "Küçülen paket enflasyonu",
+    "alan": "ekonomi",
+    "zorluk": 1,
+    "ipucu": "Bisküvi paketinin fiyatı aynı kalmış ama içinden eskisinden daha az bisküvi çıkıyor. Etikete değil gramaja bakınca aslında zam gelmiş. Üreticiler bu yolu neden seçiyor, tüketici bunu nasıl fark edebilir?",
+    "sorular": [
+      "Üreticiler fiyat artırmak yerine neden ürünü küçültmeyi tercih eder?",
+      "Bu gizli fiyat artışları resmî enflasyon ölçümüne nasıl yansıtılır?",
+      "Birim fiyat etiketi tüketiciyi korumakta ne kadar etkili?",
+      "Market rafında kendi gözlemlediğin bir örnek var mı?"
+    ],
+    "arama": "küçülen paket enflasyonu",
+    "ilgili": [
+      "tuketici-fiyat-endeksi",
+      "arz-ve-talep",
+      "gresham-yasasi"
+    ]
+  },
+  {
+    "id": "ar-046",
+    "slug": "gresham-yasasi",
+    "baslik": "Gresham yasası",
+    "alan": "ekonomi",
+    "zorluk": 3,
+    "ipucu": "Cebinde yıpranmış ve yeni banknotlar varsa hangisini önce harcarsın? Eski çağlarda sikkelerin kenarı kazınır, değerli madeni azaltılırdı; insanlar da iyi parayı saklayıp kötüsünü elden çıkarırdı. 'Kötü para iyi parayı kovar' sözü buradan geliyor.",
+    "sorular": [
+      "Gresham yasası hangi koşullarda işler, hangi koşullarda tersine döner?",
+      "Madenî paraların kenarlarındaki tırtıklar bu sorunla nasıl ilişkili?",
+      "Anadolu'da ya da başka yerlerde sikkelerin değerinin düşürüldüğü dönemlerde neler yaşandı?",
+      "Bu fikir para dışındaki alanlara, örneğin bilgiye uygulanabilir mi?"
+    ],
+    "arama": "Gresham yasası kötü para",
+    "ilgili": [
+      "likidite",
+      "tuketici-fiyat-endeksi",
+      "kuculen-paket-enflasyonu"
+    ]
+  },
+  {
+    "id": "ar-047",
+    "slug": "likidite",
+    "baslik": "Likidite",
+    "alan": "ekonomi",
+    "zorluk": 2,
+    "ipucu": "Evin, arsan ya da koleksiyonun olabilir, ama maaş günü gelmeden kirayı ödemen gerektiğinde onların hemen bir faydası olmaz. Bir varlığı değerinden kaybetmeden hızla nakde çevirebilme kolaylığına likidite denir. Zengin görünüp nakit sıkıntısı çekmek bu yüzden mümkün.",
+    "sorular": [
+      "Nakit, mevduat ve gayrimenkul likidite açısından nasıl sıralanır, neden?",
+      "Bir işletme kârlı olduğu halde neden nakit sıkıntısına düşebilir?",
+      "Bankalara hücum olayları likidite kavramıyla nasıl açıklanır?",
+      "Likidite ile getiri arasında neden genelde bir ödünleşim vardır?"
+    ],
+    "arama": "likidite nedir ekonomi",
+    "ilgili": [
+      "bilesik-faiz",
+      "gresham-yasasi",
+      "kamu-mali"
+    ]
+  },
+  {
+    "id": "ar-048",
+    "slug": "olcek-ekonomisi",
+    "baslik": "Ölçek ekonomisi",
+    "alan": "ekonomi",
+    "zorluk": 2,
+    "ipucu": "Mahalle fırını ekmeği tek tek yoğururken büyük fabrika aynı ekmeği çok daha ucuza çıkarabiliyor. Üretim büyüdükçe fırının, makinenin, kiranın yükü daha çok ürüne bölünüyor. Ama büyümenin de bir sınırı var; bir noktadan sonra işler karışmaya başlıyor.",
+    "sorular": [
+      "Sabit maliyetler üretim arttıkça birim maliyeti nasıl düşürür?",
+      "Ölçek ekonomisi bazı sektörlerde neden az sayıda dev firmaya yol açar?",
+      "Bir işletme çok büyüdüğünde ortaya çıkan ölçek eksi ekonomisi nedir?",
+      "Türkiye'de küçük üreticilerin kooperatifte bir araya gelmesi bu kavramla nasıl açıklanır?"
+    ],
+    "arama": "ölçek ekonomisi nedir",
+    "ilgili": [
+      "arz-ve-talep",
+      "karsilastirmali-ustunluk",
+      "firsat-maliyeti"
+    ]
+  }
+]

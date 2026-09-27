@@ -1,0 +1,362 @@
+[
+  {
+    "id": "as-001",
+    "metin": "Damlaya damlaya göl olur.",
+    "tur": "atasözü",
+    "anlam": "Küçük birikimler ve küçük çabalar zamanla bir araya gelir, büyük bir sonuç ortaya çıkarır."
+  },
+  {
+    "id": "as-002",
+    "metin": "Sakla samanı, gelir zamanı.",
+    "tur": "atasözü",
+    "anlam": "Şu an işe yaramaz gibi görünen bir şeyi atma; bir gün ona ihtiyacın olabilir."
+  },
+  {
+    "id": "as-003",
+    "metin": "Ak akçe kara gün içindir.",
+    "tur": "atasözü",
+    "anlam": "İşler yolundayken biriktirdiğin para, zor günlerde seni ayakta tutar. Bolluk zamanında darlığı düşünmek gerekir."
+  },
+  {
+    "id": "as-004",
+    "metin": "Bir elin nesi var, iki elin sesi var.",
+    "tur": "atasözü",
+    "anlam": "Tek başına yapılamayan ya da zor yapılan bir iş, birkaç kişi el birliği edince kolayca başarılır."
+  },
+  {
+    "id": "as-005",
+    "metin": "Komşu komşunun külüne muhtaçtır.",
+    "tur": "atasözü",
+    "anlam": "Komşular en küçük şeyler için bile birbirine ihtiyaç duyar. Bu yüzden komşuyla iyi geçinmek gerekir."
+  },
+  {
+    "id": "as-006",
+    "metin": "Ağaç yaşken eğilir.",
+    "tur": "atasözü",
+    "anlam": "İnsan küçük yaşta kolay eğitilir, alışkanlıklar da erken yaşta kazanılır. Yaş ilerledikçe değişmek zorlaşır."
+  },
+  {
+    "id": "as-007",
+    "metin": "Dost kara günde belli olur.",
+    "tur": "atasözü",
+    "anlam": "Kimin gerçek dost olduğunu, başın sıkıştığında yanında kalanlara bakarak anlarsın."
+  },
+  {
+    "id": "as-008",
+    "metin": "Söz gümüşse sükût altındır.",
+    "tur": "atasözü",
+    "anlam": "Konuşmak değerlidir ama yeri geldiğinde susmak çok daha değerlidir. Bazen susmak insanı gereksiz sıkıntılardan korur."
+  },
+  {
+    "id": "as-009",
+    "metin": "Ayağını yorganına göre uzat.",
+    "tur": "atasözü",
+    "anlam": "Harcamalarını kazancına göre ayarla; gücünün ve imkânının yetmeyeceği işlere girişme."
+  },
+  {
+    "id": "as-010",
+    "metin": "Üzüm üzüme baka baka kararır.",
+    "tur": "atasözü",
+    "anlam": "İnsanlar bir arada oldukları kişilerden etkilenir, zamanla onların huyunu kapar."
+  },
+  {
+    "id": "as-011",
+    "metin": "İşleyen demir ışıldar.",
+    "tur": "atasözü",
+    "anlam": "Sürekli çalışan, emek veren kişi gelişir, parlar. Boş duran ise paslanır, geride kalır."
+  },
+  {
+    "id": "as-012",
+    "metin": "Sütten ağzı yanan yoğurdu üfleyerek yer.",
+    "tur": "atasözü",
+    "anlam": "Bir işten zarar gören kişi, ona benzeyen durumlarda bile fazlasıyla temkinli davranır."
+  },
+  {
+    "id": "as-013",
+    "metin": "Bin bilsen de bir bilene danış.",
+    "tur": "atasözü",
+    "anlam": "Ne kadar çok şey bilirsen bil, bir işe girişmeden önce o konuyu bilen birine sormaktan geri durma."
+  },
+  {
+    "id": "as-014",
+    "metin": "Atı alan Üsküdar'ı geçti.",
+    "tur": "atasözü",
+    "anlam": "Önlem almak için çok geç kalındı; iş olup bitti, artık yapılacak bir şey yok."
+  },
+  {
+    "id": "as-015",
+    "metin": "Ne ekersen onu biçersin.",
+    "tur": "atasözü",
+    "anlam": "Başkalarına ve hayata nasıl davranırsan karşılığını da ona göre alırsın. Yaptıklarının sonucu sana döner."
+  },
+  {
+    "id": "as-016",
+    "metin": "Tatlı dil yılanı deliğinden çıkarır.",
+    "tur": "atasözü",
+    "anlam": "Güzel ve yumuşak konuşarak en inatçı insanı bile ikna edebilir, en zor işi bile çözebilirsin."
+  },
+  {
+    "id": "as-017",
+    "metin": "Dost acı söyler.",
+    "tur": "atasözü",
+    "anlam": "Gerçek dost, hoşuna gitmeyecek olsa da doğruyu yüzüne söyler; seni pohpohlamaz."
+  },
+  {
+    "id": "as-018",
+    "metin": "Emek olmadan yemek olmaz.",
+    "tur": "atasözü",
+    "anlam": "Çalışmadan, çaba göstermeden hiçbir kazanç elde edilmez."
+  },
+  {
+    "id": "as-019",
+    "metin": "Bugünün işini yarına bırakma.",
+    "tur": "atasözü",
+    "anlam": "Bugün yapabileceğin işi ertelersen işler birikir ve seni zor duruma düşürür. Vaktinde yapılan iş rahatlatır."
+  },
+  {
+    "id": "as-020",
+    "metin": "Görünen köy kılavuz istemez.",
+    "tur": "atasözü",
+    "anlam": "Apaçık ortada olan bir şeyi kanıtlamaya ya da uzun uzun açıklamaya gerek yoktur."
+  },
+  {
+    "id": "as-021",
+    "metin": "Bir fincan kahvenin kırk yıl hatırı vardır.",
+    "tur": "atasözü",
+    "anlam": "Sana yapılan küçük bir iyiliği bile uzun süre unutmamalı, ona değer vermelisin."
+  },
+  {
+    "id": "as-022",
+    "metin": "Keskin sirke küpüne zarardır.",
+    "tur": "atasözü",
+    "anlam": "Çabuk öfkelenen, sert davranan kişinin öfkesi en çok onun kendisini yıpratır."
+  },
+  {
+    "id": "as-023",
+    "metin": "Dereyi görmeden paçaları sıvama.",
+    "tur": "atasözü",
+    "anlam": "Bir iş kesinleşmeden ona göre hazırlığa girişme, olmayacak bir şeye erkenden bel bağlama."
+  },
+  {
+    "id": "as-024",
+    "metin": "Ev alma, komşu al.",
+    "tur": "atasözü",
+    "anlam": "Bir yere yerleşirken evin kendisinden çok, yanında yaşayacağın komşuların nasıl insanlar olduğuna bak."
+  },
+  {
+    "id": "as-025",
+    "metin": "Bilmemek ayıp değil, öğrenmemek ayıptır.",
+    "tur": "atasözü",
+    "anlam": "Bir şeyi bilmemek kusur sayılmaz; asıl kusur, fırsatın varken onu öğrenmeye çalışmamaktır."
+  },
+  {
+    "id": "as-026",
+    "metin": "Birlikten kuvvet doğar.",
+    "tur": "atasözü",
+    "anlam": "İnsanlar bir araya gelip birlikte hareket ettiğinde tek başlarına ulaşamayacakları bir güç kazanır."
+  },
+  {
+    "id": "as-027",
+    "metin": "Gülü seven dikenine katlanır.",
+    "tur": "atasözü",
+    "anlam": "Bir şeyi ya da birini gerçekten istiyorsan, onunla gelen zorluklara ve kusurlara da katlanmayı göze alırsın."
+  },
+  {
+    "id": "as-028",
+    "metin": "Her yiğidin bir yoğurt yiyişi vardır.",
+    "tur": "atasözü",
+    "anlam": "Herkesin bir işi yapma biçimi farklıdır ve bu farklılığa saygı duymak gerekir."
+  },
+  {
+    "id": "as-029",
+    "metin": "Rüzgâr eken fırtına biçer.",
+    "tur": "atasözü",
+    "anlam": "Kötülük ya da kargaşa çıkaran kişi, sonunda kendi yaptığından çok daha büyük bir sıkıntıyla karşılaşır."
+  },
+  {
+    "id": "as-030",
+    "metin": "Gülme komşuna, gelir başına.",
+    "tur": "atasözü",
+    "anlam": "Başkasının başına gelen sıkıntıyla alay etme; aynı durum bir gün senin de başına gelebilir."
+  },
+  {
+    "id": "as-031",
+    "metin": "etekleri zil çalmak",
+    "tur": "deyim",
+    "anlam": "Çok sevinmek, sevincini gizleyemeyecek kadar neşelenmek."
+  },
+  {
+    "id": "as-032",
+    "metin": "gözden düşmek",
+    "tur": "deyim",
+    "anlam": "Önceden sevilen, değer verilen biri olmaktan çıkmak; itibarını yitirmek."
+  },
+  {
+    "id": "as-033",
+    "metin": "kulak asmamak",
+    "tur": "deyim",
+    "anlam": "Söylenen bir söze, verilen bir öğüde önem vermemek, onu dikkate almamak."
+  },
+  {
+    "id": "as-034",
+    "metin": "pireyi deve yapmak",
+    "tur": "deyim",
+    "anlam": "Küçük, önemsiz bir şeyi olduğundan çok büyük göstermek, abartmak."
+  },
+  {
+    "id": "as-035",
+    "metin": "dilinde tüy bitmek",
+    "tur": "deyim",
+    "anlam": "Aynı şeyi defalarca söylemekten bıkıp usanmak."
+  },
+  {
+    "id": "as-036",
+    "metin": "ağzı kulaklarına varmak",
+    "tur": "deyim",
+    "anlam": "Çok sevinip yüzüne kocaman bir gülümseme yayılmak."
+  },
+  {
+    "id": "as-037",
+    "metin": "eli ayağı buz kesmek",
+    "tur": "deyim",
+    "anlam": "Korku ya da heyecandan donup kalmak, kıpırdayamaz hâle gelmek."
+  },
+  {
+    "id": "as-038",
+    "metin": "yüreği ağzına gelmek",
+    "tur": "deyim",
+    "anlam": "Ansızın büyük bir korku ya da heyecan yaşamak."
+  },
+  {
+    "id": "as-039",
+    "metin": "burnu havada olmak",
+    "tur": "deyim",
+    "anlam": "Kendini başkalarından üstün görmek, kibirli davranmak."
+  },
+  {
+    "id": "as-040",
+    "metin": "dört gözle beklemek",
+    "tur": "deyim",
+    "anlam": "Bir şeyin olmasını ya da birinin gelmesini büyük bir istek ve sabırsızlıkla beklemek."
+  },
+  {
+    "id": "as-041",
+    "metin": "göz boyamak",
+    "tur": "deyim",
+    "anlam": "Gerçekte olmayan bir şeyi varmış gibi gösterip insanları yanıltmak."
+  },
+  {
+    "id": "as-042",
+    "metin": "kılı kırk yarmak",
+    "tur": "deyim",
+    "anlam": "Bir işte aşırı titiz davranmak, en küçük ayrıntıyı bile gözden kaçırmamaya uğraşmak."
+  },
+  {
+    "id": "as-043",
+    "metin": "iki ayağını bir pabuca sokmak",
+    "tur": "deyim",
+    "anlam": "Birini bir işi hemen yapması için sıkıştırmak, ona göz açtırmadan acele ettirmek."
+  },
+  {
+    "id": "as-044",
+    "metin": "ipe un sermek",
+    "tur": "deyim",
+    "anlam": "Bir isteği yerine getirmemek için türlü bahaneler uydurmak."
+  },
+  {
+    "id": "as-045",
+    "metin": "dağdan gelip bağdakini kovmak",
+    "tur": "deyim",
+    "anlam": "Bir yere sonradan gelen birinin, oranın eskisini yerinden etmeye kalkışması."
+  },
+  {
+    "id": "as-046",
+    "metin": "kaş yapayım derken göz çıkarmak",
+    "tur": "deyim",
+    "anlam": "Bir şeyi düzeltmeye çalışırken daha da bozmak, iyilik yapayım derken zarar vermek."
+  },
+  {
+    "id": "as-047",
+    "metin": "nabzına göre şerbet vermek",
+    "tur": "deyim",
+    "anlam": "Karşındakinin hoşuna gidecek biçimde konuşup davranmak, onun keyfine göre hareket etmek."
+  },
+  {
+    "id": "as-048",
+    "metin": "çam devirmek",
+    "tur": "deyim",
+    "anlam": "Farkında olmadan birini kıracak ya da yerine yakışmayan bir söz söylemek, uygunsuz bir davranışta bulunmak."
+  },
+  {
+    "id": "as-049",
+    "metin": "ağzında bakla ıslanmamak",
+    "tur": "deyim",
+    "anlam": "Sır tutamamak, duyduğu her şeyi hemen başkalarına anlatmak."
+  },
+  {
+    "id": "as-050",
+    "metin": "eline su dökememek",
+    "tur": "deyim",
+    "anlam": "Bir konuda başka birinin yanında çok geride kalmak, onunla boy ölçüşememek."
+  },
+  {
+    "id": "as-051",
+    "metin": "kulağına küpe olmak",
+    "tur": "deyim",
+    "anlam": "Yaşanan bir olaydan ders çıkarıp onu hiç unutmamak."
+  },
+  {
+    "id": "as-052",
+    "metin": "yüzüne gözüne bulaştırmak",
+    "tur": "deyim",
+    "anlam": "Üstlendiği bir işi beceriksizce yürütüp bozmak."
+  },
+  {
+    "id": "as-053",
+    "metin": "kulak kabartmak",
+    "tur": "deyim",
+    "anlam": "Belli etmeden, gizlice konuşulanları dinlemeye çalışmak."
+  },
+  {
+    "id": "as-054",
+    "metin": "ağzı sulanmak",
+    "tur": "deyim",
+    "anlam": "Bir şeyi görüp çok istemek, ona imrenmek."
+  },
+  {
+    "id": "as-055",
+    "metin": "el üstünde tutmak",
+    "tur": "deyim",
+    "anlam": "Birine çok değer vermek, ona saygı ve sevgiyle davranmak."
+  },
+  {
+    "id": "as-056",
+    "metin": "kendi göbeğini kendi kesmek",
+    "tur": "deyim",
+    "anlam": "Kimseden yardım beklemeden işini kendi başına görmek."
+  },
+  {
+    "id": "as-057",
+    "metin": "havadan nem kapmak",
+    "tur": "deyim",
+    "anlam": "Çok alıngan olmak, en ufak bir sözden bile alınıp gücenmek."
+  },
+  {
+    "id": "as-058",
+    "metin": "dut yemiş bülbüle dönmek",
+    "tur": "deyim",
+    "anlam": "Normalde konuşkan olan birinin birden susup tek kelime edemez hâle gelmesi."
+  },
+  {
+    "id": "as-059",
+    "metin": "göze girmek",
+    "tur": "deyim",
+    "anlam": "Davranışlarıyla birinin beğenisini ve güvenini kazanmak."
+  },
+  {
+    "id": "as-060",
+    "metin": "ağırdan almak",
+    "tur": "deyim",
+    "anlam": "Bir işi aceleye getirmeden, bilerek yavaş yürütmek."
+  }
+]

@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { konular, dogaclamaSorulari, atasozleri } from '../data/index.ts';
+---
+<Base baslik="Hakkında | Konu Çarkı" aciklama="Konu Çarkı neden var, konu kütüphanesi nasıl yazıldı ve neden hiç veri toplamıyor." kirinti={[{ ad: 'Hakkında', yol: '/hakkinda/' }]}>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>Hakkında</h1>
+      <p>Konu Çarkı, bir şeyi gerçekten öğrenmenin en kısa yolunun onu başkasına anlatmak olduğu fikriyle yapıldı.</p>
+    </header>
+    <div class="yazi icerik">
+      <h2>Neden?</h2>
+      <p>Okulda, iş görüşmesinde, toplantıda ya da bir sofrada; hep konuşuyoruz ama konuşmayı neredeyse hiç çalışmıyoruz. Konu Çarkı bunun için küçük, sıkıcı olmayan bir antrenman aracı: çarkı çevirirsin, bilmediğin bir konu gelir, kısa bir süre araştırır ve anlatırsın.</p>
+
+      <h2>Kütüphane</h2>
+      <p>Sitedeki {konular.length} araştırma konusu, {dogaclamaSorulari.length} doğaçlama sorusu ve {atasozleri.length} atasözü ve deyim bu site için Türkçe olarak yazıldı. Yabancı bir listenin çevirisi değil. Konuların bir kısmı doğrudan bu topraklardan: Göbeklitepe, Marmara'daki müsilaj, Kuşköy'ün ıslıklı dili, Konya Ovası'ndaki obruklar.</p>
+      <p>Konu ipuçları kapıyı aralamak için yazıldı. Yanlış çıkabilecek tarih, sayı ve kesin iddialar bilerek konmadı; o bilgileri sen kaynaklardan bulacaksın. Araştırma bağlantıları seni TDK, DergiPark ve Vikipedi gibi Türkçe kaynaklara yönlendirir.</p>
+      <p>Kütüphanede güncel siyaset, inanç tartışmaları ve kişiler hakkında değerlendirmeler yer almaz. Amaç, herkesin sınıfta ve iş yerinde rahatça kullanabileceği, tartışmayı değil düşünmeyi kışkırtan konular.</p>
+
+      <h2>Gizlilik</h2>
+      <p>Üyelik yok, çerez yok, analitik yok, reklam yok. Fontlar dahil her şey bu siteden yüklenir; ziyaretin başka hiçbir şirkete bildirilmez. Ses kayıtların ve ilerlemen yalnızca kendi cihazında kalır. Ayrıntılar <a href="/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</a> ve <a href="/cerez-politikasi/">Çerez Politikası</a>'nda.</p>
+
+      <h2>Bir hata mı gördün?</h2>
+      <p>Bir ipucunda yanlış ya da eksik bir şey fark edersen <a href="/iletisim/">bize yaz</a>. Önerdiğin konuları da okuyoruz.</p>
+    </div>
+  </div>
+</Base>

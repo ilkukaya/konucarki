@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+import { atasozleri } from '../data/index.ts';
+const sirali = [...atasozleri].sort((a, b) => a.metin.localeCompare(b.metin, 'tr'));
+const as = sirali.filter((a) => a.tur === 'atasözü');
+const dy = sirali.filter((a) => a.tur === 'deyim');
+---
+<Base
+  baslik="Atasözleri ve deyimler: anlamı ve konuşma pratiği | Konu Çarkı"
+  aciklama="Çok bilinen atasözleri ve deyimler, sade anlamlarıyla. Anlamını kendin çıkar, günlük hayattan örnek ver, bugün hâlâ geçerli mi tartış."
+  kirinti={[{ ad: 'Atasözleri ve deyimler', yol: '/atasozleri-ve-deyimler/' }]}
+>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>Atasözleri ve deyimler</h1>
+      <p>Bir atasözünü açıklamak, iyi bir bir dakikalık konuşmadır: anlamını söylersin, bir örnek verirsin, sonra "bugün de öyle mi?" diye sorarsın.</p>
+    </header>
+    <div class="yazi">
+      <p>Aşağıdaki anlamlar TDK Atasözleri ve Deyimler Sözlüğü'ne sadık kalınarak kendi cümlelerimizle yazıldı. Pratik yaparken önce anlamı kapat, kendin çıkarmayı dene. Sayaçla çalışmak için <a href="/?mod=atasozu">atasözü modunda çarkı çevir</a>; anlam, konuşman bittikten sonra açılır.</p>
+    </div>
+    <div class="iki">
+      <section aria-labelledby="as">
+        <h2 id="as">Atasözleri <span class="soluk">({as.length})</span></h2>
+        <dl>
+          {as.map((a) => (<><dt>{a.metin}</dt><dd>{a.anlam}</dd></>))}
+        </dl>
+      </section>
+      <section aria-labelledby="dy">
+        <h2 id="dy">Deyimler <span class="soluk">({dy.length})</span></h2>
+        <dl>
+          {dy.map((a) => (<><dt>{a.metin}</dt><dd>{a.anlam}</dd></>))}
+        </dl>
+      </section>
+    </div>
+  </div>
+</Base>
+<style>
+  .iki {
+    display: grid;
+    gap: var(--b-7);
+    margin-top: var(--b-7);
+  }
+  @media (min-width: 60rem) {
+    .iki {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  h2 {
+    font-size: var(--t-2);
+  }
+  h2 .soluk {
+    font-weight: 400;
+  }
+  dl {
+    border-top: 1px solid var(--sis);
+  }
+  dt {
+    font-family: var(--f-baslik);
+    font-weight: 600;
+    font-size: var(--t-1);
+    padding-top: var(--b-3);
+  }
+  dd {
+    margin: 0;
+    padding-bottom: var(--b-3);
+    border-bottom: 1px solid var(--sis);
+    color: var(--soluk);
+  }
+</style>

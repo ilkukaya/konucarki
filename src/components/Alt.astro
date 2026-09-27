@@ -1,0 +1,70 @@
+---
+import { SITE } from '../config.ts';
+const linkler = [
+  { ad: 'Hakkında', yol: '/hakkinda/' },
+  { ad: 'İletişim', yol: '/iletisim/' },
+  { ad: 'KVKK Aydınlatma Metni', yol: '/kvkk-aydinlatma-metni/' },
+  { ad: 'Çerez Politikası', yol: '/cerez-politikasi/' },
+  { ad: 'Kullanım Koşulları', yol: '/kullanim-kosullari/' },
+  { ad: 'Ayarlar ve verilerim', yol: '/ayarlar/' },
+];
+---
+<footer class="alt">
+  <div class="kap alt-ic">
+    <p class="not">
+      <strong>{SITE.ad}</strong> çerez kullanmaz, üyelik istemez, hiçbir kişisel veriyi toplamaz.
+      Ses kayıtların ve ilerlemen yalnızca bu cihazda kalır.
+    </p>
+    <ul>
+      {linkler.map((l) => <li><a href={l.yol}>{l.ad}</a></li>)}
+    </ul>
+  </div>
+</footer>
+<style>
+  .alt {
+    margin-top: var(--b-8);
+    border-top: 1px solid var(--sis);
+    font-size: var(--t--1);
+    color: var(--soluk);
+  }
+  .alt-ic {
+    display: grid;
+    gap: var(--b-4);
+    padding-block: var(--b-6) var(--b-7);
+  }
+  .not {
+    max-width: 30rem;
+    margin: 0;
+  }
+  .not strong {
+    color: var(--murekkep);
+    font-family: var(--f-baslik);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--b-5);
+  }
+  a {
+    color: var(--soluk);
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  a:hover {
+    color: var(--murekkep);
+  }
+  @media (min-width: 52rem) {
+    .alt-ic {
+      grid-template-columns: 1fr auto;
+      align-items: start;
+    }
+    ul {
+      justify-content: flex-end;
+      max-width: 34rem;
+    }
+  }
+</style>

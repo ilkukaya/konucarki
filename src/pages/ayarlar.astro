@@ -1,0 +1,99 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/uygulama.css';
+---
+<Base baslik="Ayarlar ve verilerim | Konu Çarkı" aciklama="Konu Çarkı ayarların ve bu cihazda tutulan verilerin." kirinti={[{ ad: 'Ayarlar ve verilerim', yol: '/ayarlar/' }]} noindex>
+  <div class="kap" data-ayarlar-sayfasi>
+    <header class="sayfa-basi">
+      <h1>Ayarlar ve verilerim</h1>
+      <p>Burada gördüğün her şey yalnızca bu tarayıcıda duruyor. Bize hiçbir şey gönderilmiyor.</p>
+    </header>
+
+    <div class="bloklar">
+      <section aria-labelledby="gorunum">
+        <h2 id="gorunum">Görünüm ve ses</h2>
+        <fieldset class="secenekler">
+          <legend>Tema</legend>
+          <label><input type="radio" name="tema" value="sistem" /> Cihazın ayarına uy</label>
+          <label><input type="radio" name="tema" value="acik" /> Açık</label>
+          <label><input type="radio" name="tema" value="koyu" /> Koyu</label>
+        </fieldset>
+        <label class="anahtar"><input type="checkbox" data-ses /> Süre bitince kısa bir bip sesi çal</label>
+      </section>
+
+      <section aria-labelledby="ilerleme">
+        <h2 id="ilerleme">İlerleme</h2>
+        <label class="anahtar"><input type="checkbox" data-izin /> İlerlememi bu cihazda tut (seri, rozetler, son 30 tur)</label>
+        <p class="kucuk soluk">Kapatırsan tutulan ilerleme bilgilerin hemen silinir.</p>
+
+        <div data-ilerleme-icerik hidden>
+          <p class="seri-sayi" data-seri></p>
+          <h3>Rozetler</h3>
+          <ul class="rozetler" data-rozetler></ul>
+          <h3>Bu cihazdaki geçmişim</h3>
+          <p class="soluk" data-gecmis-bos>Henüz tamamlanmış bir tur yok.</p>
+          <ol class="gecmis" data-gecmis></ol>
+          <button type="button" class="dugme ikincil" data-gecmis-sil hidden>Geçmişin tamamını sil</button>
+        </div>
+      </section>
+
+      <section aria-labelledby="sil">
+        <h2 id="sil">Tüm verileri sil</h2>
+        <p>Ayarların, ilerlemen ve izin tercihin dahil, <code>kc:</code> önekli her şey bu tarayıcıdan silinir.</p>
+        <button type="button" class="dugme" data-hepsini-sil>Bu cihazdaki tüm Konu Çarkı verilerini sil</button>
+        <p class="kucuk" role="status" data-sil-durum></p>
+      </section>
+    </div>
+  </div>
+</Base>
+<script>
+  import { ayarlariSayfasi } from '../scripts/ayarlar.ts';
+  ayarlariSayfasi();
+</script>
+<style>
+  .bloklar {
+    display: grid;
+    gap: var(--b-7);
+    max-width: 44rem;
+  }
+  section {
+    border-top: 1px solid var(--sis);
+    padding-top: var(--b-5);
+  }
+  h2 {
+    font-size: var(--t-2);
+  }
+  h3 {
+    font-size: var(--t-0);
+    margin-top: var(--b-5);
+  }
+  .secenekler {
+    border: 0;
+    padding: 0;
+    margin: 0 0 var(--b-4);
+  }
+  .secenekler legend {
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: var(--b-1);
+  }
+  .secenekler label,
+  .anahtar {
+    display: flex;
+    align-items: center;
+    gap: var(--b-3);
+    min-height: 44px;
+    cursor: pointer;
+  }
+  input[type='radio'] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--kobalt);
+    margin: 0;
+  }
+  .seri-sayi {
+    font-family: var(--f-baslik);
+    font-size: var(--t-1);
+    font-weight: 600;
+  }
+</style>

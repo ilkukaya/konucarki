@@ -1,0 +1,194 @@
+[
+  {
+    "id": "ar-049",
+    "slug": "gobeklitepe",
+    "baslik": "Göbeklitepe",
+    "alan": "anadolu",
+    "zorluk": 1,
+    "ipucu": "Şanlıurfa yakınlarındaki bir tepenin altından, üzerine tilki, yaban domuzu ve yılan kabartmaları oyulmuş T biçimli dev taş dikmeler çıktı. Kazıda evcil hayvan kemiği değil, çoğunlukla yabani hayvan kemikleri ve yabani bitki kalıntıları bulunuyor.",
+    "sorular": [
+      "T biçimli dikmeler hangi taştan, hangi aletlerle yontulmuş olabilir?",
+      "Kazıdaki hayvan kemikleri, burayı yapanların nasıl beslendiği hakkında bize ne söylüyor?",
+      "Bir yapının ne zaman kullanıldığını kazı katmanlarından ve karbon tarihlendirmesinden nasıl çıkarırız?",
+      "Göbeklitepe'nin ne işe yaradığına dair hangi görüşler var, her biri hangi buluntuya dayanıyor?"
+    ],
+    "arama": "göbeklitepe kazısı arkeoloji",
+    "ilgili": ["catalhoyuk", "obsidiyen-ticareti", "arslantepe"]
+  },
+  {
+    "id": "ar-050",
+    "slug": "catalhoyuk",
+    "baslik": "Çatalhöyük",
+    "alan": "anadolu",
+    "zorluk": 1,
+    "ipucu": "Konya Ovası'ndaki bu yerleşimde evler birbirine yaslanarak kurulmuş, aralarında sokak yok. İnsanlar evlerine damdan açılan bir delikten merdivenle iniyordu. Duvar resimleri, sıvalar, fırınlar ve ocaklar burada gündelik hayatın nasıl aktığını adım adım okumaya izin veriyor.",
+    "sorular": [
+      "Sokaksız bir mahallede insanlar birbirine nasıl ulaşıyordu, damdan giriş nasıl işliyordu?",
+      "Evlerin aynı yere tekrar tekrar yapılması kazı katmanlarında nasıl izler bırakıyor?",
+      "Arkeologlar bitki ve hayvan kalıntılarından o insanların ne yediğini nasıl anlıyor?",
+      "Duvar resimlerinde neler görülüyor, bunları yorumlarken hangi tuzaklara düşülebilir?"
+    ],
+    "arama": "çatalhöyük neolitik yerleşim",
+    "ilgili": ["gobeklitepe", "obsidiyen-ticareti", "kapadokya-yeralti-sehirleri"]
+  },
+  {
+    "id": "ar-051",
+    "slug": "kapadokya-yeralti-sehirleri",
+    "baslik": "Kapadokya yeraltı şehirleri",
+    "alan": "anadolu",
+    "zorluk": 1,
+    "ipucu": "Derinkuyu ve Kaymaklı'da yumuşak volkanik kaya, yani tüf, kat kat aşağı doğru oyulmuş. Odalar, dar geçitler, havalandırma bacaları ve geçidi kapatan yuvarlak taş kapılar var. Yerin altında havayı taze tutmak ve suya ulaşmak, buranın asıl mühendislik sorusu.",
+    "sorular": [
+      "Havalandırma bacaları yerin altındaki katlara temiz havayı nasıl taşıyordu?",
+      "Tüf neden oyulmaya bu kadar elverişli, onu oluşturan kül nereden geldi?",
+      "Bir odanın ne zaman oyulduğunu duvardaki alet izlerinden ya da buluntulardan nasıl anlarız?",
+      "Yuvarlak taş kapılar nasıl yuvarlanıp yerine oturtuluyordu?"
+    ],
+    "arama": "kapadokya yeraltı şehirleri",
+    "ilgili": ["peri-bacalari", "sonmus-ve-uyuyan-volkanlar", "catalhoyuk"]
+  },
+  {
+    "id": "ar-052",
+    "slug": "kervansaraylar",
+    "baslik": "Anadolu kervansarayları",
+    "alan": "anadolu",
+    "zorluk": 1,
+    "ipucu": "Anadolu'nun eski ticaret yollarında, yolcuların hayvanları ve yükleriyle geceyi güvenle geçirebildiği taş hanlar sıralanıyordu. Kalın duvarlar, tek bir büyük kapı, açık bir avlu ve kapalı bir salon; plan çoğunda birbirine benziyor.",
+    "sorular": [
+      "Kervansaraylar yollara neden belli aralıklarla kurulmuş olabilir, bu aralığı ne belirliyordu?",
+      "Avlulu ve kapalı salonlu plan, sıcak yazda ve karlı kışta nasıl işe yarıyordu?",
+      "Bir kervansarayın ne zaman yapıldığını kapısındaki yazıttan nasıl öğrenebiliriz?",
+      "Yolcu, hayvan ve yük aynı yapıda nasıl ağırlanıyordu, hangi hizmetler vardı?"
+    ],
+    "arama": "anadolu kervansarayları mimari",
+    "ilgili": ["piri-reis-haritasi", "obsidiyen-ticareti", "uluburun-batigi"]
+  },
+  {
+    "id": "ar-053",
+    "slug": "hitit-civi-yazisi",
+    "baslik": "Hitit çivi yazısı ve Boğazköy tabletleri",
+    "alan": "anadolu",
+    "zorluk": 2,
+    "ipucu": "Çorum'daki Boğazköy'de, Hattuşa kentinin kalıntılarında çok sayıda kil tablet ele geçti. Üzerlerindeki kama biçimli işaretler Mezopotamya'dan alınmış bir yazıya ait ama dili bambaşka. Tabletler çözülünce bu dilin pek çok Avrupa diliyle akraba olduğu anlaşıldı.",
+    "sorular": [
+      "Hiç bilinmeyen bir dil, eldeki tabletlerden nasıl çözülebilir, hangi ipuçları kullanıldı?",
+      "Kil tabletlere hangi araçla yazılıyordu, tabletler nasıl saklanıyordu?",
+      "Tabletlerde ne tür metinler var: mektup, antlaşma, kayıt, yoksa başka şeyler mi?",
+      "Boğazköy tabletleri neden UNESCO'nun Dünya Belleği listesine alınmış olabilir?"
+    ],
+    "arama": "hitit çivi yazısı tabletleri",
+    "ilgili": ["arslantepe", "uluburun-batigi", "lidya-sikkeleri"]
+  },
+  {
+    "id": "ar-054",
+    "slug": "uluburun-batigi",
+    "baslik": "Uluburun batığı",
+    "alan": "anadolu",
+    "zorluk": 2,
+    "ipucu": "Kaş açıklarında bir süngerci, deniz dibinde kulaklı metal külçeler gördüğünü anlattı; ortaya Bronz Çağı'ndan kalma bir ticaret gemisi çıktı. Gemide bakır ve kalay külçeleri, cam külçeleri, seramikler ve farklı kıyılardan gelmiş eşyalar vardı.",
+    "sorular": [
+      "Bakır ve kalay aynı gemide taşınıyorsa, bu bize bronz üretimi hakkında ne anlatıyor?",
+      "Sualtı kazısında buluntuların yeri nasıl ölçülüp kaydediliyor?",
+      "Külçelerin hangi madenden geldiği kimyasal ve izotop analizleriyle nasıl bulunuyor?",
+      "Bodrum'daki sualtı arkeolojisi müzesinde bu gemiden neler sergileniyor?"
+    ],
+    "arama": "uluburun batığı sualtı arkeolojisi",
+    "ilgili": ["hitit-civi-yazisi", "obsidiyen-ticareti", "karadeniz-oksijensiz-derinlikler"]
+  },
+  {
+    "id": "ar-055",
+    "slug": "piri-reis-haritasi",
+    "baslik": "Piri Reis haritası",
+    "alan": "anadolu",
+    "zorluk": 2,
+    "ipucu": "Topkapı Sarayı'nda korunan bu dünya haritası parçası, deri üzerine renkli mürekkeplerle çizilmiş. Atlas Okyanusu'nun iki yakasını, Avrupa ve Afrika kıyılarını ve Amerika kıyılarını gösteriyor. Kenarındaki notlar, daha eski pek çok haritadan yararlanıldığını söylüyor.",
+    "sorular": [
+      "Birden çok kaynaktan tek bir harita derlemek nasıl yapılır, ne gibi hatalara yol açabilir?",
+      "Haritadaki kıyıları bugünkü haritalarla karşılaştırırken hangi yöntemleri kullanabiliriz?",
+      "O dönemin denizcileri kıyıları ve yönleri hangi aletlerle ölçüyordu?",
+      "Harita hakkında dolaşan olağanüstü iddiaları kaynaklara bakarak nasıl sınarız?"
+    ],
+    "arama": "piri reis haritası",
+    "ilgili": ["kervansaraylar", "uluburun-batigi"]
+  },
+  {
+    "id": "ar-056",
+    "slug": "obsidiyen-ticareti",
+    "baslik": "Anadolu'da obsidiyen ticareti",
+    "alan": "anadolu",
+    "zorluk": 2,
+    "ipucu": "Obsidiyen, lav çok hızlı soğuyunca oluşan doğal bir cam; kırıldığında jilet gibi keskin kenarlar veriyor. Kapadokya'daki ve Doğu Anadolu'daki volkanlardan çıkan obsidiyen, çok uzaktaki yerleşimlerde bulunuyor. Her kaynağın kendine has kimyasal izi, taşın yolculuğunu takip etmeyi sağlıyor.",
+    "sorular": [
+      "Bir obsidiyen parçasının hangi volkandan geldiği kimyasal analizle nasıl belirleniyor?",
+      "Obsidiyen uzak yerlere yayılırken insanlar arasında nasıl bir değiş tokuş işliyor olabilir?",
+      "Obsidiyenden kesici alet yapmak için hangi yontma teknikleri kullanılıyordu?",
+      "Çatalhöyük'te bulunan obsidiyen aynalar nasıl parlatılmış olabilir?"
+    ],
+    "arama": "anadolu obsidiyen ticareti",
+    "ilgili": ["sonmus-ve-uyuyan-volkanlar", "catalhoyuk", "gobeklitepe"]
+  },
+  {
+    "id": "ar-057",
+    "slug": "urartu-su-kanallari",
+    "baslik": "Urartu su kanalları",
+    "alan": "anadolu",
+    "zorluk": 2,
+    "ipucu": "Van Gölü'nün suyu sodalı olduğu için içmeye de sulamaya da yaramıyor. Urartular dağlardan gelen suyu barajlarda toplayıp uzun kanallarla ovalara taşıdı. Kesme taş duvarlarla desteklenen bu kanallardan biri bugün de tarlalara su götürüyor.",
+    "sorular": [
+      "Bir kanalın suyu düzgün akıtması için eğim nasıl ayarlanır, o dönemde bu nasıl ölçülürdü?",
+      "Van Gölü'nün suyu neden bu kadar sodalı, gölün kimyası nasıl oluşmuş?",
+      "Bir kanalın Urartu dönemine ait olduğunu yazıtlar gibi hangi kanıtlarla anlıyoruz?",
+      "Taş kanal duvarları deprem ve sel karşısında nasıl bu kadar dayanmış olabilir?"
+    ],
+    "arama": "urartu su kanalları van",
+    "ilgili": ["efes-su-sistemi", "hitit-civi-yazisi", "kuzey-anadolu-fayi"]
+  },
+  {
+    "id": "ar-058",
+    "slug": "arslantepe",
+    "baslik": "Arslantepe Höyüğü",
+    "alan": "anadolu",
+    "zorluk": 3,
+    "ipucu": "Malatya yakınlarındaki bu höyükte kerpiçten büyük bir yönetim yapısı ve içinde çok sayıda kil mühür baskısı bulundu. Kaplar ve depo kapıları mühürlenip açıldıkça baskılar bir kenarda biriktirilmiş. Yazı yokken malların giriş çıkışının nasıl izlendiğine dair güçlü ipuçları sunuyor.",
+    "sorular": [
+      "Kil mühür baskılarından hangi kabın ya da kapının mühürlendiği nasıl anlaşılıyor?",
+      "Yazı olmadan bir depo nasıl yönetilebilir, bugün hangi yöntemler buna benziyor?",
+      "Höyükteki metal buluntular maden işleme teknolojisi hakkında neler anlatıyor?",
+      "Höyükte üst üste binen katmanlar farklı dönemleri ayırmamıza nasıl yardım ediyor?"
+    ],
+    "arama": "arslantepe höyüğü mühür baskıları",
+    "ilgili": ["hitit-civi-yazisi", "gobeklitepe", "lidya-sikkeleri"]
+  },
+  {
+    "id": "ar-059",
+    "slug": "lidya-sikkeleri",
+    "baslik": "Lidya elektron sikkeleri",
+    "alan": "anadolu",
+    "zorluk": 3,
+    "ipucu": "Manisa'daki Sardes çevresinde akan çayın kumlarında, altın ve gümüşün doğal karışımı olan elektron bulunuyordu. Lidya'da bu karışımdan, üzerinde aslan başı damgası taşıyan küçük metal parçalar basıldı. Ağırlığı belli, damgası tanınan bir metal, alışverişte tartı ve pazarlık derdini nasıl değiştirdi?",
+    "sorular": [
+      "Elektronun içindeki altın oranı değişkense bu sikkelerin değerini nasıl etkilerdi?",
+      "Sardes kazılarında altını gümüşten ayıran atölyenin izleri nasıl bulundu?",
+      "Sikkeden önce insanlar değiş tokuşta değeri nasıl ölçüyordu?",
+      "Bir sikkenin nerede basıldığını damgasından ve metalinin analizinden nasıl anlarız?"
+    ],
+    "arama": "lidya elektron sikke sardes",
+    "ilgili": ["arslantepe", "efes-su-sistemi", "hitit-civi-yazisi"]
+  },
+  {
+    "id": "ar-060",
+    "slug": "efes-su-sistemi",
+    "baslik": "Efes'te su ve kanalizasyon sistemi",
+    "alan": "anadolu",
+    "zorluk": 3,
+    "ipucu": "Efes'e su, uzaktaki kaynaklardan su kemerleri ve kanallarla getiriliyordu. Şehrin altında pişmiş toprak borular suyu çeşmelere, hamamlara ve evlere dağıtıyor, atık su ise ayrı kanallarla uzaklaştırılıyordu. Ortak kullanılan tuvaletler de bu akan suya bağlıydı.",
+    "sorular": [
+      "Pompa olmadan suyu uzaktan şehre getirmek için hangi fizik ilkesine güveniliyordu?",
+      "Pişmiş toprak borular birbirine nasıl ekleniyor, sızıntı nasıl önleniyordu?",
+      "Borulardaki kireç tortuları su kullanımı ve sistemin ömrü hakkında bize neler söyleyebilir?",
+      "Bir liman kenti olan Efes'in denizden uzaklaşmasının akarsularla ne ilgisi var?"
+    ],
+    "arama": "efes su kemerleri kanalizasyon",
+    "ilgili": ["urartu-su-kanallari", "travertenler", "lidya-sikkeleri"]
+  }
+]

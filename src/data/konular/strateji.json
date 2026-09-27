@@ -1,0 +1,194 @@
+[
+  {
+    "id": "ar-013",
+    "slug": "mahkum-ikilemi",
+    "baslik": "Mahkûm ikilemi",
+    "alan": "strateji",
+    "zorluk": 1,
+    "ipucu": "Suç ortakları ayrı odalarda sorgulanıyor, birbirleriyle konuşamıyorlar. Her biri için tek başına en akıllıca hamle ötekini ele vermek; ama herkes böyle düşününce sonuç hepsi için kötü oluyor. Aynı sokaktaki fırınların birbirini kırmak için fiyat indirmesi de bu tuzağa benziyor mu?",
+    "sorular": [
+      "Oyun bir kez değil, tekrar tekrar oynandığında sonuç nasıl değişiyor?",
+      "Esnaf arasındaki fiyat rekabetinde bu ikilemi gösteren bir örnek bulabilir misin?",
+      "Gerçek insanlar deneylerde kuramın öngördüğü gibi mi davranıyor?",
+      "İletişim ve güven bu ikilemi nasıl ortadan kaldırabilir?"
+    ],
+    "arama": "mahkûm ikilemi oyun kuramı",
+    "ilgili": ["nash-dengesi", "kisasa-kisas", "ortak-mallarin-trajedisi", "tavuk-oyunu"]
+  },
+  {
+    "id": "ar-014",
+    "slug": "ortak-mallarin-trajedisi",
+    "baslik": "Ortak malların trajedisi",
+    "alan": "strateji",
+    "zorluk": 1,
+    "ipucu": "Köyün ortak merasına herkes birkaç hayvan fazla salar, çünkü kazanç kendisine, zarar herkese kalır; sonunda çayır çorak bir toprağa döner. Ortak kaynakları korumanın tek yolu onları paylaştırmak ya da dışarıdan denetlemek mi, yoksa toplulukların kendi kurallarıyla başardığı örnekler de var mı?",
+    "sorular": [
+      "Aşırı avlanma ve su kaynaklarının tükenmesi bu kavramla nasıl açıklanabilir?",
+      "Toplulukların ortak kaynakları kendi kurallarıyla başarıyla yönettiği örnekler neler?",
+      "Kavramın ilk ortaya atıldığı haliyle eleştirilen yönleri neler?",
+      "Türkiye'den bir yayla, göl ya da balıkçılık örneği bulabilir misin?"
+    ],
+    "arama": "ortak malların trajedisi",
+    "ilgili": ["bedavaci-sorunu", "mahkum-ikilemi", "sosyal-kaytarma"]
+  },
+  {
+    "id": "ar-015",
+    "slug": "bedavaci-sorunu",
+    "baslik": "Bedavacı sorunu",
+    "alan": "strateji",
+    "zorluk": 1,
+    "ipucu": "Apartman yönetimi merdiven boyası için para topluyor; sen ödemesen de merdivenler herkes için boyanacak. Herkes böyle düşünürse boya hiç alınmaz. Parklar, sokak lambaları ve gönüllü bağışlar bu ikilemle her gün yüz yüze.",
+    "sorular": [
+      "Kamu malı ile özel mal arasındaki fark bu sorunu nasıl ortaya çıkarıyor?",
+      "Toplumlar bedavacılığı azaltmak için hangi yöntemler geliştirmiş?",
+      "Grup ödevinde hiç çalışmayan arkadaşın durumu bu kavramla açıklanabilir mi?",
+      "İnsanlar kuramın beklediğinden daha çok katkı veriyorsa bunun nedeni ne olabilir?"
+    ],
+    "arama": "bedavacı sorunu kamu malı",
+    "ilgili": ["ortak-mallarin-trajedisi", "sosyal-kaytarma", "mahkum-ikilemi"]
+  },
+  {
+    "id": "ar-016",
+    "slug": "suru-davranisi",
+    "baslik": "Sürü davranışı",
+    "alan": "strateji",
+    "zorluk": 1,
+    "ipucu": "Yan yana açılmış lokantalardan önünde kuyruk olanına girersin; boş olanın yemeği belki daha iyidir. Başkalarının ne yaptığı, kendi bilgimizden daha güvenilir bir işaret gibi gelir. Bir anda herkesin aynı şeyi alıp aynı şeyi paylaştığı akımlar bu eğilimle nereye varabilir?",
+    "sorular": [
+      "Bilgi çağlayanı nedir ve sürü davranışıyla nasıl ilişkilidir?",
+      "Başkalarını taklit etmek hangi durumlarda aslında akıllıca bir stratejidir?",
+      "Fiyat balonları bu davranışla ne ölçüde açıklanabilir, açıklanamayan yanı ne?",
+      "Sosyal medyadaki bir akımı örnek alarak süreci anlatabilir misin?"
+    ],
+    "arama": "sürü davranışı psikoloji",
+    "ilgili": ["grup-dusuncesi", "odak-noktasi", "onay-yanliligi"]
+  },
+  {
+    "id": "ar-017",
+    "slug": "nash-dengesi",
+    "baslik": "Nash dengesi",
+    "alan": "strateji",
+    "zorluk": 3,
+    "ipucu": "Kalabalık bir yolda herkes hangi şeritten gideceğine karar vermiş; kimse tek başına şerit değiştirerek daha hızlı ilerleyemiyor. Oyun kuramında buna denge denir: herkesin hamlesi ötekilerinkine en iyi yanıt olduğunda kimsenin kendi başına sapmaya nedeni kalmaz. Ama denge her zaman herkes için iyi bir sonuç demek değil.",
+    "sorular": [
+      "Nash dengesi ile herkes için en iyi sonuç arasındaki fark nedir?",
+      "Bir oyunun birden fazla dengesi olursa hangisine varılacağını ne belirler?",
+      "Karma strateji nedir, penaltı atışları bununla nasıl açıklanabilir?",
+      "Gerçek insanlar dengeye ulaşacak kadar hesaplı mı davranıyor?"
+    ],
+    "arama": "Nash dengesi oyun kuramı",
+    "ilgili": ["mahkum-ikilemi", "odak-noktasi", "tavuk-oyunu"]
+  },
+  {
+    "id": "ar-018",
+    "slug": "tavuk-oyunu",
+    "baslik": "Tavuk oyunu",
+    "alan": "strateji",
+    "zorluk": 2,
+    "ipucu": "Dar bir köy yolunda karşı karşıya gelen traktörlerden biri geri çekilmek zorunda; kimse çekilmezse yol kilitlenir, çekilen ise gururunu kaybeder. Bu oyunda geri adım atmayacağına karşı tarafı inandırmak bazen en güçlü hamle olur.",
+    "sorular": [
+      "Tavuk oyunu mahkûm ikileminden hangi yönleriyle ayrılıyor?",
+      "Kararlılığını göstermek için seçeneklerini bilerek kısıtlamak neden işe yarayabilir?",
+      "Grev ya da iş pazarlıklarında bu oyuna benzeyen durumlar bulabilir misin?",
+      "Taraflar inatlaşıp kimse geri adım atmadığında model neyi açıklayamıyor?"
+    ],
+    "arama": "tavuk oyunu oyun kuramı",
+    "ilgili": ["mahkum-ikilemi", "nash-dengesi", "ultimatom-oyunu"]
+  },
+  {
+    "id": "ar-019",
+    "slug": "kisasa-kisas",
+    "baslik": "Kısasa kısas stratejisi",
+    "alan": "strateji",
+    "zorluk": 2,
+    "ipucu": "Komşun sana tatlı gönderdiyse tabağı boş iade etmezsin, selamı kesene de sen selam vermezsin. Önce iyi niyetle başla, sonra karşındakinin son hamlesini tekrarla: bu sade strateji, tekrarlanan oyunlarda karmaşık rakiplerini şaşırtıcı biçimde geride bırakabiliyor.",
+    "sorular": [
+      "Bilgisayar turnuvalarında bu strateji neden öne çıktı?",
+      "Bağışlayıcı kısasa kısas nedir, hangi durumlarda daha iyi sonuç verir?",
+      "Yanlış anlamalar ve iletişim hataları bu stratejiyi nasıl zayıflatır?",
+      "Gündelik ilişkilerde karşılıklılığa bir örnek verebilir misin?"
+    ],
+    "arama": "kısasa kısas stratejisi",
+    "ilgili": ["mahkum-ikilemi", "nash-dengesi", "bedavaci-sorunu"]
+  },
+  {
+    "id": "ar-020",
+    "slug": "grup-dusuncesi",
+    "baslik": "Grup düşüncesi",
+    "alan": "strateji",
+    "zorluk": 2,
+    "ipucu": "Toplantıda herkes fikre başını sallıyor, içinden itiraz eden de havayı bozmamak için susuyor. Uyumlu gruplar bazen tek bir kişinin asla vermeyeceği kadar kötü kararlar alabilir. Sınıf toplantısından şirket yönetimine, bu sessizliğin bedelini kim ödüyor?",
+    "sorular": [
+      "Bir grupta grup düşüncesinin başladığını gösteren belirtiler neler?",
+      "Bilerek karşı çıkan birini görevlendirmek gerçekten işe yarıyor mu?",
+      "İş dünyasından ya da bilim tarihinden grup düşüncesine örnek gösterilen bir karar bulabilir misin?",
+      "Grup uyumu her zaman sorun mu, yoksa bazen avantaj mı?"
+    ],
+    "arama": "grup düşüncesi",
+    "ilgili": ["suru-davranisi", "onay-yanliligi", "sosyal-kaytarma"]
+  },
+  {
+    "id": "ar-021",
+    "slug": "ultimatom-oyunu",
+    "baslik": "Ültimatom oyunu",
+    "alan": "strateji",
+    "zorluk": 2,
+    "ipucu": "Biri elindeki parayı nasıl bölüşeceğini önerir, öteki ya kabul eder ya reddeder; reddederse kimse bir şey alamaz. Hesaba göre en küçük pay bile kabul edilmeli, ama insanlar haksız bulduğu teklifi kendi zararına geri çevirebiliyor. Harçlığı paylaşan kardeşler bunu çoktan biliyor olabilir.",
+    "sorular": [
+      "İnsanlar neden kendilerine para kazandıracak bir teklifi reddeder?",
+      "Diktatör oyunu ile ültimatom oyunu arasındaki fark ne anlatıyor?",
+      "Deney sonuçları farklı kültürlerde nasıl değişiyor?",
+      "Laboratuvardaki küçük paralarla yapılan deneyler gerçek hayatı ne kadar yansıtır?"
+    ],
+    "arama": "ültimatom oyunu deney",
+    "ilgili": ["mahkum-ikilemi", "tavuk-oyunu", "kisasa-kisas"]
+  },
+  {
+    "id": "ar-022",
+    "slug": "odak-noktasi",
+    "baslik": "Odak noktası (Schelling noktası)",
+    "alan": "strateji",
+    "zorluk": 3,
+    "ipucu": "Telefonun şarjı bitmiş, arkadaşınla şehir merkezinde buluşacaksın ama yer konuşulmamış. Büyük ihtimalle birbirinizi meydandaki saat kulesinin dibinde bulursunuz. Konuşmadan anlaşabilmemizi sağlayan bu ortak tahminler, oyun kuramına göre hiç de tesadüf değil.",
+    "sorular": [
+      "Bir seçeneği odak noktası yapan özellikler neler?",
+      "Kültür ve ortak geçmiş odak noktalarını nasıl belirliyor?",
+      "Senin şehrinde herkesin aklına gelecek bir buluşma yeri var mı, neden o?",
+      "Birden çok belirgin seçenek olduğunda bu yaklaşım neden tıkanabilir?"
+    ],
+    "arama": "Schelling noktası oyun kuramı",
+    "ilgili": ["nash-dengesi", "suru-davranisi"]
+  },
+  {
+    "id": "ar-023",
+    "slug": "kazananin-laneti",
+    "baslik": "Kazananın laneti",
+    "alan": "strateji",
+    "zorluk": 3,
+    "ipucu": "Mezatta eski bir tabloyu en yüksek teklifi vererek aldın, ama eve dönerken içini bir kuşku sarıyor. Belki de kazandın, çünkü eşyanın değerini salondaki herkesten fazla abarttın. Açık artırmanın türü ve teklif verenlerin bilgisi, bu tuzağın ne kadar derin olacağını belirliyor.",
+    "sorular": [
+      "Açık artırmada kazanan neden çoğu zaman fazla ödemiş olabilir?",
+      "İngiliz usulü, Hollanda usulü ve kapalı zarf açık artırmaları nasıl işler?",
+      "Kamu ihalelerinde ya da internetteki mezatlarda bu etkiye örnek bulabilir misin?",
+      "Deneyimli teklif verenler bu tuzaktan nasıl korunuyor, her zaman başarabiliyorlar mı?"
+    ],
+    "arama": "kazananın laneti açık artırma",
+    "ilgili": ["batik-maliyet-yanilgisi", "capa-etkisi", "suru-davranisi"]
+  },
+  {
+    "id": "ar-024",
+    "slug": "sosyal-kaytarma",
+    "baslik": "Sosyal kaytarma",
+    "alan": "strateji",
+    "zorluk": 2,
+    "ipucu": "Halat çekme oyununda herkes tüm gücüyle asıldığını düşünür, oysa kalabalık arttıkça kişi başına düşen çaba azalabilir. Kimin ne kadar katkı verdiği görünmez olunca insan farkında olmadan yavaşlar. Grup ödevinde ortalıkta görünmeyen arkadaşın tek suçlusu o mu?",
+    "sorular": [
+      "Kalabalık gruplarda bireysel çaba neden azalıyor?",
+      "Katkıların tek tek görünür olması kaytarmayı nasıl etkiliyor?",
+      "Bazı kültürlerde ya da ekiplerde bu etkinin daha zayıf olduğu söyleniyor; neden olabilir?",
+      "Grup içinde çabanın tersine arttığı durumlar da var mı?"
+    ],
+    "arama": "sosyal kaytarma",
+    "ilgili": ["bedavaci-sorunu", "grup-dusuncesi", "ortak-mallarin-trajedisi"]
+  }
+]

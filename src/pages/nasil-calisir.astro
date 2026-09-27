@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  baslik="Nasıl çalışır? Araştır, notları kapat, anlat | Konu Çarkı"
+  aciklama="Neden notları kapatıyoruz, on dakikalık araştırma nasıl verimli olur, öğretmenler sınıfta nasıl kullanır. Feynman tekniğine yakın, sade bir yöntem rehberi."
+  kirinti={[{ ad: 'Nasıl çalışır', yol: '/nasil-calisir/' }]}
+>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>Nasıl çalışır?</h1>
+      <p>Yöntem üç kelime: çevir, araştır, anlat. Ama asıl iş, araştırmayla anlatmanın arasındaki o küçük anda oluyor: notları kapattığın anda.</p>
+    </header>
+
+    <div class="yazi icerik">
+      <h2>Neden notları kapatıyoruz?</h2>
+      <p>Bir metni okurken her şey tanıdık gelir. Cümleler mantıklıdır, kavramlar yerli yerindedir; "tamam, anladım" dersin. Sonra biri "anlatsana" deyince kelimeler bir türlü gelmez. Bu, tanıma ile hatırlama arasındaki farktır.</p>
+      <p>Tanımak kolaydır, çünkü ipucu gözünün önündedir. Hatırlamak ise bilgiyi hiçbir dayanak olmadan zihinden geri çağırmayı ister. Öğrenme üzerine yapılan çalışmalar, bu geri çağırma çabasının bilgiyi okumaktan çok daha kalıcı hale getirdiğini gösteriyor. Araştırmacılar buna geri çağırma pratiği diyor.</p>
+      <p>Notlara bakarak anlattığında aslında okuyorsun. Notları kapattığında ise iki şey olur: bildiğin şey sağlamlaşır, bilmediğin şey açığa çıkar. Anlatırken takıldığın cümle, tam olarak henüz anlamadığın yerdir. Bu bir başarısızlık değil, bir harita.</p>
+      <p>Bu fikir, bir konuyu gerçekten anlayıp anlamadığını onu sade bir dille başkasına anlatmaya çalışarak sınamaya dayanan <strong>Feynman tekniğine</strong> çok yakın. Konu Çarkı bu tekniğe iki şey ekliyor: bir süre sınırı ve rastgelelik. Süre, seni mükemmeliyetçilikten kurtarır. Rastgelelik de hep bildiğin konulara dönmeni engeller.</p>
+
+      <h2>On dakikalık araştırma nasıl verimli olur?</h2>
+      <p>On dakika kısa görünür ama dağılmazsan yeter. Şu dört adımı dene:</p>
+      <ol class="adim">
+        <li><strong>Bir tanım bul.</strong> İlk iki dakikada konunun ne olduğunu tek cümleyle söyleyebilecek hale gel. TDK sözlüğü ya da Vikipedi'nin ilk paragrafı çoğu zaman yeter.</li>
+        <li><strong>İki kaynağı karşılaştır.</strong> Tek bir kaynağa güvenme. Bir ansiklopedi maddesiyle bir makale özetini yan yana koy. Aynı şeyi mi söylüyorlar? Ayrıldıkları yer, konunun ilginç yeridir.</li>
+        <li><strong>Bir örnek yakala.</strong> Soyut bir kavram, somut bir örnekle akılda kalır. Mümkünse Türkiye'den, günlük hayattan bir örnek bul. Kendi örneğini kurabiliyorsan daha da iyi.</li>
+        <li><strong>Bir sınırlama not et.</strong> Bu fikir nerede işlemez? Kimler itiraz ediyor? Neyi hâlâ bilmiyoruz? Bir sınırlamayı söyleyebilmek, konuyu ezberlemediğini, kavradığını gösterir.</li>
+      </ol>
+      <p>Kartta her konu için araştırma soruları var. Hepsini cevaplamak zorunda değilsin; yön bulmak için kullan. Kaynak bağlantıları TDK, DergiPark, Vikipedi ve Google Akademik'te arama yapar. DergiPark'taki makalelerin özetlerini okumak bile çoğu zaman yeterince derinlik verir.</p>
+
+      <h2>Anlatırken</h2>
+      <p>Mükemmel bir konuşma aramıyoruz. İyi bir anlatımın iskeleti basit: ne olduğunu söyle, bir örnek ver, bir sınırlamayla bitir. Doğaçlama modunda bu iskeletin adı <em>tanımla, örnekle, bağla</em>: ne olduğunu söyle, kendi hayatından bir örnek ver, genel bir sonuca bağla.</p>
+      <p>İstersen konuşmanı kaydet. Kayıt yalnızca senin cihazında kalır. Kendi sesini dinlemek ilk başta tuhaf gelir ama en hızlı geri bildirim yoludur: "şey"leri, tekrarları, atladığın yerleri hemen duyarsın. Tur bitince kısa bir öz değerlendirme listesi ve aynı kaynak bağlantıları çıkar; emin olmadığın yeri hemen kontrol edebilirsin.</p>
+
+      <h2>Öğretmenler sınıfta nasıl kullanır?</h2>
+      <p>Konu Çarkı üyelik istemediği ve veri toplamadığı için sınıfta açıp hemen kullanabilirsin. Birkaç öneri:</p>
+      <ul>
+        <li><strong>Isınma turu.</strong> Dersin ilk beş dakikasında doğaçlama modunu tam ekranda aç. Her öğrenci bir dakika konuşur; bir sonraki öğrenci çarkı çevirir. "Hayal et" kategorisi gerginliği azaltır.</li>
+        <li><strong>Sözlü sınav provası.</strong> Araştırma modunda süreyi ev ödevi olarak ver: öğrenci konu sayfasının bağlantısıyla araştırır, derste notsuz anlatır.</li>
+        <li><strong>Eşli çalışma.</strong> Biri anlatır, diğeri dinleyip tek bir soru sorar. Sonra roller değişir. Soru soran da konuyu anlamak zorunda kalır.</li>
+        <li><strong>Konuyu sen seç.</strong> Her konunun kalıcı bir sayfası var; bağlantısını tahtaya yazman ya da paylaşman yeterli. Bağlantıdan açılan tur, çark çevrilmeden o konuyla başlar.</li>
+      </ul>
+      <p>Tam ekranda konu başlığı ve sayaç büyük görünür; projeksiyonda arka sıralardan okunur. Klavyede boşluk tuşu sayacı başlatır ve duraklatır, F tam ekranı açar.</p>
+
+      <h2>Kısa sorular</h2>
+      <h3>Süreleri değiştirebilir miyim?</h3>
+      <p>Evet. Araştırma süresi 1 ile 60 dakika, konuşma süresi 1 ile 10 dakika arasında. Seçimlerin bu cihazda hatırlanır.</p>
+      <h3>Hiç bilmediğim bir konu gelirse?</h3>
+      <p>Amaç zaten bu. Yine de üç pas hakkın var. Hak bitse bile yeniden çevirebilirsin; ceza yok.</p>
+      <h3>İpucundaki bilgiler neden bu kadar genel?</h3>
+      <p>Bilerek öyle. İpucu kapıyı aralar, bilgiyi sen bulursun. Tarih, sayı ve kesin iddiaları kaynaklardan kendin doğrulamalısın.</p>
+      <h3>İlerlemem kaydediliyor mu?</h3>
+      <p>Yalnızca istersen ve yalnızca bu cihazda. İlk turdan sonra sana sorarız. <a href="/ayarlar/">Ayarlar ve verilerim</a> sayfasından her zaman değiştirebilir ya da silebilirsin.</p>
+
+      <p class="son"><a class="dugme buyuk" href="/">Çarkı çevir</a></p>
+    </div>
+  </div>
+</Base>
+<style>
+  .adim {
+    padding-left: 1.3em;
+  }
+  .adim li + li {
+    margin-top: var(--b-3);
+  }
+  .adim li::marker {
+    color: var(--firuze);
+    font-family: var(--f-baslik);
+    font-weight: 700;
+  }
+  .son {
+    margin-top: var(--b-7);
+  }
+</style>

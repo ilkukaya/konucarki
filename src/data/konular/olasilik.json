@@ -1,0 +1,194 @@
+[
+  {
+    "id": "ar-025",
+    "slug": "dogum-gunu-problemi",
+    "baslik": "Doğum günü problemi",
+    "alan": "olasilik",
+    "zorluk": 1,
+    "ipucu": "Kalabalık olmayan bir sınıfta iki kişinin aynı gün doğmuş olması sana uzak bir ihtimal gibi gelebilir. Oysa hesap yapınca sonuç sezgine hiç uymuyor. Sorunun püf noktası, kimi kiminle karşılaştırdığında saklı.",
+    "sorular": [
+      "Bu problemde sezgimiz neden bu kadar yanılıyor, hangi karşılaştırmaları gözden kaçırıyoruz?",
+      "Aynı fikir bilgisayar güvenliğinde, özellikle şifreleme saldırılarında nasıl kullanılıyor?",
+      "Doğumların yıl içine eşit dağılmadığını hesaba katınca sonuç nasıl değişir?",
+      "Kendi sınıfında ya da iş yerinde bunu denesen hangi sonuçları beklerdin?"
+    ],
+    "arama": "doğum günü problemi olasılık",
+    "ilgili": ["buyuk-sayilar-yasasi", "sicak-el-yanilgisi", "monty-hall-problemi"]
+  },
+  {
+    "id": "ar-026",
+    "slug": "monty-hall-problemi",
+    "baslik": "Monty Hall problemi",
+    "alan": "olasilik",
+    "zorluk": 2,
+    "ipucu": "Televizyonda bir yarışmacı kapalı kapılardan birini seçiyor, sunucu da boş olduğunu bildiği bir kapıyı açıyor. Şimdi yarışmacıya fikrini değiştirmek isteyip istemediği soruluyor. Çoğu kişi 'fark etmez' der, matematik ise başka bir şey söylüyor.",
+    "sorular": [
+      "Sunucunun hangi kapının boş olduğunu bilmesi sonucu neden bu kadar etkiliyor?",
+      "Bu problem yayımlandığında uzmanlar bile neden itiraz etti, tartışma nasıl sonuçlandı?",
+      "Sunucu kapıyı rastgele açsaydı hesap nasıl değişirdi?",
+      "Bu fikri bir arkadaşına kâğıt bardaklarla nasıl gösterebilirsin?"
+    ],
+    "arama": "Monty Hall problemi",
+    "ilgili": ["dogum-gunu-problemi", "taban-orani-yanilgisi", "simpson-paradoksu"]
+  },
+  {
+    "id": "ar-027",
+    "slug": "sicak-el-yanilgisi",
+    "baslik": "Sıcak el yanılgısı",
+    "alan": "olasilik",
+    "zorluk": 1,
+    "ipucu": "Mahalle maçında üst üste gol atan arkadaşa herkes pas vermek ister, çünkü 'bugün eli sıcak'. Peki bu seri gerçek bir yetenek patlaması mı, yoksa rastlantının bize oynadığı bir oyun mu? Araştırmacılar bu soruda bile anlaşamıyor.",
+    "sorular": [
+      "Rastgele dizilerde üst üste gelen tekrarları neden 'anlamlı' buluyoruz?",
+      "Sıcak el üzerine yapılan ilk çalışmalar sonradan nasıl eleştirildi?",
+      "Bu yanılgının tersi sayılan düşünce hatası nedir, ikisi nasıl ayrılır?",
+      "Türkiye'de spor yorumlarından bu yanılgıya uyan bir örnek bulabilir misin?"
+    ],
+    "arama": "sıcak el yanılgısı",
+    "ilgili": ["ortalamaya-donus", "buyuk-sayilar-yasasi", "dogum-gunu-problemi"]
+  },
+  {
+    "id": "ar-028",
+    "slug": "ortalamaya-donus",
+    "baslik": "Ortalamaya dönüş",
+    "alan": "olasilik",
+    "zorluk": 2,
+    "ipucu": "Deneme sınavında beklenmedik yüksek not alan öğrenci, bir sonrakinde genelde biraz geriler. Öğretmen bunu övgünün şımarttığına bağlar, azarlanan öğrencinin toparlanmasını da azara. Oysa ortada kimsenin fark etmediği sessiz bir istatistik kuralı olabilir.",
+    "sorular": [
+      "Ortalamaya dönüş hangi durumlarda ortaya çıkar, şans payının burada rolü ne?",
+      "Bu etki, bir uygulamanın işe yarayıp yaramadığını ölçen çalışmaları nasıl yanıltabilir?",
+      "Her iniş çıkışı ortalamaya dönüşle açıklamak ne zaman yanlış olur?",
+      "Sporda 'kapak laneti' denen inanış bu kavramla nasıl açıklanıyor?"
+    ],
+    "arama": "ortalamaya dönüş istatistik",
+    "ilgili": ["sicak-el-yanilgisi", "korelasyon-nedensellik", "buyuk-sayilar-yasasi"]
+  },
+  {
+    "id": "ar-029",
+    "slug": "hayatta-kalan-yanliligi",
+    "baslik": "Hayatta kalan yanlılığı",
+    "alan": "olasilik",
+    "zorluk": 1,
+    "ipucu": "Eski evler ne kadar sağlam yapılmış, diye düşünürsün. Ama yıkılıp gidenleri görmüyorsun, yalnızca ayakta kalanlar gözünün önünde. Başarı hikâyelerinden eski şarkılara kadar, elenenleri hesaba katmayınca tablo bambaşka görünür.",
+    "sorular": [
+      "Uçakların nereden zırhlanacağına dair meşhur örnek bu kavramı nasıl anlatıyor?",
+      "Başarı hikâyesi anlatan kitaplar bu yanlılığa neden sık düşer?",
+      "Görmediğimiz verileri hesaba katmak için araştırmacılar hangi yolları kullanır?",
+      "'Eskiden her şey daha iyiydi' düşüncesinde bu yanlılığın payı ne kadar?"
+    ],
+    "arama": "hayatta kalan yanlılığı",
+    "ilgili": ["orneklem-yanliligi", "korelasyon-nedensellik", "p-degeri"]
+  },
+  {
+    "id": "ar-030",
+    "slug": "korelasyon-nedensellik",
+    "baslik": "Korelasyon ve nedensellik",
+    "alan": "olasilik",
+    "zorluk": 1,
+    "ipucu": "Yaz gelince hem dondurma satışları artıyor hem de denizde boğulma haberleri. Kimse dondurmanın buna yol açtığını söylemez, ama benzer mantık hataları haber başlıklarında sık sık karşına çıkar. İki şeyin birlikte değişmesi, birinin ötekini doğurduğunu gösterir mi?",
+    "sorular": [
+      "Üçüncü bir etkenin iki şeyi birden değiştirdiği durumlara ne ad verilir, nasıl fark edilir?",
+      "Nedenselliği göstermek için bilim insanları hangi deney düzenlerini kullanır?",
+      "Deney yapmanın mümkün olmadığı alanlarda neden-sonuç ilişkisi nasıl araştırılır?",
+      "Türkiye'de okuduğun bir haberde bu hatayı yakalayabilir misin?"
+    ],
+    "arama": "korelasyon nedensellik farkı",
+    "ilgili": ["simpson-paradoksu", "ortalamaya-donus", "hayatta-kalan-yanliligi"]
+  },
+  {
+    "id": "ar-031",
+    "slug": "simpson-paradoksu",
+    "baslik": "Simpson paradoksu",
+    "alan": "olasilik",
+    "zorluk": 3,
+    "ipucu": "Bir hastanenin her bölümde daha başarılı görünüp toplamda daha başarısız çıkması mümkün mü? Kulağa imkânsız gelen bu durum, veriyi gruplara ayırınca ya da birleştirince ortaya çıkabiliyor. Hangi tablonun doğruyu söylediğine karar vermek sanıldığı kadar kolay değil.",
+    "sorular": [
+      "Bu paradoks hangi koşullarda ortaya çıkar, grupların büyüklüğü neden belirleyici?",
+      "Üniversite kabul oranları üzerine yapılan bilinen örnekte ne oldu?",
+      "Gruplara ayrılmış veri mi, toplu veri mi daha doğru? Bu soruya tek cevap var mı?",
+      "Bir okulun ya da ilin ortalamaları karşılaştırılırken bu tuzak nasıl kurulabilir?"
+    ],
+    "arama": "simpson paradoksu istatistik",
+    "ilgili": ["korelasyon-nedensellik", "taban-orani-yanilgisi", "orneklem-yanliligi"]
+  },
+  {
+    "id": "ar-032",
+    "slug": "taban-orani-yanilgisi",
+    "baslik": "Taban oranı yanılgısı",
+    "alan": "olasilik",
+    "zorluk": 2,
+    "ipucu": "Çok nadir bir hastalık için yapılan güvenilir bir test pozitif çıktığında, çoğu insan hasta olduğundan emin olur. Ama işin içine o hastalığın toplumda ne kadar seyrek görüldüğü girince tablo değişir. Beynimiz bu arka plan bilgisini sessizce çöpe atmaya bayılır.",
+    "sorular": [
+      "Bir testin doğruluğu ile pozitif sonucun güvenilirliği neden aynı şey değildir?",
+      "Bayes teoremi bu yanılgıyı düzeltmek için nasıl kullanılır?",
+      "Mahkemelerde bu hatanın yapıldığı bilinen durumlar nelerdir?",
+      "Havalimanı güvenliği ya da spam filtresi gibi sistemlerde bu sorun nasıl ortaya çıkar?"
+    ],
+    "arama": "taban oranı yanılgısı",
+    "ilgili": ["monty-hall-problemi", "p-degeri", "simpson-paradoksu"]
+  },
+  {
+    "id": "ar-033",
+    "slug": "buyuk-sayilar-yasasi",
+    "baslik": "Büyük sayılar yasası",
+    "alan": "olasilik",
+    "zorluk": 2,
+    "ipucu": "Bir sigorta şirketi senin başına ne geleceğini bilemez, ama kalabalık bir müşteri kitlesine bakınca ne kadar ödeme yapacağını oldukça iyi tahmin eder. Tek tek olaylar öngörülemezken kalabalık neden düzenli davranır? Bu yasa, rastlantıyla kesinlik arasındaki köprüyü anlatıyor.",
+    "sorular": [
+      "Büyük sayılar yasası kısa vadede neden hiçbir şey vaat etmez?",
+      "Bu yasayı 'şans sonunda dengelenir' diye yorumlamak neden yanlış?",
+      "Anketlerde katılımcı sayısının artması hangi hataları azaltır, hangilerini azaltmaz?",
+      "Sigortacılık dışında bu yasaya dayanan başka hangi işler var?"
+    ],
+    "arama": "büyük sayılar yasası",
+    "ilgili": ["sicak-el-yanilgisi", "orneklem-yanliligi", "dogum-gunu-problemi"]
+  },
+  {
+    "id": "ar-034",
+    "slug": "p-degeri",
+    "baslik": "P değeri",
+    "alan": "olasilik",
+    "zorluk": 3,
+    "ipucu": "Haberlerde 'araştırma anlamlı bir fark buldu' dendiğinde, arka planda çoğu zaman bu küçük sayı vardır. Ama ne anlattığı, sanıldığından çok daha dar. Bilim dünyasında bile en sık yanlış anlaşılan kavramlardan biri olduğu söylenir.",
+    "sorular": [
+      "P değeri tam olarak neyin olasılığını anlatır, neyi anlatmaz?",
+      "'İstatistiksel olarak anlamlı' ile 'önemli' arasındaki fark nedir?",
+      "Tekrarlanabilirlik krizi tartışmasında p değerine hangi eleştiriler yöneltildi?",
+      "P değerine alternatif olarak önerilen yaklaşımlar nelerdir?"
+    ],
+    "arama": "p değeri nedir istatistik",
+    "ilgili": ["taban-orani-yanilgisi", "orneklem-yanliligi", "hayatta-kalan-yanliligi"]
+  },
+  {
+    "id": "ar-035",
+    "slug": "orneklem-yanliligi",
+    "baslik": "Örneklem yanlılığı",
+    "alan": "olasilik",
+    "zorluk": 2,
+    "ipucu": "Sokak röportajında mikrofon uzatılanlar, o saatte o caddede yürüyenlerdir. İnternet anketine katılanlar da o sayfayı açanlar. Kime sorduğun, ne öğreneceğini baştan belirler; kalabalık bir örneklem bile yanlış yerden seçildiyse işe yaramaz.",
+    "sorular": [
+      "Rastgele örneklem neden bu kadar önemli, pratikte neden zor elde edilir?",
+      "Gönüllü katılımla yapılan anketler hangi yönde yanılmaya eğilimlidir?",
+      "Tarihteki bilinen anket başarısızlıklarında hangi yanlılık türleri rol oynadı?",
+      "Türkiye'de sosyal medyada paylaşılan bir anketi bu açıdan değerlendirebilir misin?"
+    ],
+    "arama": "örneklem yanlılığı nedir",
+    "ilgili": ["hayatta-kalan-yanliligi", "buyuk-sayilar-yasasi", "p-degeri"]
+  },
+  {
+    "id": "ar-036",
+    "slug": "benford-yasasi",
+    "baslik": "Benford yasası",
+    "alan": "olasilik",
+    "zorluk": 3,
+    "ipucu": "Market fişlerindeki, elektrik faturalarındaki ya da nehir uzunluklarındaki sayıların ilk basamağına bak. Hepsinin eşit sıklıkta çıkmasını beklersin, ama doğa küçük rakamları kayırıyor gibi. Denetçiler bu tuhaflığı sahte kayıtları yakalamak için kullanıyor.",
+    "sorular": [
+      "Hangi tür veri kümeleri bu yasaya uyar, hangileri uymaz?",
+      "Bu dağılımın ortaya çıkmasının matematiksel açıklaması nedir?",
+      "Muhasebe denetiminde bu yasa nasıl kullanılır, sınırları nelerdir?",
+      "Bir veri kümesinin bu yasaya uymaması tek başına hile olduğunu kanıtlar mı?"
+    ],
+    "arama": "Benford yasası",
+    "ilgili": ["buyuk-sayilar-yasasi", "orneklem-yanliligi", "p-degeri"]
+  }
+]

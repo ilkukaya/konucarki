@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config.ts';
+interface Props { baslik: string; aciklama: string; yol: string; ad: string }
+const { baslik, aciklama, yol, ad } = Astro.props;
+---
+<Base baslik={`${baslik} | Konu Çarkı`} aciklama={aciklama} kirinti={[{ ad, yol }]}>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>{baslik}</h1>
+      <p class="guncel">Son güncelleme: {SITE.sonGuncelleme}</p>
+    </header>
+    <div class="yazi icerik">
+      <slot />
+    </div>
+  </div>
+</Base>
+<style>
+  .guncel {
+    font-size: var(--t-0) !important;
+  }
+</style>

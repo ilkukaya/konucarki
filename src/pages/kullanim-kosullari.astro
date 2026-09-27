@@ -1,0 +1,27 @@
+---
+import YasalSayfa from '../components/YasalSayfa.astro';
+import { SITE } from '../config.ts';
+---
+<YasalSayfa baslik="Kullanım Koşulları" ad="Kullanım Koşulları" yol="/kullanim-kosullari/" aciklama="Konu Çarkı'nın kullanım koşulları: ücretsiz, eğitim ve pratik amaçlı bir araç.">
+  <h2>Hizmet</h2>
+  <p>Konu Çarkı, konuşma ve öğrenme pratiği için ücretsiz, eğitim amaçlı bir araçtır. Siteyi kullanmak için üye olman ya da bilgi vermen gerekmez.</p>
+
+  <h2>İçeriğin doğruluğu</h2>
+  <p>Konu ipuçları yalnızca başlangıç içindir ve bilerek genel tutulmuştur. Doğrulukları garanti edilmez; öğrendiğin bilgileri güvenilir kaynaklardan kontrol etmelisin.</p>
+  <p>Sitedeki hiçbir içerik tıbbi, hukuki veya finansal tavsiye değildir. Sağlık ve ekonomiyle ilgili konular yalnızca kavram düzeyinde ele alınır.</p>
+
+  <h2>Dış bağlantılar</h2>
+  <p>Araştırma bağlantıları seni TDK, DergiPark, Vikipedi ve Google Akademik gibi başka sitelere götürür. Bu sitelerin içeriğinden ve gizlilik uygulamalarından sorumlu değiliz.</p>
+
+  <h2>Fikrî haklar</h2>
+  <p>Site metinleri, tasarımı ve konu kütüphanesi {SITE.ad}'na aittir. Kişisel ve sınıf içi kullanım serbesttir; içeriğin izinsiz olarak toplu şekilde kopyalanması, çoğaltılması veya başka bir yerde yayımlanması yasaktır.</p>
+
+  <h2>Değişiklikler</h2>
+  <p>Bu koşullar güncellenebilir. Güncel sürüm her zaman bu sayfadadır; en üstteki tarih son değişikliği gösterir.</p>
+
+  <h2>Uygulanacak hukuk</h2>
+  <p>Bu koşullar Türkiye Cumhuriyeti hukukuna tabidir.</p>
+
+  <h2>İletişim</h2>
+  <p><a href={`mailto:${SITE.eposta}`}>{SITE.eposta}</a></p>
+</YasalSayfa>

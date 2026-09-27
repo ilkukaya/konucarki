@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+import govdeFont from '@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2?url';
+import Ust from '../components/Ust.astro';
+import Alt from '../components/Alt.astro';
+import { SITE } from '../config.ts';
+
+export type Kirinti = { ad: string; yol: string };
+
+interface Props {
+  baslik: string; // <title> tam hali
+  aciklama?: string;
+  kirinti?: Kirinti[]; // Ana sayfa hariç yol; ana sayfa otomatik eklenir
+  jsonLd?: Record<string, unknown>[];
+  noindex?: boolean;
+  ogTur?: 'website' | 'article';
+  anaSayfa?: boolean;
+}
+
+const { baslik, aciklama = SITE.aciklama, kirinti = [], jsonLd = [], noindex = false, ogTur = 'website', anaSayfa = false } = Astro.props;
+const site = Astro.site!;
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogGorsel = new URL('/og.png', site).href;
+
+const tumKirinti: Kirinti[] = [{ ad: 'Konu Çarkı', yol: '/' }, ...kirinti];
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: tumKirinti.map((k, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: k.ad,
+    item: new URL(k.yol, site).href,
+  })),
+};
+const ldListesi = [...jsonLd, breadcrumb];
+---
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{baslik}</title>
+    <meta name="description" content={aciklama} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="theme-color" content="#f7f9fc" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href={govdeFont} as="font" type="font/woff2" crossorigin />
+    <script is:inline src="/tema.js"></script>
+
+    <meta property="og:type" content={ogTur} />
+    <meta property="og:site_name" content={SITE.ad} />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:title" content={baslik} />
+    <meta property="og:description" content={aciklama} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogGorsel} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Konu Çarkı: çevir, araştır, anlat." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={baslik} />
+    <meta name="twitter:description" content={aciklama} />
+    <meta name="twitter:image" content={ogGorsel} />
+
+    {ldListesi.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />)}
+  </head>
+  <body>
+    <a class="atla" href="#icerik">İçeriğe geç</a>
+    <Ust />
+    <main id="icerik" tabindex="-1">
+      {!anaSayfa && kirinti.length > 0 && (
+        <nav class="kirinti kap" aria-label="Sayfa yolu">
+          <ol>
+            {tumKirinti.map((k, i) => (
+              <li>{i === tumKirinti.length - 1 ? <span aria-current="page">{k.ad}</span> : <a href={k.yol}>{k.ad}</a>}</li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      <slot />
+    </main>
+    <Alt />
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<!-- OG görseli kaynağı. Üretmek için: node scripts/og-uret.mjs (Playwright gerekir). -->
+<style>
+  @font-face { font-family: 'B'; src: url('../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-ext-wght-normal.woff2'); font-weight: 200 800; unicode-range: U+0100-02BA; }
+  @font-face { font-family: 'B'; src: url('../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2'); font-weight: 200 800; }
+  @font-face { font-family: 'S'; src: url('../node_modules/@fontsource/source-sans-3/files/source-sans-3-latin-ext-400-normal.woff2'); unicode-range: U+0100-02BA; }
+  @font-face { font-family: 'S'; src: url('../node_modules/@fontsource/source-sans-3/files/source-sans-3-latin-400-normal.woff2'); }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #F7F9FC; color: #16213A; }
+  .k { position: relative; width: 1200px; height: 630px; }
+  .yazi { position: absolute; left: 80px; top: 92px; width: 600px; }
+  .marka { font: 700 34px 'B'; letter-spacing: -0.03em; display: flex; gap: 14px; align-items: center; }
+  h1 { font: 700 76px/1.02 'B'; letter-spacing: -0.035em; margin: 64px 0 28px; }
+  p { font: 400 28px/1.4 'S'; color: #505D78; margin: 0; }
+  svg.cark { position: absolute; right: -90px; top: 45px; width: 560px; height: 560px; }
+</style>
+</head>
+<body>
+<div class="k">
+  <div class="yazi">
+    <div class="marka"><svg width="36" height="36" viewBox="-12 -12 24 24"><rect x="-7.5" y="-7.5" width="15" height="15" fill="#1D3F8F"/><rect x="-7.5" y="-7.5" width="15" height="15" fill="#1D3F8F" transform="rotate(45)"/><circle r="3" fill="#F7F9FC"/></svg>Konu Çarkı</div>
+    <h1>Çevir.<br/>Araştır.<br/>Anlat.</h1>
+    <p>Bilmediğin bir konu gelsin; notlarını kapat, kendi sözlerinle anlat.</p>
+  </div>
+  <svg class="cark" id="c" viewBox="-108 -114 216 222"></svg>
+</div>
+<script>
+  const n = 10, c = document.getElementById('c'), NS = 'http://www.w3.org/2000/svg';
+  const p = (r, a) => { const t = (a - 90) * Math.PI / 180; return [r * Math.cos(t), r * Math.sin(t)]; };
+  c.innerHTML = '<circle r="104" fill="none" stroke="#DCE3EE"/>';
+  for (let i = 0; i < n; i++) {
+    const a0 = i * 36 - 18, a1 = a0 + 36, [x0, y0] = p(100, a0), [x1, y1] = p(100, a1), [x2, y2] = p(22, a1), [x3, y3] = p(22, a0);
+    const e = document.createElementNS(NS, 'path');
+    e.setAttribute('d', `M${x0} ${y0}A100 100 0 0 1 ${x1} ${y1}L${x2} ${y2}A22 22 0 0 0 ${x3} ${y3}Z`);
+    e.setAttribute('fill', i % 2 ? '#167F79' : '#1D3F8F'); e.setAttribute('stroke', '#F7F9FC'); e.setAttribute('stroke-width', '1.2');
+    c.append(e);
+  }
+  c.insertAdjacentHTML('beforeend', '<circle r="21" fill="#F7F9FC" stroke="#DCE3EE"/><rect x="-8" y="-8" width="16" height="16" fill="#1D3F8F"/><rect x="-8" y="-8" width="16" height="16" fill="#1D3F8F" transform="rotate(45)"/><circle r="3.4" fill="#F7F9FC"/><path d="M-7.5 -113 L7.5 -113 L0 -95 Z" fill="#16213A" stroke="#F7F9FC" stroke-width="1.5"/>');
+</script>
+</body>
+</html>

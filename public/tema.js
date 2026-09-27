@@ -1,0 +1,1 @@
+try{var t=JSON.parse(localStorage.getItem('kc:v1:ayarlar')||'{}').tema;if(t==='acik')document.documentElement.dataset.theme='light';else if(t==='koyu')document.documentElement.dataset.theme='dark'}catch(e){}

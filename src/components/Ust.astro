@@ -1,0 +1,130 @@
+---
+import Yildiz from './Yildiz.astro';
+const yol = Astro.url.pathname;
+const menu = [
+  { ad: 'Çark', yol: '/' },
+  { ad: 'Araştırma konuları', yol: '/arastirma-konulari/' },
+  { ad: 'Doğaçlama konuları', yol: '/dogaclama-konusma-konulari/' },
+  { ad: 'Nasıl çalışır', yol: '/nasil-calisir/' },
+];
+const aktif = (m: string) => (m === '/' ? yol === '/' : yol.startsWith(m));
+---
+<header class="ust">
+  <div class="kap ust-ic">
+    <a class="marka" href="/" aria-label="Konu Çarkı, ana sayfa">
+      <Yildiz boyut={26} />
+      <span>Konu Çarkı</span>
+    </a>
+    <nav aria-label="Ana menü">
+      <ul>
+        {menu.map((m) => (
+          <li><a href={m.yol} aria-current={aktif(m.yol) ? 'page' : undefined}>{m.ad}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <button type="button" class="tema-dugme" data-tema-dugme aria-label="Koyu temaya geç">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+        <path class="ay" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" />
+        <g class="gunes"><circle cx="12" cy="12" r="4.2" /><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" /></g>
+      </svg>
+    </button>
+  </div>
+</header>
+<script>
+  import { tema } from '../scripts/tema.ts';
+  tema();
+</script>
+<style>
+  .ust {
+    border-bottom: 1px solid var(--sis);
+  }
+  .ust-ic {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--b-2) var(--b-5);
+    padding-block: var(--b-3);
+  }
+  .marka {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--b-2);
+    font-family: var(--f-baslik);
+    font-weight: 750;
+    font-size: var(--t-1);
+    letter-spacing: -0.03em;
+    color: var(--murekkep);
+    text-decoration: none;
+    min-height: 44px;
+    margin-right: auto;
+  }
+  nav {
+    order: 3;
+    width: 100%;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--b-4);
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--soluk);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav a:hover {
+    color: var(--murekkep);
+  }
+  nav a[aria-current='page'] {
+    color: var(--murekkep);
+    box-shadow: inset 0 -2px 0 var(--firuze);
+  }
+  .tema-dugme {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid transparent;
+    border-radius: var(--r-dugme);
+    background: transparent;
+    color: var(--soluk);
+    cursor: pointer;
+  }
+  .tema-dugme:hover {
+    color: var(--murekkep);
+    border-color: var(--sis);
+  }
+  .tema-dugme svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+  }
+  .gunes {
+    display: none;
+  }
+  :global([data-koyu]) .gunes {
+    display: inline;
+  }
+  :global([data-koyu]) .ay {
+    display: none;
+  }
+  @media (min-width: 52rem) {
+    nav {
+      order: 0;
+      width: auto;
+    }
+    .marka {
+      margin-right: var(--b-4);
+    }
+    .tema-dugme {
+      margin-left: auto;
+    }
+  }
+</style>

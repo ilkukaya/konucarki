@@ -1,0 +1,150 @@
+---
+import Base from '../../layouts/Base.astro';
+import { alanById, konuBySlug, konular } from '../../data/index.ts';
+import { ZORLUK_ADI, type ArastirmaKonusu } from '../../data/schema.ts';
+import { aramaLinkleri } from '../../lib/arama.ts';
+
+export function getStaticPaths() {
+  return konular.map((k) => ({ params: { slug: k.slug }, props: { konu: k } }));
+}
+const { konu } = Astro.props as { konu: ArastirmaKonusu };
+const alan = alanById.get(konu.alan)!;
+const ilgili = konu.ilgili.map((s) => konuBySlug.get(s)!).filter(Boolean);
+const ayniAlan = konular.filter((k) => k.alan === konu.alan && k.slug !== konu.slug && !konu.ilgili.includes(k.slug)).slice(0, 6);
+
+function kisalt(s: string, n = 155): string {
+  if (s.length <= n) return s;
+  const kes = s.slice(0, n - 1);
+  return kes.slice(0, kes.lastIndexOf(' ')) + '…';
+}
+const site = Astro.site!;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'LearningResource',
+  name: konu.baslik,
+  description: konu.ipucu,
+  inLanguage: 'tr-TR',
+  url: new URL(`/konu/${konu.slug}/`, site).href,
+  learningResourceType: 'Araştırma ve anlatım alıştırması',
+  educationalLevel: ZORLUK_ADI[konu.zorluk],
+  about: alan.ad,
+  isAccessibleForFree: true,
+  isPartOf: { '@type': 'WebSite', name: 'Konu Çarkı', url: new URL('/', site).href },
+};
+---
+<Base
+  baslik={`${konu.baslik} nedir? Araştır ve anlat | Konu Çarkı`}
+  aciklama={kisalt(konu.ipucu)}
+  kirinti={[{ ad: 'Araştırma konuları', yol: '/arastirma-konulari/' }, { ad: alan.ad, yol: `/arastirma-konulari/${alan.id}/` }, { ad: konu.baslik, yol: `/konu/${konu.slug}/` }]}
+  jsonLd={[ld]}
+  ogTur="article"
+>
+  <article class="kap konu">
+    <header class="sayfa-basi">
+      <p class="ust"><a href={`/arastirma-konulari/${alan.id}/`}>{alan.ad}</a> <span class="zorluk" data-z={konu.zorluk}>{ZORLUK_ADI[konu.zorluk]}</span></p>
+      <h1>{konu.baslik}</h1>
+      <p class="ipucu">{konu.ipucu}</p>
+      <a class="dugme buyuk" href={`/?konu=${konu.slug}`}>Bu konuyla tur başlat</a>
+    </header>
+
+    <div class="izgara">
+      <section aria-labelledby="sorular">
+        <h2 id="sorular">Araştırırken şunlara bak</h2>
+        <ol class="sorular">
+          {konu.sorular.map((s) => <li>{s}</li>)}
+        </ol>
+        <p class="soluk">Hepsine cevap bulmak zorunda değilsin. Anlatırken bir tanım, bir örnek ve bir sınırlama söyleyebiliyorsan konuyu tutmuşsun demektir.</p>
+      </section>
+      <section aria-labelledby="kaynaklar">
+        <h2 id="kaynaklar">Nereden başlarım?</h2>
+        <ul class="kaynaklar">
+          {aramaLinkleri(konu.arama).map((l) => (
+            <li><a href={l.url} target="_blank" rel="noopener noreferrer">{l.ad}</a> <span class="soluk">· {l.aciklama}</span></li>
+          ))}
+        </ul>
+        <p class="kucuk soluk">Arama terimi: “{konu.arama}”. Bağlantılar yeni sekmede açılır.</p>
+      </section>
+    </div>
+
+    {ilgili.length > 0 && (
+      <section class="ek" aria-labelledby="ilgili">
+        <h2 id="ilgili">İlgili konular</h2>
+        <ul class="konu-listesi">
+          {ilgili.map((k) => (
+            <li><a href={`/konu/${k.slug}/`}><span class="konu-ad">{k.baslik}</span><span class="zorluk" data-z={k.zorluk}>{ZORLUK_ADI[k.zorluk]}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+    <section class="ek" aria-labelledby="ayni-alan">
+      <h2 id="ayni-alan">{alan.ad} alanından</h2>
+      <ul class="konu-listesi">
+        {ayniAlan.map((k) => (
+          <li><a href={`/konu/${k.slug}/`}><span class="konu-ad">{k.baslik}</span><span class="zorluk" data-z={k.zorluk}>{ZORLUK_ADI[k.zorluk]}</span></a></li>
+        ))}
+      </ul>
+    </section>
+  </article>
+</Base>
+<style>
+  .ust {
+    display: flex;
+    gap: var(--b-4);
+    align-items: center;
+    font-weight: 600;
+    font-size: var(--t--1) !important;
+    margin-bottom: var(--b-3);
+  }
+  .ipucu {
+    font-size: var(--t-1);
+    color: var(--murekkep) !important;
+    margin-bottom: var(--b-5);
+  }
+  .izgara {
+    display: grid;
+    gap: var(--b-6);
+    border-top: 1px solid var(--sis);
+    padding-top: var(--b-5);
+  }
+  @media (min-width: 56rem) {
+    .izgara {
+      grid-template-columns: 3fr 2fr;
+      gap: var(--b-7);
+    }
+  }
+  h2 {
+    font-size: var(--t-1);
+  }
+  .sorular {
+    padding-left: 1.3em;
+  }
+  .sorular li + li {
+    margin-top: var(--b-2);
+  }
+  .sorular li::marker {
+    color: var(--firuze);
+    font-family: var(--f-baslik);
+    font-weight: 700;
+  }
+  .kaynaklar {
+    list-style: none;
+    padding: 0;
+  }
+  .kaynaklar li {
+    border-top: 1px solid var(--sis);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    flex-wrap: wrap;
+  }
+  .kaynaklar li:last-child {
+    border-bottom: 1px solid var(--sis);
+  }
+  .kaynaklar a {
+    font-weight: 600;
+  }
+  .ek {
+    margin-top: var(--b-7);
+  }
+</style>

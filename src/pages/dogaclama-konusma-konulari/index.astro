@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+import { kategoriler, dogaclamaSorulari } from '../../data/index.ts';
+---
+<Base
+  baslik="Doğaçlama konuşma konuları: 200 soru, 10 kategori | Konu Çarkı"
+  aciklama="Mülakat pratiği, sınıf içi konuşma etkinliği ve hazırlıksız konuşma için 200 Türkçe doğaçlama sorusu. İş, okul, aile, şehir, mutfak ve fazlası."
+  kirinti={[{ ad: 'Doğaçlama konuları', yol: '/dogaclama-konusma-konulari/' }]}
+>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>Doğaçlama konuşma konuları</h1>
+      <p>Hazırlanmadan bir dakika konuşmak, çoğu insanın en çok çekindiği şeydir. Oysa bu da çalışarak açılan bir kas.</p>
+    </header>
+    <div class="yazi">
+      <p>Buradaki {dogaclamaSorulari.length} soru deneyimden cevaplanabilecek türden: bayram sofrası, dolmuşta para uzatma zinciri, ilk iş görüşmesi. Doğru cevabı yok; önemli olan düşünceni toparlayıp bir yere bağlamak.</p>
+      <p>Takıldığında üç adımlık çerçeveyi kullan: <strong>tanımla</strong> (ne olduğunu söyle), <strong>örnekle</strong> (kendi hayatından bir an anlat), <strong>bağla</strong> (genel bir sonuca var). Mülakata hazırlanıyorsan "İş ve mülakat", sınıfta ısınma turu yapacaksan "Hayal et" kategorisiyle başla. Rastgele bir soru için <a href="/?mod=dogaclama">doğaçlama modunda çarkı çevir</a>.</p>
+    </div>
+    <ul class="kategori-listesi">
+      {kategoriler.map((k) => {
+        const ornek = dogaclamaSorulari.find((s) => s.kategori === k.id)!;
+        return (
+          <li>
+            <h2><a href={`/dogaclama-konusma-konulari/${k.id}/`}>{k.ad}</a></h2>
+            <p class="soluk">{k.aciklama}</p>
+            <p class="ornek">“{ornek.soru}”</p>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</Base>
+<style>
+  .kategori-listesi {
+    list-style: none;
+    padding: 0;
+    margin: var(--b-7) 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    column-gap: var(--b-6);
+  }
+  .kategori-listesi li {
+    border-top: 1px solid var(--sis);
+    padding: var(--b-4) 0 var(--b-5);
+  }
+  h2 {
+    font-size: var(--t-1);
+    margin-bottom: var(--b-1);
+  }
+  h2 a {
+    color: var(--murekkep);
+    text-decoration: none;
+  }
+  h2 a:hover {
+    color: var(--kobalt);
+    text-decoration: underline;
+  }
+  .soluk {
+    margin-bottom: var(--b-2);
+  }
+  .ornek {
+    margin: 0;
+    font-family: var(--f-baslik);
+    font-weight: 500;
+  }
+</style>

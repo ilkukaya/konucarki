@@ -1,0 +1,194 @@
+[
+  {
+    "id": "ar-085",
+    "slug": "sera-etkisi",
+    "baslik": "Sera etkisi",
+    "alan": "iklim",
+    "zorluk": 1,
+    "ipucu": "Güneşli bir kış gününde kapıları kapalı arabaya bindiğinde içerinin ne kadar ısındığını fark edersin. Atmosferdeki bazı gazlar da Dünya'nın yaydığı ısının bir kısmını tutuyor. Bu etki olmasa gezegen çok daha soğuk olurdu; tartışma, etkinin ne kadar güçlendiği üzerine.",
+    "sorular": [
+      "Hangi gazlar sera gazı sayılır, su buharının bu listedeki yeri neden farklıdır?",
+      "Doğal sera etkisi ile insan kaynaklı güçlenmesi arasındaki ayrım nasıl yapılıyor?",
+      "Sera benzetmesi neden fiziksel olarak tam doğru değil?",
+      "İklim modellerindeki belirsizliklerin en çok bulutlardan kaynaklandığı neden söyleniyor?"
+    ],
+    "arama": "sera etkisi sera gazları",
+    "ilgili": ["karbon-dongusu", "isi-adasi-etkisi", "sulak-alanlar"]
+  },
+  {
+    "id": "ar-086",
+    "slug": "isi-adasi-etkisi",
+    "baslik": "Kentsel ısı adası",
+    "alan": "iklim",
+    "zorluk": 1,
+    "ipucu": "Yaz akşamı şehirden köye doğru yola çıkınca camdan giren havanın birden serinlediğini hissedersin. Asfalt, beton ve binalar gün boyu topladığı ısıyı gece yavaş yavaş geri veriyor. Bu yüzden kentin göbeği çevresindeki kırsala göre daha sıcak kalabiliyor.",
+    "sorular": [
+      "Isı adası etkisi neden gündüzden çok geceleri belirgin hale gelir?",
+      "Ağaçlar, parklar ve açık renkli çatılar kentteki sıcaklığı nasıl etkiler?",
+      "Isı adası ölçümlerinde meteoroloji istasyonlarının yeri neden sonuçları yanıltabilir?",
+      "Rüzgâr koridorları kavramı şehir planlamasında nasıl kullanılıyor?"
+    ],
+    "arama": "kentsel ısı adası",
+    "ilgili": ["sera-etkisi", "isik-kirliligi", "lodos-ve-poyraz"]
+  },
+  {
+    "id": "ar-087",
+    "slug": "lodos-ve-poyraz",
+    "baslik": "Lodos ve poyraz: yerel rüzgârlar",
+    "alan": "iklim",
+    "zorluk": 1,
+    "ipucu": "Lodoslu bir İstanbul gününde vapur seferleri aksar, sahil yolu dalgalara teslim olur ve herkes başının ağrıdığından söz eder. Ertesi gün poyraz çıkınca hava birden serinler, gökyüzü berraklaşır. Rüzgârların bu adları eski denizcilerin yön bilgisinden geliyor.",
+    "sorular": [
+      "Rüzgâr gülündeki yön adları nereden gelir, denizcilikle bağı nedir?",
+      "Lodosun sıcak ve nemli, poyrazın serin ve kuru olmasının nedeni ne olabilir?",
+      "Lodosun baş ağrısı yaptığı yolundaki yaygın inanç bilimsel olarak ne kadar destekleniyor?",
+      "Karayel, keşişleme ve yıldız gibi rüzgârlar hangi yönlerden eser?"
+    ],
+    "arama": "lodos poyraz rüzgâr gülü",
+    "ilgili": ["isi-adasi-etkisi", "musilaj", "enerji-depolama"]
+  },
+  {
+    "id": "ar-088",
+    "slug": "isik-kirliligi",
+    "baslik": "Işık kirliliği",
+    "alan": "iklim",
+    "zorluk": 1,
+    "ipucu": "Kasabadaki dedenin evinin damına çıktığında gökyüzünde şehirde hiç görmediğin kadar yıldız belirir. Şehrin ışıkları geceyi yalnızca aydınlatmıyor, gökyüzünü de bir perde gibi örtüyor. Işığa yönelen böcekler, göçmen kuşlar ve yumurtadan çıkan kaplumbağa yavruları da bundan etkileniyor.",
+    "sorular": [
+      "Işık kirliliğinin gökyüzü parlaması, kamaşma ve ışık taşması gibi türleri nelerdir?",
+      "Deniz kaplumbağası yavruları kumsaldaki yapay ışıklardan neden yanılır?",
+      "LED aydınlatmaya geçişin ışık kirliliğini azalttığı mı, artırdığı mı tartışılıyor?",
+      "Karanlık gökyüzü parkı nedir, hangi ölçütlerle belirlenir?"
+    ],
+    "arama": "ışık kirliliği",
+    "ilgili": ["isi-adasi-etkisi", "tuz-golu-ve-flamingolar", "sulak-alanlar"]
+  },
+  {
+    "id": "ar-089",
+    "slug": "musilaj",
+    "baslik": "Müsilaj ve deniz salyası",
+    "alan": "iklim",
+    "zorluk": 2,
+    "ipucu": "Marmara'da vapurun kenarından bakınca suyun yüzünde kirli bir köpük tabakası görmek herkesi şaşırtmıştı. Deniz salyası denen bu jöle benzeri yapı, mikroskobik canlıların aşırı çoğalmasıyla ilişkilendiriliyor. Sıcak, durgun su ve denize karışan besin tuzları işin içinde.",
+    "sorular": [
+      "Müsilajın oluşumunda fitoplanktonların ve besin tuzlarının rolü nedir?",
+      "Deniz suyunun ısınması ve durgunluğu müsilaj oluşumunu nasıl kolaylaştırır?",
+      "Müsilaj dip canlıları ve balıkçılık açısından neden sorun yaratır?",
+      "Müsilajın tek bir nedene bağlanması neden yanıltıcı olabilir?"
+    ],
+    "arama": "müsilaj deniz salyası",
+    "ilgili": ["mikroplastik", "sulak-alanlar", "karbon-dongusu"]
+  },
+  {
+    "id": "ar-090",
+    "slug": "sulak-alanlar",
+    "baslik": "Sulak alanlar",
+    "alan": "iklim",
+    "zorluk": 2,
+    "ipucu": "Kamışların arasında kurbağa sesleri, üstte süzülen balıkçıllar: bataklık kelimesi çoğumuza hoş gelmez ama doğa için tam bir hazine. Sulak alanlar yağmuru sünger gibi emip yavaşça bırakıyor, suyu süzüyor, sayısız kuşa konaklama yeri oluyor. Kuruduklarında kaybın geri dönüşü zor.",
+    "sorular": [
+      "Sulak alanlar taşkınları ve kuraklığı nasıl yumuşatır?",
+      "Turbalıklar karbon depolamada neden önemli sayılıyor?",
+      "Geçmişte bataklıkların kurutulması hangi gerekçelerle yapıldı, bugün nasıl değerlendiriliyor?",
+      "Ramsar Sözleşmesi nedir, bir alanın listeye girmesi neyi değiştirir?"
+    ],
+    "arama": "sulak alanlar ekosistem",
+    "ilgili": ["tuz-golu-ve-flamingolar", "karbon-dongusu", "musilaj"]
+  },
+  {
+    "id": "ar-091",
+    "slug": "mikroplastik",
+    "baslik": "Mikroplastikler",
+    "alan": "iklim",
+    "zorluk": 2,
+    "ipucu": "Sahilde gördüğün plastik şişe zamanla kaybolmuyor; güneşte ve dalgada ufalanıp gözle zor seçilen parçalara dönüşüyor. Çamaşır makinesinde dönen sentetik kazaklar ve yolda aşınan araba lastikleri de bu parçacıkları çoğaltıyor. Artık onları deniz dibinde de dağ zirvesinde de arıyorlar.",
+    "sorular": [
+      "Birincil ve ikincil mikroplastik arasındaki fark nedir?",
+      "Mikroplastikler denizden besin zincirine nasıl karışır?",
+      "Mikroplastik ölçümlerinde yöntem farkları sonuçları neden karşılaştırılamaz hale getirebiliyor?",
+      "Biyobozunur diye satılan plastiklerin gerçekten çözüm olup olmadığı neden tartışmalı?"
+    ],
+    "arama": "mikroplastik kirliliği",
+    "ilgili": ["musilaj", "sulak-alanlar", "karbon-dongusu"]
+  },
+  {
+    "id": "ar-092",
+    "slug": "jeotermal-enerji",
+    "baslik": "Jeotermal enerji",
+    "alan": "iklim",
+    "zorluk": 2,
+    "ipucu": "Ege'de bir kaplıcada sıcak suya girdiğinde o ısının güneşten değil, yerin derinliklerinden geldiğini düşünmezsin. Kabuğun ince ve kırıklı olduğu yerlerde yeraltı suyu ısınıp yüzeye yaklaşıyor. Bu ısıdan hem sera ısıtmada hem de elektrik üretiminde yararlanılıyor.",
+    "sorular": [
+      "Jeotermal kaynakların fay hatları ve volkanik bölgelerle ilişkisi nedir?",
+      "Jeotermal santrallerin çevreye etkileri konusunda hangi kaygılar dile getiriliyor?",
+      "Isı pompalarıyla sığ jeotermal kullanımı, derin kaynaklardan nasıl ayrılır?",
+      "Jeotermal enerji neden yenilenebilir sayılır, bir kaynak tükenebilir mi?"
+    ],
+    "arama": "jeotermal enerji",
+    "ilgili": ["enerji-depolama", "sodali-goller-van-golu", "karbon-dongusu"]
+  },
+  {
+    "id": "ar-093",
+    "slug": "tuz-golu-ve-flamingolar",
+    "baslik": "Tuz Gölü ve flamingolar",
+    "alan": "iklim",
+    "zorluk": 2,
+    "ipucu": "Yazın Tuz Gölü'nün kıyısında yürüdüğünde ayağının altı kar gibi bembeyaz, ufukta da pembe bir şerit görürsün. O şerit, sığ ve tuzlu suda beslenmeye gelen flamingolar. Suyun seviyesi ve tuzluluğu, kuşların orada kalıp kalmayacağını doğrudan etkiliyor.",
+    "sorular": [
+      "Tuz Gölü neden bu kadar tuzlu, göl suyu nereden besleniyor?",
+      "Flamingoların pembe rengi beslendikleri canlılarla nasıl ilişkili?",
+      "Kuraklık ve yeraltı suyu kullanımı göldeki kuş yaşamını nasıl etkileyebilir?",
+      "Göçmen kuşları izlemek için halkalama ve uydu vericilerinin artıları ve sınırları neler?"
+    ],
+    "arama": "Tuz Gölü flamingo",
+    "ilgili": ["sulak-alanlar", "sodali-goller-van-golu", "isik-kirliligi"]
+  },
+  {
+    "id": "ar-094",
+    "slug": "karbon-dongusu",
+    "baslik": "Karbon döngüsü",
+    "alan": "iklim",
+    "zorluk": 3,
+    "ipucu": "Soluduğun havadaki karbon, bir zaman bir çam iğnesinde, bir deniz kabuğunda ya da kömür damarında bekliyor olabilir. Karbon atmosfer, okyanus, canlılar ve kayalar arasında kimi zaman hızlı, kimi zaman çok yavaş dolaşıyor. İnsanın bu dengeye nasıl dokunduğu iklim tartışmasının kalbinde.",
+    "sorular": [
+      "Hızlı ve yavaş karbon döngüsü arasındaki fark nedir?",
+      "Okyanuslar karbonu nasıl tutar, bunun asitlenmeyle bağlantısı nedir?",
+      "Ormanların karbon yutağı olarak kapasitesi hakkında neden farklı tahminler var?",
+      "Karbon yakalama ve depolama teknolojileri hangi eleştirilerle karşılaşıyor?"
+    ],
+    "arama": "karbon döngüsü",
+    "ilgili": ["sera-etkisi", "sulak-alanlar", "jeotermal-enerji"]
+  },
+  {
+    "id": "ar-095",
+    "slug": "sodali-goller-van-golu",
+    "baslik": "Sodalı göller ve Van Gölü",
+    "alan": "iklim",
+    "zorluk": 3,
+    "ipucu": "Van Gölü kıyısındaki eski hikâyelerde suyun sabun gibi kaygan olduğu, çamaşırın onunla yıkandığı anlatılır. Göl hem tuzlu hem de sodalı, yani suyu bazik. Böyle zorlu bir suda yalnızca bazı canlılar yaşayabiliyor; inci kefali ve göl dibindeki kayamsı mikrobiyalitler bunların en bilinenleri.",
+    "sorular": [
+      "Bir gölün sodalı olmasına hangi jeolojik ve kimyasal koşullar yol açar?",
+      "Van Gölü'nün denize çıkışı olmaması suyunun kimyasını nasıl etkiliyor?",
+      "Mikrobiyalitler nedir, geçmiş iklimleri anlamak için neden ilgi çekiyor?",
+      "Göl tortularından geçmiş iklimi okumaya çalışmanın sınırları neler?"
+    ],
+    "arama": "Van Gölü sodalı su",
+    "ilgili": ["tuz-golu-ve-flamingolar", "karbon-dongusu", "jeotermal-enerji"]
+  },
+  {
+    "id": "ar-096",
+    "slug": "enerji-depolama",
+    "baslik": "Rüzgâr ve güneş enerjisinde depolama",
+    "alan": "iklim",
+    "zorluk": 3,
+    "ipucu": "Rüzgâr santrallerinin kanatları poyrazda fırıl fırıl döner, sonra rüzgâr diner. Güneş panelleri öğlen coşar, akşam susar. Elektriği tam ihtiyaç anında üretmek zor olduğu için fazlasını bir yerde bekletmek gerekiyor; büyük piller ve pompajlı hidroelektrik bu işin başlıca yollarından.",
+    "sorular": [
+      "Yenilenebilir enerjide kesintililik sorunu şebeke dengesini nasıl etkiler?",
+      "Pompajlı hidroelektrik santraller elektriği nasıl depolar?",
+      "Lityum iyon pillerin hammadde ve geri dönüşüm açısından eleştirilen yanları neler?",
+      "Yeşil hidrojenin depolama aracı olarak görülmesi ne kadar gerçekçi?"
+    ],
+    "arama": "enerji depolama yenilenebilir",
+    "ilgili": ["jeotermal-enerji", "lodos-ve-poyraz", "sera-etkisi"]
+  }
+]

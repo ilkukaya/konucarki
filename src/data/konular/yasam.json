@@ -1,0 +1,239 @@
+[
+  {
+    "id": "ar-073",
+    "slug": "plasebo-etkisi",
+    "baslik": "Plasebo etkisi",
+    "alan": "yasam",
+    "zorluk": 1,
+    "ipucu": "Annenin 'geçti bak' diye öptüğü dizin gerçekten daha az mı acıyor? İçinde etken madde olmayan bir şekerlemenin bile beklentiyle bir şeyleri değiştirebildiği biliniyor. Bilim insanları bu etkiyi hem ölçmeye hem de ondan ayıklanmaya uğraşıyor.",
+    "sorular": [
+      "Plasebo etkisi neden araştırmalarda kontrol grubu kullanmayı zorunlu hale getirir?",
+      "Nosebo etkisi nedir, plaseboyla nasıl bir ayna ilişkisi vardır?",
+      "Hastanın plasebo aldığını bildiği durumlarda da etki görülür mü, bu konuda neler tartışılıyor?",
+      "Plasebo etkisinin abartıldığını söyleyenlerin gerekçeleri neler?"
+    ],
+    "arama": "plasebo etkisi",
+    "ilgili": [
+      "sirkadiyen-ritim",
+      "uyku-evreleri",
+      "bagisiklik-bellegi"
+    ]
+  },
+  {
+    "id": "ar-074",
+    "slug": "sirkadiyen-ritim",
+    "baslik": "Sirkadiyen ritim",
+    "alan": "yasam",
+    "zorluk": 1,
+    "ipucu": "Uzun bir yolculuktan sonra gözün faltaşı gibi açık, oysa saat gece yarısı. Vücudun içinde güneşe ayarlı bir saat var ve onu kandırmak sandığın kadar kolay değil. Bu saat yalnız insanda değil; bitkilerde, mantarlarda, hatta bazı bakterilerde bile işliyor.",
+    "sorular": [
+      "Vücudun iç saati hangi dış işaretlerle ayarlanır, ışığın bunda payı nedir?",
+      "Jet lag neden doğuya uçarken batıya göre daha zor atlatılır?",
+      "Gece vardiyasında çalışmanın iç saat üzerindeki etkisi hakkında hangi sorular hâlâ açık?",
+      "Bitkiler karanlık bir odada da yapraklarını gün düzenine göre oynatır mı?"
+    ],
+    "arama": "sirkadiyen ritim biyolojik saat",
+    "ilgili": [
+      "uyku-evreleri",
+      "fotosentez",
+      "arilarin-dansi"
+    ]
+  },
+  {
+    "id": "ar-075",
+    "slug": "uyku-evreleri",
+    "baslik": "Uyku evreleri ve REM uykusu",
+    "alan": "yasam",
+    "zorluk": 2,
+    "ipucu": "Öğle sıcağında divanda kısa bir kestirme bazen insanı dinç kaldırır, bazen de sersem. Uyku tek parça bir karanlık değil; beyin gece boyunca farklı evreler arasında dolaşıyor. Rüyaların çoğunun görüldüğü evrede gözlerin kapakların altında hızla kıpırdadığı biliniyor.",
+    "sorular": [
+      "Uyku evreleri nasıl ayırt edilir, beyin dalgaları bu ayrımda ne işe yarar?",
+      "REM uykusunda kasların gevşemesi hangi işe yarıyor olabilir?",
+      "Uykunun bellekle ilişkisi hakkında hangi görüşler tartışmalı?",
+      "Kısa kestirmeden bazen yorgun uyanmamızın açıklaması ne olabilir?"
+    ],
+    "arama": "uyku evreleri REM",
+    "ilgili": [
+      "sirkadiyen-ritim",
+      "bagisiklik-bellegi"
+    ]
+  },
+  {
+    "id": "ar-076",
+    "slug": "fotosentez",
+    "baslik": "Fotosentez",
+    "alan": "yasam",
+    "zorluk": 1,
+    "ipucu": "Çay bahçesindeki çınarın gölgesinde otururken aslında havayı, suyu ve ışığı gövdeye çeviren bir fabrikanın altındasın. Yaprak, ışığın enerjisini şekere bağlıyor ve yan ürün olarak soluduğumuz oksijeni bırakıyor. Bütün bunlar yaprağın içindeki minicik yeşil yapılarda oluyor.",
+    "sorular": [
+      "Klorofil ışığın hangi renklerini tutar, yapraklar bu yüzden mi yeşil görünür?",
+      "Fotosentezin ışığa bağlı ve ışıktan bağımsız evreleri arasındaki fark nedir?",
+      "Denizlerdeki mikroskobik canlıların fotosentezdeki payı neden sık sık gözden kaçar?",
+      "Yapay fotosentez fikri nedir, önündeki başlıca engeller neler?"
+    ],
+    "arama": "fotosentez klorofil",
+    "ilgili": [
+      "likenler",
+      "mitokondri",
+      "sirkadiyen-ritim"
+    ]
+  },
+  {
+    "id": "ar-077",
+    "slug": "arilarin-dansi",
+    "baslik": "Bal arılarının salınım dansı",
+    "alan": "yasam",
+    "zorluk": 1,
+    "ipucu": "Yayladaki kovanın önünde duran bir arıcı, arıların nereye uçacağına aslında kovanın içinde karar verildiğini anlatır. Çiçek bulan işçi, karanlık peteğin üstünde kıvrak bir dans yapar ve kardeşlerine yönü, uzaklığı tarif eder. Yön bilgisi güneşin konumuna göre veriliyor.",
+    "sorular": [
+      "Salınım dansında yön ve uzaklık bilgisi nasıl kodlanıyor?",
+      "Karanlık kovanda dansı izleyen arılar bilgiyi hangi duyularla alıyor?",
+      "Dansın tek başına yeterli olmadığını, kokunun da işin içinde olduğunu savunanlar ne diyor?",
+      "Bulutlu havada arılar güneşin yerini nasıl kestiriyor olabilir?"
+    ],
+    "arama": "arıların dansı salınım",
+    "ilgili": [
+      "sirkadiyen-ritim",
+      "likenler",
+      "fotosentez"
+    ]
+  },
+  {
+    "id": "ar-078",
+    "slug": "mikrobiyota",
+    "baslik": "Bağırsak mikrobiyotası",
+    "alan": "yasam",
+    "zorluk": 2,
+    "ipucu": "Evde yoğurt mayalarken bir kaşık eski yoğurdu sütün içine katarsın; yani canlı bir topluluğu yeni bir eve taşırsın. Bağırsaklarımızda da benzer biçimde kalabalık bir mikrop topluluğu yaşıyor. Bu topluluğun sindirimden bağışıklığa kadar pek çok işe karıştığı düşünülüyor.",
+    "sorular": [
+      "Mikrobiyota ile mikrobiyom kavramları arasındaki fark nedir?",
+      "Bağırsak mikropları bağışıklık sisteminin eğitimine nasıl katkıda bulunuyor olabilir?",
+      "Bağırsak ile beyin arasındaki bağlantı fikrinde kanıtlanmış ve henüz belirsiz olan kısımlar neler?",
+      "Mikrobiyota araştırmalarının çoğunun farelerde yapılması sonuçları nasıl sınırlıyor?"
+    ],
+    "arama": "bağırsak mikrobiyotası",
+    "ilgili": [
+      "antibiyotik-direnci",
+      "bagisiklik-bellegi",
+      "likenler"
+    ]
+  },
+  {
+    "id": "ar-079",
+    "slug": "antibiyotik-direnci",
+    "baslik": "Antibiyotik direnci",
+    "alan": "yasam",
+    "zorluk": 2,
+    "ipucu": "Bakteriler hızla çoğalır ve her kuşakta küçük farklılıklar ortaya çıkar. Bir mikrop öldürücüye maruz kaldığında dayanıklı olanlar geride kalır ve yeni kalabalığı onlar kurar. Üstelik bakteriler direnç genlerini birbirine, akrabası olmayan türlere bile aktarabiliyor.",
+    "sorular": [
+      "Doğal seçilim antibiyotik direncinin ortaya çıkışını nasıl açıklar?",
+      "Yatay gen aktarımı nedir, dirençli genlerin yayılmasını neden hızlandırır?",
+      "Direnç sorunu yalnızca hastanelerle mi sınırlı, tarım ve çevrenin bunda yeri ne?",
+      "Faj terapisi gibi alternatif yaklaşımların önündeki belirsizlikler neler?"
+    ],
+    "arama": "antibiyotik direnci",
+    "ilgili": [
+      "mikrobiyota",
+      "suru-bagisikligi",
+      "bagisiklik-bellegi"
+    ]
+  },
+  {
+    "id": "ar-080",
+    "slug": "suru-bagisikligi",
+    "baslik": "Sürü bağışıklığı",
+    "alan": "yasam",
+    "zorluk": 2,
+    "ipucu": "Kalabalık bir vapurda herkes birbirine yakın durur, ama bulaşıcı bir mikrop her yolcudan geçemez. Toplulukta yeterince insan korunaklı olduğunda, mikrop yeni birine atlayacak köprü bulmakta zorlanır. Böylece korunaklı olmayanlar da dolaylı olarak kalabalığın kalkanından yararlanır.",
+    "sorular": [
+      "Sürü bağışıklığı eşiği bir mikrobun bulaşıcılığıyla nasıl ilişkilidir?",
+      "Bağışıklığın zamanla azalması sürü bağışıklığı hesaplarını nasıl zorlaştırır?",
+      "Nüfusun homojen olmadığı, kümeler halinde yaşadığı durumlarda bu kavramın sınırları neler?",
+      "Kavram ilk olarak hangi alanda ve hangi canlılar gözlenirken kullanılmaya başlandı?"
+    ],
+    "arama": "sürü bağışıklığı kavramı",
+    "ilgili": [
+      "bagisiklik-bellegi",
+      "antibiyotik-direnci"
+    ]
+  },
+  {
+    "id": "ar-081",
+    "slug": "bagisiklik-bellegi",
+    "baslik": "Bağışıklık belleği",
+    "alan": "yasam",
+    "zorluk": 3,
+    "ipucu": "Çocukken geçirdiğin bazı hastalıkları neden ikinci kez aynı şekilde yaşamıyorsun? Bağışıklık sistemi karşılaştığı bir mikrobun izini hücrelerinde saklıyor. Aynı misafir yeniden kapıyı çaldığında, tanıyan hücreler çok daha hızlı harekete geçiyor.",
+    "sorular": [
+      "Bellek hücreleri nasıl oluşur, vücutta ne kadar süre kalabilir?",
+      "Aşıların çalışma mantığı bağışıklık belleğine nasıl dayanır?",
+      "Grip gibi bazı mikroplara karşı belleğin neden kalıcı koruma sağlamadığı nasıl açıklanıyor?",
+      "Bitkilerde ya da böceklerde bir tür bağışıklık belleğinden söz edilebilir mi?"
+    ],
+    "arama": "bağışıklık belleği hücreleri",
+    "ilgili": [
+      "suru-bagisikligi",
+      "mikrobiyota",
+      "antibiyotik-direnci"
+    ]
+  },
+  {
+    "id": "ar-082",
+    "slug": "likenler",
+    "baslik": "Likenler ve simbiyoz",
+    "alan": "yasam",
+    "zorluk": 2,
+    "ipucu": "Eski bir köy evinin taş duvarında sarı, yeşil, gri lekeler görürsün; çoğu kişi onları yosun sanar. Aslında bunlar bir mantarla fotosentez yapan bir ortağın kurduğu ortaklık. Temiz havaya duyarlı oldukları için bazı araştırmacılar onları hava kalitesinin göstergesi olarak kullanıyor.",
+    "sorular": [
+      "Liken ortaklığında mantarın ve alg ya da siyanobakterinin kazancı ne?",
+      "Likenler çıplak kayada toprak oluşumuna nasıl katkı sağlar?",
+      "Likenlerin iki ortaklı bir yapı olduğu görüşü son araştırmalarla nasıl sorgulanıyor?",
+      "Hava kirliliğini izlemede likenleri kullanmanın avantajları ve sınırları neler?"
+    ],
+    "arama": "liken simbiyoz",
+    "ilgili": [
+      "fotosentez",
+      "mikrobiyota",
+      "mitokondri"
+    ]
+  },
+  {
+    "id": "ar-083",
+    "slug": "mitokondri",
+    "baslik": "Mitokondri ve endosimbiyoz kuramı",
+    "alan": "yasam",
+    "zorluk": 3,
+    "ipucu": "Merdivenleri koşarak çıkınca kaslarının ihtiyaç duyduğu enerjinin büyük kısmı hücre içindeki küçük yapılarda üretiliyor. İşin tuhafı, bu yapıların kendilerine ait ayrı bir DNA'sı var. Pek çok biyolog, bunların bir zamanlar serbest yaşayan bakteriler olduğunu düşünüyor.",
+    "sorular": [
+      "Endosimbiyoz kuramı hangi kanıtlara dayanır?",
+      "Mitokondri DNA'sı neden yalnızca anneden aktarılır, bu durum soy araştırmalarında nasıl kullanılır?",
+      "Kloroplastlar için de benzer bir köken önerilmesinin gerekçeleri neler?",
+      "Endosimbiyoz sürecinin nasıl başladığına dair hangi sorular hâlâ yanıtsız?"
+    ],
+    "arama": "mitokondri endosimbiyoz kuramı",
+    "ilgili": [
+      "fotosentez",
+      "likenler",
+      "epigenetik"
+    ]
+  },
+  {
+    "id": "ar-084",
+    "slug": "epigenetik",
+    "baslik": "Epigenetik",
+    "alan": "yasam",
+    "zorluk": 3,
+    "ipucu": "Deri hücren de karaciğer hücren de aynı DNA'yı taşıyor, ama biri diğerinin işini yapmıyor. Genlerin hangisinin açık, hangisinin kapalı kalacağını belirleyen kimyasal işaretler var. Bu işaretlerin çevreyle nasıl değiştiği ve kuşaktan kuşağa geçip geçmediği hâlâ tartışılıyor.",
+    "sorular": [
+      "DNA metilasyonu ve histon değişiklikleri gen ifadesini nasıl etkiler?",
+      "Tek yumurta ikizleri yaşlandıkça neden birbirinden farklılaşabilir?",
+      "Epigenetik işaretlerin kuşaklar arası aktarımı hakkındaki iddialar neden temkinle karşılanıyor?",
+      "Popüler yayınlarda epigenetiğin abartılı anlatıldığını söyleyenler neye itiraz ediyor?"
+    ],
+    "arama": "epigenetik gen ifadesi",
+    "ilgili": [
+      "mitokondri",
+      "bagisiklik-bellegi"
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+# Yasaklı terimler. Her satır bir terim; büyük/küçük harf ve Türkçe karakter duyarsız,
+# tam kelime (ve kelimenin ekli halleri için sonuna * koy) eşleşir. # ile başlayan satırlar yorumdur.
+# = ile başlayan terimler Türkçe karakterlere duyarlı eşleşir (ör. "kürt" ≠ "kurt").
+# Siyaset
+parti
+partiler*
+partisi*
+partinin
+seçim
+seçimler*
+seçimde
+seçimi
+milletvekil*
+cumhurbaşkan*
+başbakan*
+bakanlar kurulu
+iktidar*
+muhalefet*
+# Din ve inanç
+din
+dini
+dinî
+dinler*
+tanrı*
+allah*
+peygamber*
+cami
+camii*
+kilise*
+sinagog*
+mezhep*
+cihat*
+şeriat*
+# Kimlik ve etnik köken
+ırk
+ırkçı*
+etnik*
+=kürt*
+ermeni*
+rum
+rumlar*
+yahudi*
+hristiyan*
+müslüman*
+# Şiddet, terör, askerî
+terör*
+savaş
+savaşı
+savaşta
+savaşlar*
+asker*
+ordu
+orduyu
+orduları*
+silah*
+bomba*
+katliam*
+# Kumar ve bahis
+kumar*
+bahis*
+bahsi
+iddaa*
+piyango*
+rulet*
+kumarhane*
+# Alkol ve madde
+alkol*
+rakı
+şarap*
+bira
+biralar*
+sigara*
+uyuşturucu*
+esrar
+eroin*
+kokain*
+# Cinsellik
+cinsel*
+seks
+seksüel*
+# İntihar ve kendine zarar
+intihar*
+kendine zarar

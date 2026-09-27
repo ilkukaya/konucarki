@@ -1,0 +1,232 @@
+---
+import Cark from './Cark.astro';
+import { alanlar, kategoriler } from '../data/index.ts';
+
+const dilimler = {
+  arastirma: alanlar.map((a) => ({ id: a.id, etiket: a.kisaAd })),
+  dogaclama: kategoriler.map((k) => ({ id: k.id, etiket: k.kisaAd })),
+  atasozu: Array.from({ length: 8 }, (_, i) => (i % 2 ? { id: `deyim-${i}`, etiket: 'Deyim' } : { id: `atasozu-${i}`, etiket: 'Atasözü' })),
+};
+const adlar = Object.fromEntries([...alanlar.map((a) => [a.id, a.ad]), ...kategoriler.map((k) => [k.id, k.ad])]);
+
+const arastirmaDk = [1, 2, 3, 5, 10, 15, 20, 30, 45, 60];
+const konusmaDk = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const hazirlikSn = [
+  { d: 0, ad: 'Kapalı' },
+  { d: 15, ad: '15 sn' },
+  { d: 30, ad: '30 sn' },
+  { d: 60, ad: '1 dk' },
+  { d: 120, ad: '2 dk' },
+  { d: 300, ad: '5 dk' },
+];
+const modlar = [
+  { id: 'arastirma', ad: 'Derin araştırma' },
+  { id: 'dogaclama', ad: 'Doğaçlama' },
+  { id: 'atasozu', ad: 'Atasözü ve deyim' },
+];
+---
+<section class="uyg" data-uygulama data-dilimler={JSON.stringify(dilimler)} data-adlar={JSON.stringify(adlar)} data-site={Astro.site?.host} aria-label="Konu çarkı uygulaması">
+  <div class="modlar" role="tablist" aria-label="Mod seç">
+    {modlar.map((m, i) => (
+      <button type="button" role="tab" id={`sekme-${m.id}`} data-mod={m.id} aria-controls="uyg-panel" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+        {m.ad}
+      </button>
+    ))}
+  </div>
+
+  <div id="uyg-panel" class="uyg-izgara" role="tabpanel" aria-labelledby="sekme-arastirma" data-panel>
+    <div class="sol">
+      <Cark dilimler={dilimler.arastirma} />
+      <div class="sol-alt">
+        <button type="button" class="dugme buyuk cevir" data-cevir>Çarkı çevir</button>
+        <div class="filtre" data-filtre-kap>
+          <label class="alan-etiket" for="alan-filtre">Alan</label>
+          <select id="alan-filtre" data-filtre>
+            <option value="">Tüm alanlar</option>
+            {alanlar.map((a) => <option value={a.id}>{a.ad}</option>)}
+          </select>
+        </div>
+        <p class="gunun" data-gunun-kap>
+          <span class="soluk">Günün konusu:</span>
+          <button type="button" class="baglanti-dugme" data-gunun>göster</button>
+        </p>
+      </div>
+    </div>
+
+    <div class="sahne" data-sahne>
+      <noscript>
+        <p class="uyari">Çarkın dönmesi için tarayıcında JavaScript açık olmalı. Bu arada <a href="/arastirma-konulari/">tüm araştırma konularına</a> göz atabilirsin.</p>
+      </noscript>
+
+      <!-- Boş: çevirmeden önce -->
+      <div class="bolum" data-bolum="bos">
+        <h2 class="sahne-baslik" data-bos-baslik>Hazırsan çevir.</h2>
+        <p class="olcu" data-bos-metin>Çark bir alan seçer, o alandan bilmediğin bir konu gelir. Süre boyunca araştır, sonra notlarını kapatıp konuyu kendi sözlerinle anlat.</p>
+
+        <fieldset class="ayarlar" data-ayar-mod="arastirma">
+          <legend>Süreler</legend>
+          <div>
+            <label class="alan-etiket" for="ay-arastirma">Araştırma</label>
+            <select id="ay-arastirma" data-ayar="arastirmaDk">
+              {arastirmaDk.map((d) => <option value={d}>{d} dk</option>)}
+            </select>
+          </div>
+          <div>
+            <label class="alan-etiket" for="ay-arastirma-konusma">Konuşma</label>
+            <select id="ay-arastirma-konusma" data-ayar="arastirmaKonusmaDk">
+              {konusmaDk.map((d) => <option value={d}>{d} dk</option>)}
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="ayarlar" data-ayar-mod="dogaclama" hidden>
+          <legend>Süreler</legend>
+          <div>
+            <label class="alan-etiket" for="ay-dogaclama-hazirlik">Hazırlık</label>
+            <select id="ay-dogaclama-hazirlik" data-ayar="dogaclamaHazirlikSn">
+              {hazirlikSn.map((h) => <option value={h.d}>{h.ad}</option>)}
+            </select>
+          </div>
+          <div>
+            <label class="alan-etiket" for="ay-dogaclama-konusma">Konuşma</label>
+            <select id="ay-dogaclama-konusma" data-ayar="dogaclamaKonusmaDk">
+              {konusmaDk.map((d) => <option value={d}>{d} dk</option>)}
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="ayarlar" data-ayar-mod="atasozu" hidden>
+          <legend>Süreler</legend>
+          <div>
+            <label class="alan-etiket" for="ay-atasozu-hazirlik">Hazırlık</label>
+            <select id="ay-atasozu-hazirlik" data-ayar="atasozuHazirlikSn">
+              {hazirlikSn.map((h) => <option value={h.d}>{h.ad}</option>)}
+            </select>
+          </div>
+          <div>
+            <label class="alan-etiket" for="ay-atasozu-konusma">Konuşma</label>
+            <select id="ay-atasozu-konusma" data-ayar="atasozuKonusmaDk">
+              {konusmaDk.map((d) => <option value={d}>{d} dk</option>)}
+            </select>
+          </div>
+        </fieldset>
+        <p class="kisayol soluk kucuk">Kısayollar: <kbd>Boşluk</kbd> çevir / başlat / duraklat · <kbd>P</kbd> pas · <kbd>F</kbd> tam ekran</p>
+        <p class="uyari" data-hata hidden></p>
+      </div>
+
+      <!-- Tur: konu seçildikten sonra -->
+      <div class="bolum" data-bolum="tur" hidden>
+        <div class="sayac" data-sayac hidden>
+          <p class="evre" data-evre>Araştırma</p>
+          <p class="rakam" data-rakam aria-hidden="true">10:00</p>
+          <div class="cubuk" aria-hidden="true"><span data-cubuk></span></div>
+          <div class="sayac-dugmeler">
+            <button type="button" class="dugme ikincil" data-duraklat>Duraklat</button>
+            <button type="button" class="dugme sade" data-sifirla>Sıfırla</button>
+            <button type="button" class="dugme sade" data-erken>Erken bitir</button>
+            <button type="button" class="dugme sade" data-tamekran aria-keyshortcuts="F">Tam ekran</button>
+          </div>
+        </div>
+
+        <div class="notlari-kapat" data-notlari-kapat hidden>
+          <p class="nk-baslik">Süre doldu.</p>
+          <p>Sekmeleri ve notları kapat, bir yudum çay al. Hazır olduğunda başla.</p>
+          <button type="button" class="dugme buyuk" data-anlat>Anlatmaya başla</button>
+        </div>
+
+        <article class="kart" data-kart>
+          <p class="kart-ust">
+            <span data-kart-grup></span>
+            <span class="zorluk" data-kart-zorluk hidden></span>
+          </p>
+          <h2 class="kart-baslik" data-kart-baslik tabindex="-1"></h2>
+
+          <div data-kart-ayrinti>
+            <p class="ipucu" data-kart-ipucu hidden></p>
+            <div data-kart-arastirma hidden>
+              <h3 class="ara-baslik">Araştırırken şunlara bak</h3>
+              <ol class="sorular" data-kart-sorular></ol>
+              <h3 class="ara-baslik">Nereden başlarım?</h3>
+              <ul class="kaynaklar" data-kart-kaynaklar></ul>
+              <p class="kucuk"><a data-kart-sayfa href="/arastirma-konulari/">Konu sayfasını aç</a></p>
+            </div>
+            <ol class="cerceve" data-kart-cerceve hidden aria-label="Konuşma çerçevesi">
+              <li><strong>Tanımla</strong> <span>ne olduğunu söyle</span></li>
+              <li><strong>Örnekle</strong> <span>kendi hayatından bir örnek ver</span></li>
+              <li><strong>Bağla</strong> <span>genel bir sonuca bağla</span></li>
+            </ol>
+            <div data-kart-atasozu hidden>
+              <p class="ipucu">Anlamını kendin çıkarmayı dene. Sonra günlük hayattan bir örnek ver ve bugün hâlâ geçerli mi, tartış.</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="secili-dugmeler" data-secili-dugmeler>
+          <button type="button" class="dugme buyuk" data-basla>Başla</button>
+          <button type="button" class="dugme ikincil" data-pas aria-keyshortcuts="P">Pas geç</button>
+          <p class="pas-bitti soluk" data-pas-bitti hidden>Pas hakkın bitti, bu konu senin.</p>
+        </div>
+
+        <div class="kayit" data-kayit hidden>
+          <button type="button" class="dugme ikincil" data-kaydet>
+            <span class="kayit-nokta" aria-hidden="true"></span><span data-kaydet-yazi>Kaydet</span>
+          </button>
+          <p class="kucuk soluk" data-kayit-not>Kayıt yalnızca bu cihazda kalır, hiçbir yere yüklenmez.</p>
+          <p class="kucuk soluk" data-kayit-yok hidden>Tarayıcın kaydı desteklemiyor.</p>
+          <p class="kucuk uyari-metin" data-kayit-hata hidden></p>
+        </div>
+      </div>
+
+      <!-- Bitti -->
+      <div class="bolum" data-bolum="bitti" hidden>
+        <p class="evre">Tur bitti</p>
+        <h2 class="sahne-baslik" data-bitti-baslik tabindex="-1"></h2>
+        <p class="soluk" data-bitti-ozet></p>
+
+        <div class="rozet-kutusu" data-rozet-kutusu hidden></div>
+
+        <div class="izin-kart" data-izin hidden>
+          <p><strong>İlerlemeni bu cihazda tutalım mı?</strong> Seri, rozetler ve son turların görünür. Veriler yalnızca bu tarayıcıda kalır, bize gönderilmez.</p>
+          <div class="izin-dugmeler">
+            <button type="button" class="dugme" data-izin-evet>Tut</button>
+            <button type="button" class="dugme ikincil" data-izin-hayir>Tutma</button>
+          </div>
+        </div>
+
+        <fieldset class="degerlendir">
+          <legend>Kendini değerlendir</legend>
+          <label><input type="checkbox" /> <span data-deg-1>Konuyu bir cümleyle tanımlayabildim</span></label>
+          <label><input type="checkbox" /> <span>Somut bir örnek verdim</span></label>
+          <label><input type="checkbox" /> <span data-deg-3>Emin olmadığım noktayı fark ettim</span></label>
+          <p class="kucuk soluk">Bu işaretler kaydedilmez; yalnızca kendin için.</p>
+        </fieldset>
+
+        <div data-bitti-kontrol hidden>
+          <h3 class="ara-baslik">Emin olmadığın yerleri şimdi kaynaklardan kontrol et</h3>
+          <ul class="kaynaklar" data-bitti-kaynaklar></ul>
+        </div>
+
+        <div data-bitti-anlam hidden>
+          <button type="button" class="dugme ikincil" data-anlam-goster aria-expanded="false" aria-controls="anlam-metni">Anlamı göster</button>
+          <p id="anlam-metni" class="anlam" data-anlam hidden></p>
+        </div>
+
+        <div class="kayit-sonuc" data-kayit-sonuc hidden>
+          <h3 class="ara-baslik">Kaydın</h3>
+          <audio controls preload="metadata" data-ses></audio>
+          <a class="dugme sade" data-ses-indir download>Kaydı indir</a>
+        </div>
+
+        <div class="bitti-dugmeler">
+          <button type="button" class="dugme buyuk" data-yeni>Yeni konu çevir</button>
+          <button type="button" class="dugme ikincil" data-paylas>Paylaşım kartı</button>
+        </div>
+        <p class="kucuk soluk" data-paylas-not hidden></p>
+      </div>
+    </div>
+  </div>
+  <p class="gizli" aria-live="polite" data-duyuru></p>
+</section>
+
+<script>
+  import { baslat } from '../scripts/uygulama.ts';
+  baslat();
+</script>

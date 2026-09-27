@@ -1,0 +1,58 @@
+---
+import Base from '../../layouts/Base.astro';
+import { alanlar, konular } from '../../data/index.ts';
+import { ZORLUK_ADI } from '../../data/schema.ts';
+---
+<Base
+  baslik="Araştırma ve sunum konuları: 120 konu, 10 alan | Konu Çarkı"
+  aciklama="Sunum, sözlü sınav ve konuşma pratiği için 120 Türkçe araştırma konusu. Zihinden depreme, Anadolu arkeolojisinden olasılığa; her konuda ipucu, sorular ve Türkçe kaynak bağlantıları."
+  kirinti={[{ ad: 'Araştırma konuları', yol: '/arastirma-konulari/' }]}
+>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>Araştırma konuları</h1>
+      <p>Sunum hazırlayacaksın ama konu bulamıyorsun, ya da sözlü sınava bilmediğin bir başlıkla çalışmak istiyorsun. Buradaki {konular.length} konu tam bunun için yazıldı.</p>
+    </header>
+    <div class="yazi">
+      <p>Her konunun kısa bir başlangıç ipucu, araştırırken yol gösteren soruları ve TDK, DergiPark, Vikipedi ile Google Akademik aramaları var. İpuçları bilerek tarih ve sayı içermez; onları sen bulacaksın.</p>
+      <p>Öğretmensen bir konunun bağlantısını ödev olarak paylaşabilirsin. Öğrenci o bağlantıyla doğrudan araştırma süresini başlatır, sonra notlarını kapatıp anlatır. Konuyu rastgele seçmek istersen <a href="/">çarkı çevir</a>.</p>
+    </div>
+    {alanlar.map((a) => (
+      <section class="alan-blok" aria-labelledby={`alan-${a.id}`}>
+        <div class="alan-bas">
+          <h2 id={`alan-${a.id}`}><a href={`/arastirma-konulari/${a.id}/`}>{a.ad}</a></h2>
+          <p class="soluk">{a.aciklama}</p>
+        </div>
+        <ul class="konu-listesi">
+          {konular.filter((k) => k.alan === a.id).map((k) => (
+            <li><a href={`/konu/${k.slug}/`}><span class="konu-ad">{k.baslik}</span><span class="zorluk" data-z={k.zorluk}>{ZORLUK_ADI[k.zorluk]}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>
+<style>
+  .alan-blok {
+    margin-top: var(--b-7);
+  }
+  .alan-bas {
+    margin-bottom: var(--b-3);
+  }
+  .alan-bas h2 {
+    font-size: var(--t-2);
+    margin-bottom: var(--b-1);
+  }
+  .alan-bas h2 a {
+    color: var(--murekkep);
+    text-decoration: none;
+  }
+  .alan-bas h2 a:hover {
+    color: var(--kobalt);
+    text-decoration: underline;
+  }
+  .alan-bas p {
+    margin: 0;
+    max-width: var(--olcu);
+  }
+</style>

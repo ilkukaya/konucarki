@@ -1,0 +1,12 @@
+[
+  { "id": "zihin", "ad": "Zihin ve kararlar", "kisaAd": "Zihin", "aciklama": "Aklımızın kestirmeleri, belleğin oyunları, alışkanlıkların nasıl kurulup bozulduğu." },
+  { "id": "strateji", "ad": "Oyunlar, stratejiler ve gruplar", "kisaAd": "Strateji", "aciklama": "İnsanlar ne zaman iş birliği yapar, ne zaman yapmaz? Oyun kuramından kuyruklara kadar grup halinde karar vermek." },
+  { "id": "olasilik", "ad": "Sayılar, olasılık ve istatistik", "kisaAd": "Olasılık", "aciklama": "Sezgimizi yanıltan olasılıklar, yanıltıcı grafikler ve bir sayının arkasındaki soru." },
+  { "id": "ekonomi", "ad": "Ekonomi ve para", "kisaAd": "Ekonomi", "aciklama": "Fırsat maliyetinden enflasyonun nasıl ölçüldüğüne, günlük hayatta ekonominin kavramları." },
+  { "id": "anadolu", "ad": "Anadolu'nun derin geçmişi", "kisaAd": "Anadolu", "aciklama": "Arkeoloji ve teknoloji tarihi: Anadolu topraklarında insanlar nasıl yaşadı, ne üretti, neyi nasıl çözdü." },
+  { "id": "yerbilim", "ad": "Yer bilimleri ve deprem", "kisaAd": "Yer bilimi", "aciklama": "Faylar, zeminler, volkanlar ve peri bacaları: ayağımızın altındaki hareketli dünya." },
+  { "id": "yasam", "ad": "Yaşam bilimleri ve sağlık kavramları", "kisaAd": "Yaşam", "aciklama": "Hücreden ekosisteme canlıların işleyişi ve sağlıkla ilgili temel kavramlar; tavsiye değil, merak." },
+  { "id": "iklim", "ad": "İklim, enerji ve çevre", "kisaAd": "İklim", "aciklama": "Denizlerimizden göllerimize çevre olayları, enerjinin nereden geldiği ve iklimin nasıl işlediği." },
+  { "id": "dil", "ad": "Dil, kültür ve medya", "kisaAd": "Dil", "aciklama": "Türkçenin yapısı, kültürün taşıyıcıları ve ekranların bize neyi nasıl gösterdiği." },
+  { "id": "fizik", "ad": "Fizik, uzay ve teknoloji", "kisaAd": "Fizik", "aciklama": "Gökyüzünden cebimizdeki telefona, dünyayı açıklayan fizik ve onu kullanan teknoloji." }
+]

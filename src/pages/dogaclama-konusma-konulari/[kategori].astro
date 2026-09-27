@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import { kategoriler, dogaclamaSorulari } from '../../data/index.ts';
+import type { DogaclamaKategori } from '../../data/schema.ts';
+
+export function getStaticPaths() {
+  return kategoriler.map((k) => ({ params: { kategori: k.id }, props: { kategori: k } }));
+}
+const { kategori } = Astro.props as { kategori: DogaclamaKategori };
+const sorular = dogaclamaSorulari.filter((s) => s.kategori === kategori.id);
+const digerleri = kategoriler.filter((k) => k.id !== kategori.id);
+---
+<Base
+  baslik={`${kategori.ad}: doğaçlama konuşma soruları | Konu Çarkı`}
+  aciklama={`${kategori.ad} kategorisinde ${sorular.length} doğaçlama konuşma sorusu. ${kategori.aciklama}`.slice(0, 155)}
+  kirinti={[{ ad: 'Doğaçlama konuları', yol: '/dogaclama-konusma-konulari/' }, { ad: kategori.ad, yol: `/dogaclama-konusma-konulari/${kategori.id}/` }]}
+>
+  <div class="kap">
+    <header class="sayfa-basi">
+      <h1>{kategori.ad}</h1>
+      <p>{kategori.aciklama}</p>
+    </header>
+    <p class="olcu">Bir soru seç, sayacı bir dakikaya kur ve başla: tanımla, örnekle, bağla. Sayaçla çalışmak için <a href="/?mod=dogaclama">doğaçlama modunu aç</a>.</p>
+    <ol class="soru-listesi">
+      {sorular.map((s) => <li>{s.soru}</li>)}
+    </ol>
+    <nav class="diger" aria-labelledby="diger-k">
+      <h2 id="diger-k">Diğer kategoriler</h2>
+      <ul>
+        {digerleri.map((k) => <li><a href={`/dogaclama-konusma-konulari/${k.id}/`}>{k.ad}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</Base>
+<style>
+  .soru-listesi {
+    padding: 0;
+    margin: var(--b-6) 0 0;
+    list-style: none;
+    counter-reset: s;
+    max-width: 48rem;
+    border-top: 1px solid var(--sis);
+  }
+  .soru-listesi li {
+    counter-increment: s;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    padding: var(--b-3) 0;
+    border-bottom: 1px solid var(--sis);
+    font-size: var(--t-1);
+    line-height: 1.4;
+  }
+  .soru-listesi li::before {
+    content: counter(s);
+    font-family: var(--f-baslik);
+    font-weight: 700;
+    color: var(--firuze);
+    font-variant-numeric: tabular-nums;
+  }
+  .diger {
+    margin-top: var(--b-8);
+  }
+  .diger h2 {
+    font-size: var(--t-1);
+  }
+  .diger ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--b-5);
+  }
+  .diger a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+</style>
