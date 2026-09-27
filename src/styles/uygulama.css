@@ -4,11 +4,49 @@
   padding-top: var(--b-5);
 }
 
-/* Mod seçici: alt çizgili sekmeler */
+/* Mod seçici: alt çizgili sekmeler + ses düğmesi */
+.mod-satir {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--b-2);
+  border-bottom: 1px solid var(--sis);
+}
+.ses-dugme {
+  flex: none;
+  margin-left: auto;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 2px;
+  display: grid;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--r-dugme);
+  background: none;
+  color: var(--soluk);
+  cursor: pointer;
+}
+.ses-dugme:hover {
+  color: var(--murekkep);
+  border-color: var(--sis);
+}
+.ses-dugme svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ses-dugme .carpi,
+.ses-dugme[aria-pressed='true'] .dalga {
+  display: none;
+}
+.ses-dugme[aria-pressed='true'] .carpi {
+  display: inline;
+}
 .modlar {
+  min-width: 0;
   display: flex;
   gap: var(--b-1);
-  border-bottom: 1px solid var(--sis);
   overflow-x: auto;
   scrollbar-width: none;
 }

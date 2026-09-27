@@ -24,7 +24,9 @@ import { gununIndeksi, yerelGun } from '../lib/tarih.ts';
 import { Kaydedici, kayitDestekleniyor, type KayitSonucu } from './kayit.ts';
 import { kartCiz, paylasVeyaIndir } from './paylasim.ts';
 import { rozetSvg } from './rozet-svg.ts';
-import { bip, ekranAcikKalsin, sesiHazirla, titret } from './sinyal.ts';
+import { ekranAcikKalsin, titret } from './sinyal.ts';
+import * as ses from './ses.ts';
+import { sesiHazirla } from './ses.ts';
 import * as veri from './veri.ts';
 
 type Durum = 'bos' | 'secili' | 'arastirma' | 'notlari-kapat' | 'hazirlik' | 'konusma' | 'bitti';
@@ -118,6 +120,7 @@ export function baslat(): void {
   let sayac: GeriSayim | null = null;
   let raf = 0;
   let son10 = false;
+  let sonTikSaniye = 0;
   let donuyor = false;
   let aci = 0;
   let pasHakki = PAS_HAKKI;
@@ -205,13 +208,49 @@ export function baslat(): void {
     const sapma = (rastgeleTam(1000) / 1000 - 0.5) * 0.9;
     const sure = animasyonlu && !hareketAz.matches ? SPIN_MS + rastgeleTam(500) : 0;
     dilimiVurgula(null);
+    const baslangic = aci;
     aciAyarla(hedefAci(aci, i, n, sure ? 4 + rastgeleTam(2) : 0, sapma), sure);
+    if (sure) tikTakip(baslangic, 360 / n, sure);
     return new Promise((coz) =>
       window.setTimeout(() => {
         dilimiVurgula(aciDilimi(aci, n));
         coz();
       }, sure + 30),
     );
+  }
+
+  /**
+   * Dönüş sırasında çarkın gerçek açısını okuyup her dilim sınırında bir tık çalar;
+   * böylece ses animasyonla birebir eşleşir ve yavaşladıkça seyrekleşir.
+   */
+  function tikTakip(baslangic: number, dilimAci: number, sure: number): void {
+    let onceki = baslangic;
+    let toplam = baslangic;
+    let sonDilim = Math.floor(toplam / dilimAci);
+    let sonZaman = performance.now();
+    const bitis = sonZaman + sure;
+    const adim = () => {
+      const m = getComputedStyle(carkDon).transform;
+      const eslesme = m.match(/matrix\(([^,]+),\s*([^,]+)/);
+      if (eslesme) {
+        const a = (Math.atan2(Number(eslesme[2]), Number(eslesme[1])) * 180) / Math.PI;
+        let fark = a - (((onceki % 360) + 360) % 360);
+        if (fark > 180) fark -= 360;
+        if (fark < -180) fark += 360;
+        toplam += fark;
+        onceki = toplam;
+        const simdi = performance.now();
+        const hiz = Math.min(1, Math.abs(fark) / Math.max(1, simdi - sonZaman) / 1.2); // derece/ms, ~1.2 en hızlı
+        sonZaman = simdi;
+        const dilim = Math.floor(toplam / dilimAci);
+        if (dilim !== sonDilim) {
+          sonDilim = dilim;
+          ses.carkTik(hiz);
+        }
+      }
+      if (performance.now() < bitis) requestAnimationFrame(adim);
+    };
+    requestAnimationFrame(adim);
   }
 
   // ---------- Filtre ----------
@@ -266,8 +305,9 @@ export function baslat(): void {
       if (pasHakki > 0) pasHakki--;
       pasKullanildi = true;
     }
-    if (durum === 'bitti') turuTemizle();
     sesiHazirla();
+    if (durum === 'secili') ses.pasSesi();
+    if (durum === 'bitti') turuTemizle();
     hataGoster(null);
     donuyor = true;
     cevirD.disabled = true;
@@ -279,6 +319,7 @@ export function baslat(): void {
       if (!s) throw new Error('boş seçim');
       secim = s;
       durumaGec('secili');
+      ses.konuGeldi();
       duyur(`Seçilen konu: ${secimBasligi(s)}`);
       if (window.matchMedia('(max-width: 60rem)').matches) sahne.scrollIntoView({ behavior: hareketAz.matches ? 'auto' : 'smooth', block: 'start' });
     } catch {
@@ -362,10 +403,12 @@ export function baslat(): void {
     void ekranAcikKalsin(sayacta);
   }
 
-  function fazBaslat(yeni: 'arastirma' | 'hazirlik' | 'konusma', ms: number): void {
+  function fazBaslat(yeni: 'arastirma' | 'hazirlik' | 'konusma', ms: number, otomatik = false): void {
     sesiHazirla();
+    if (!otomatik) ses.basladi();
     sayac = new GeriSayim(ms);
     son10 = false;
+    sonTikSaniye = 0;
     sayacEl.classList.remove('son-on');
     durumaGec(yeni);
     sayac.baslat();
@@ -389,6 +432,12 @@ export function baslat(): void {
     if (sonOn && !son10 && sayac.calisiyor) {
       son10 = true;
       duyur('Son 10 saniye.');
+    }
+    // Son üç saniyede saat tıkırtısı kadar hafif bir tık.
+    const saniye = Math.ceil(kalan / 1000);
+    if (sayac.calisiyor && kalan > 0 && saniye <= 3 && saniye !== sonTikSaniye) {
+      sonTikSaniye = saniye;
+      if (!kaydedici.kaydediyor) ses.sonSaniye(); // kayda karışmasın
     }
   }
 
@@ -424,7 +473,7 @@ export function baslat(): void {
     ciz();
     sayac = null;
     if (sureDoldu) {
-      if (ayarlar.ses) bip();
+      if (biten !== 'konusma') ses.evreBitti(); // konuşma sonu için turBitti() çalar
       titret();
     }
     if (biten === 'arastirma') {
@@ -432,7 +481,7 @@ export function baslat(): void {
       duyur('Süre doldu. Notlarını kapat, hazır olduğunda anlatmaya başla.');
       $<HTMLButtonElement>('[data-anlat]', kok).focus();
     } else if (biten === 'hazirlik') {
-      fazBaslat('konusma', konusmaSuresi());
+      fazBaslat('konusma', konusmaSuresi(), true);
     } else if (biten === 'konusma') {
       turuBitir();
     }
@@ -531,7 +580,10 @@ export function baslat(): void {
   // ---------- Tur sonu ----------
   function turuBitir(): void {
     if (!secim) return;
-    if (kaydedici.kaydediyor) kaydedici.durdur();
+    const kayitVardi = kaydedici.kaydediyor;
+    if (kayitVardi) kaydedici.durdur();
+    // Kayıt kapanırken çalarsa sese karışmasın diye kısa bir gecikme.
+    window.setTimeout(ses.turBitti, kayitVardi ? 250 : 0);
     durumaGec('bitti');
     const s = secim;
     bitti.baslik.textContent = secimBasligi(s);
@@ -589,7 +641,10 @@ export function baslat(): void {
     if (seri > 1) parcalar.push(el('p', { class: 'seri' }, `${seri} gündür üst üste konuşuyorsun.`));
     bitti.rozet.replaceChildren(...parcalar);
     bitti.rozet.hidden = !parcalar.length;
-    if (yeni.length) duyur(`Yeni rozet: ${yeni.map((r) => r.ad).join(', ')}`);
+    if (yeni.length) {
+      duyur(`Yeni rozet: ${yeni.map((r) => r.ad).join(', ')}`);
+      window.setTimeout(ses.rozetSesi, 750);
+    }
   }
 
   function turuTemizle(): void {
@@ -796,6 +851,31 @@ export function baslat(): void {
     kaydedici.temizle();
     void ekranAcikKalsin(false);
   });
+
+  for (const c of $$<HTMLInputElement>('.degerlendir input', kok)) {
+    c.addEventListener('change', () => {
+      sesiHazirla();
+      ses.isaret(c.checked);
+    });
+  }
+
+  // Ses aç/kapat (ayar kalıcı: zorunlu işlevsel tercih)
+  const sesD = $<HTMLButtonElement>('[data-ses-dugme]', kok);
+  function sesDurumu(): void {
+    ses.sesAcik(ayarlar.ses);
+    sesD.setAttribute('aria-pressed', String(!ayarlar.ses));
+    sesD.setAttribute('aria-label', ayarlar.ses ? 'Sesleri kapat' : 'Sesleri aç');
+    sesD.title = ayarlar.ses ? 'Sesleri kapat' : 'Sesleri aç';
+  }
+  sesD.addEventListener('click', () => {
+    ayarlar = ayarYaz('ses', !ayarlar.ses);
+    sesDurumu();
+    if (ayarlar.ses) {
+      sesiHazirla();
+      ses.isaret(true);
+    }
+  });
+  sesDurumu();
 
   // ---------- İlk kurulum ----------
   if (!kayitDestekleniyor()) {

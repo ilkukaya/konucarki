@@ -1,38 +1,4 @@
-// Süre bitişi sinyalleri ve ekranın açık kalması. Hepsi destek yoksa sessizce geçer.
-
-let ctx: AudioContext | null = null;
-
-/** Kullanıcı etkileşimi sırasında çağrılmalı; tarayıcılar sesi ancak böyle açar. */
-export function sesiHazirla(): void {
-  try {
-    ctx ??= new AudioContext();
-    if (ctx.state === 'suspended') void ctx.resume();
-  } catch {
-    ctx = null;
-  }
-}
-
-export function bip(kez = 2): void {
-  if (!ctx) return;
-  try {
-    const t0 = ctx.currentTime + 0.02;
-    for (let i = 0; i < kez; i++) {
-      const o = ctx.createOscillator();
-      const g = ctx.createGain();
-      o.type = 'sine';
-      o.frequency.value = i === kez - 1 ? 880 : 660;
-      const t = t0 + i * 0.22;
-      g.gain.setValueAtTime(0.0001, t);
-      g.gain.exponentialRampToValueAtTime(0.25, t + 0.015);
-      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.18);
-      o.connect(g).connect(ctx.destination);
-      o.start(t);
-      o.stop(t + 0.2);
-    }
-  } catch {
-    /* ses yok */
-  }
-}
+// Titreşim ve ekranın açık kalması (sesler ses.ts içinde). Hepsi destek yoksa sessizce geçer.
 
 export function titret(): void {
   try {
