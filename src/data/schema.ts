@@ -23,6 +23,8 @@ export type DogaclamaSorusu = { id: string; kategori: string; soru: string };
 export type AtasozuTur = 'atasözü' | 'deyim';
 export type AtasozuDeyim = { id: string; metin: string; tur: AtasozuTur; anlam: string };
 
+export type MeydanOkuma = { id: string; metin: string };
+
 export const HEDEF = {
   alanSayisi: 10,
   alanBasinaKonu: 12,
@@ -144,5 +146,17 @@ export function atasozleriniDogrula(liste: AtasozuDeyim[], dosya = 'atasozleri.j
   }
   h.push(...tekil(liste, (a) => a.id, dosya, 'id'));
   h.push(...tekil(liste, (a) => a.metin.toLocaleLowerCase('tr'), dosya, 'metin'));
+  return h;
+}
+
+export function meydanOkumalariDogrula(liste: MeydanOkuma[], dosya = 'meydan-okumalar.json'): Hata[] {
+  const h: Hata[] = [];
+  if (liste.length < 12) h.push({ dosya, mesaj: `En az 12 meydan okuma kartı bekleniyordu, ${liste.length} var` });
+  for (const m of liste) {
+    if (!/^mo-\d{2}$/.test(m.id)) h.push({ dosya, mesaj: `${m.id}: id biçimi "mo-00" olmalı` });
+    if (!m.metin || m.metin.length > 90) h.push({ dosya, mesaj: `${m.id}: metin 1–90 karakter olmalı` });
+  }
+  h.push(...tekil(liste, (m) => m.id, dosya, 'id'));
+  h.push(...tekil(liste, (m) => m.metin.toLocaleLowerCase('tr'), dosya, 'metin'));
   return h;
 }

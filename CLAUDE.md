@@ -7,6 +7,7 @@ Türkçe, tamamen statik (Astro, `output: 'static'`) konuşma ve öğrenme prati
 - **Sıfır üçüncü taraf kaynak.** Google Fonts, CDN, analitik, reklam, gömülü video, sosyal widget yok. Fontlar dahil her şey aynı origin'den.
 - **Çerez yok.** Site hiç çerez yazmaz.
 - **localStorage:** tüm anahtarlar `kc:v1:` önekli (`src/lib/depo.ts`). Ayarlar (süre, mod, ses, tema) izinsiz tutulabilir. İlerleme/seri/rozet/geçmiş **varsayılan kapalı**, yalnızca kullanıcı "Tut" derse. "Tüm verileri sil" `kc:` önekli her şeyi siler.
+- **Oyunlaştırma:** puan/seviye/rozet/günün görevi `src/lib/oyun.ts` ve `ilerleme.ts` (saf, testli). Kalıcı puan yalnızca ilerleme izniyle; izin yoksa oturum puanı yalnızca bellekte. Grup modunda oyuncu isimleri ve puanları YALNIZCA bellekte, asla depolanmaz. Sesler Web Audio ile sentezlenir (`src/scripts/ses.ts`), dosya yok.
 - **Ses kaydı yalnızca cihazda.** Blob asla ağa gitmez; `fetch`/XHR/`sendBeacon` ses verisiyle çağrılmaz. Mikrofon izni yalnızca "Kaydet"e basınca istenir; kayıt bitince track'ler durdurulur; blob URL'ler `revokeObjectURL` ile silinir.
 - **Paylaşım kartı** Canvas ile cihazda üretilir.
 - **CSP:** script için `unsafe-inline`/`unsafe-eval` yok. Inline `<script>` (ld+json hariç) ve `style=""` özniteliği yok; dinamik değerler `el.style.setProperty` ile. `scripts/check-dist.ts` build sonrası bunu denetler.

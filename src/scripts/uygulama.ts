@@ -1,5 +1,5 @@
 // Ana sayfa uygulaması: mod seçici, çark, konu kartı, sayaç durum makinesi, tur sonu, kayıt.
-import type { ArastirmaKonusu, AtasozuDeyim, DogaclamaSorusu } from '../data/schema.ts';
+import type { ArastirmaKonusu, AtasozuDeyim, DogaclamaSorusu, MeydanOkuma } from '../data/schema.ts';
 import { ZORLUK_ADI } from '../data/schema.ts';
 import { aramaLinkleri } from '../lib/arama.ts';
 import { aciDilimi, dilimYolu, etiket, hedefAci, type Dilim } from '../lib/cark.ts';
@@ -17,11 +17,13 @@ import {
   type Ayarlar,
 } from '../lib/depo.ts';
 import { ROZETLER, ozeteEkle, ozettenRozetler, seriHesapla, type Mod, type Tur } from '../lib/ilerleme.ts';
+import { gorevTamamMi, gununGorevi, seviye, toplamPuan, turPuani, type PuanKalemi, type TurSonucu } from '../lib/oyun.ts';
 import { TekrarOnleyici, rastgeleTam } from '../lib/rastgele.ts';
 import { GeriSayim, sureBicimle, sureOkunur } from '../lib/sayac.ts';
 import { slugify } from '../lib/slugify.ts';
 import { gununIndeksi, yerelGun } from '../lib/tarih.ts';
 import { Kaydedici, kayitDestekleniyor, type KayitSonucu } from './kayit.ts';
+import { yildizSerpintisi } from './kutlama.ts';
 import { kartCiz, paylasVeyaIndir } from './paylasim.ts';
 import { rozetSvg } from './rozet-svg.ts';
 import { ekranAcikKalsin, titret } from './sinyal.ts';
@@ -29,7 +31,7 @@ import * as ses from './ses.ts';
 import { sesiHazirla } from './ses.ts';
 import * as veri from './veri.ts';
 
-type Durum = 'bos' | 'secili' | 'arastirma' | 'notlari-kapat' | 'hazirlik' | 'konusma' | 'bitti';
+type Durum = 'bos' | 'secili' | 'arastirma' | 'notlari-kapat' | 'hazirlik' | 'konusma' | 'bitti' | 'grup-sonuc';
 type Secim =
   | { mod: 'arastirma'; konu: ArastirmaKonusu }
   | { mod: 'dogaclama'; soru: DogaclamaSorusu }
@@ -61,7 +63,52 @@ export function baslat(): void {
   const filtreEtiket = $<HTMLLabelElement>('[data-filtre-kap] label', kok);
   const gununD = $<HTMLButtonElement>('[data-gunun]', kok);
   const sahne = $('[data-sahne]', kok);
-  const bolumler = { bos: $('[data-bolum="bos"]', kok), tur: $('[data-bolum="tur"]', kok), bitti: $('[data-bolum="bitti"]', kok) };
+  const bolumler = {
+    bos: $('[data-bolum="bos"]', kok),
+    tur: $('[data-bolum="tur"]', kok),
+    bitti: $('[data-bolum="bitti"]', kok),
+    grupSonuc: $('[data-bolum="grup-sonuc"]', kok),
+  };
+  const meydanlar = JSON.parse(kok.dataset.meydan ?? '[]') as MeydanOkuma[];
+  const oyunEl = {
+    karne: $('[data-karne]', kok),
+    karneSeviye: $('[data-karne-seviye]', kok),
+    karneXp: $('[data-karne-xp]', kok),
+    karneCubukKap: $('[data-karne-cubuk-kap]', kok),
+    karneCubuk: $('[data-karne-cubuk]', kok),
+    karneAlt: $('[data-karne-alt]', kok),
+    gorev: $('[data-gorev]', kok),
+    gorevMetin: $('[data-gorev-metin]', kok),
+    gorevOdul: $('[data-gorev-odul]', kok),
+    jetonlar: $('[data-jetonlar]', kok),
+    meydan: $('[data-meydan]', kok),
+    meydanMetin: $('[data-meydan-metin]', kok),
+    meydanCek: $<HTMLButtonElement>('[data-meydan-cek]', kok),
+    meydanBirak: $<HTMLButtonElement>('[data-meydan-birak]', kok),
+    alkis: $('[data-alkis]', kok),
+    alkisAd: $('[data-alkis-ad]', kok),
+    alkisDugmeler: $$<HTMLButtonElement>('[data-alkis-n]', kok),
+    puanKalemleri: $('[data-puan-kalemleri]', kok),
+    puanToplam: $('[data-puan-toplam]', kok),
+    seviyeKap: $('[data-seviye-kap]', kok),
+    seviyeAd: $('[data-seviye-ad]', kok),
+    seviyeXp: $('[data-seviye-xp]', kok),
+    seviyeCubuk: $('[data-seviye-cubuk]', kok),
+    seviyeNot: $('[data-seviye-not]', kok),
+    grupSeridi: $('[data-grup-seridi]', kok),
+    siraAd: $('[data-sira-ad]', kok),
+    skor: $('[data-skor]', kok),
+    grupBitir: $<HTMLButtonElement>('[data-grup-bitir]', kok),
+    grupGiris: $('[data-grup-giris]', kok),
+    grupKur: $('[data-grup-kur]', kok),
+    oyuncuAdi: $<HTMLInputElement>('[data-oyuncu-adi]', kok),
+    oyuncular: $('[data-oyuncular]', kok),
+    grupBasla: $<HTMLButtonElement>('[data-grup-basla]', kok),
+    kazanan: $('[data-kazanan]', kok),
+    siralama: $('[data-siralama]', kok),
+    bosBaslik: $('[data-bos-baslik]', kok),
+    yeniD: $<HTMLButtonElement>('[data-yeni]', kok),
+  };
   const hataP = $('[data-hata]', kok);
   const duyuru = $('[data-duyuru]', kok);
 
@@ -133,6 +180,21 @@ export function baslat(): void {
     dogaclama: new TekrarOnleyici(20),
     atasozu: new TekrarOnleyici(20),
   };
+  // Oyun durumu
+  type Oyuncu = { ad: string; puan: number; pas: number; tur: number };
+  let grup: { oyuncular: Oyuncu[]; sira: number } | null = null;
+  let taslakOyuncular: string[] = [];
+  let meydan: MeydanOkuma | null = null;
+  const meydanTekrar = new TekrarOnleyici(12);
+  let oturumPuani = 0;
+  let turKalemleri: PuanKalemi[] = [];
+  let alkisSecim = 0;
+  let grupPuaniIslendi = true;
+  let puanAnimasyonu = 0;
+  const alanListesi = dilimSetleri.arastirma.map((d) => ({ id: d.id, ad: adlar[d.id] ?? d.etiket }));
+  const gorev = gununGorevi(yerelGun(), alanListesi);
+  let gorevBugunTamam = ilerlemeIzni() ? ozetOku().gorevGunleri.includes(yerelGun()) : false;
+
   const kaydedici = new Kaydedici();
   const hareketAz = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -302,12 +364,16 @@ export function baslat(): void {
     if (durum !== 'bos' && durum !== 'secili' && durum !== 'bitti') return;
     if (durum === 'secili') {
       // Konu gelmişken yeniden çevirmek: hak varsa pas sayılır; hak bitince ceza yok.
-      if (pasHakki > 0) pasHakki--;
+      if (kalanPas() > 0) pasHarca();
       pasKullanildi = true;
+      meydanBirak(true);
     }
     sesiHazirla();
     if (durum === 'secili') ses.pasSesi();
-    if (durum === 'bitti') turuTemizle();
+    if (durum === 'bitti') {
+      grupSirayiIlerlet();
+      turuTemizle();
+    }
     hataGoster(null);
     donuyor = true;
     cevirD.disabled = true;
@@ -320,6 +386,7 @@ export function baslat(): void {
       secim = s;
       durumaGec('secili');
       ses.konuGeldi();
+      kartBelirsin();
       duyur(`Seçilen konu: ${secimBasligi(s)}`);
       if (window.matchMedia('(max-width: 60rem)').matches) sahne.scrollIntoView({ behavior: hareketAz.matches ? 'auto' : 'smooth', block: 'start' });
     } catch {
@@ -333,8 +400,16 @@ export function baslat(): void {
   }
 
   function pas(): void {
-    if (durum !== 'secili' || pasHakki <= 0) return;
+    if (durum !== 'secili' || kalanPas() <= 0) return;
     void cevir();
+  }
+
+  function kalanPas(): number {
+    return grup ? grup.oyuncular[grup.sira].pas : pasHakki;
+  }
+  function pasHarca(): void {
+    if (grup) grup.oyuncular[grup.sira].pas--;
+    else pasHakki--;
   }
 
   // ---------- Kart ----------
@@ -367,20 +442,28 @@ export function baslat(): void {
   }
 
   function pasGuncelle(): void {
-    pasD.hidden = pasHakki <= 0;
-    pasBitti.hidden = pasHakki > 0;
-    pasD.textContent = `Pas geç (${pasHakki} hak kaldı)`;
-    cevirD.textContent = durum === 'secili' ? (pasHakki > 0 ? 'Yeniden çevir (pas)' : 'Yeniden çevir') : 'Çarkı çevir';
+    const kalan = kalanPas();
+    pasD.hidden = kalan <= 0;
+    pasBitti.hidden = kalan > 0;
+    pasD.setAttribute('aria-label', `Pas geç, ${kalan} hak kaldı`);
+    oyunEl.jetonlar.replaceChildren(
+      ...Array.from({ length: PAS_HAKKI }, (_, i) => {
+        const j = el('span', { class: i < kalan ? 'jeton dolu' : 'jeton' });
+        return j;
+      }),
+    );
+    cevirD.textContent = durum === 'secili' ? (kalan > 0 ? 'Yeniden çevir (pas)' : 'Yeniden çevir') : 'Çarkı çevir';
   }
 
   // ---------- Durum makinesi ----------
   function durumaGec(yeni: Durum): void {
     durum = yeni;
     kok.dataset.durum = yeni;
-    const turda = yeni !== 'bos' && yeni !== 'bitti';
+    const turda = yeni !== 'bos' && yeni !== 'bitti' && yeni !== 'grup-sonuc';
     bolumler.bos.hidden = yeni !== 'bos';
     bolumler.tur.hidden = !turda;
     bolumler.bitti.hidden = yeni !== 'bitti';
+    bolumler.grupSonuc.hidden = yeni !== 'grup-sonuc';
 
     const sayacta = yeni === 'arastirma' || yeni === 'hazirlik' || yeni === 'konusma';
     sayacEl.hidden = !sayacta;
@@ -393,7 +476,12 @@ export function baslat(): void {
 
     // Tur sırasında mod ve filtre değiştirilemez.
     const kilitli = sayacta || yeni === 'notlari-kapat';
-    cevirD.hidden = kilitli;
+    cevirD.hidden = kilitli || yeni === 'grup-sonuc';
+    oyunEl.grupBitir.disabled = kilitli;
+    oyunEl.meydan.hidden = !meydan || !(turda || yeni === 'bitti');
+    oyunEl.meydanBirak.hidden = yeni !== 'secili';
+    oyunEl.meydanCek.textContent = '';
+    oyunEl.meydanCek.append(meydan ? 'Başka kart çek' : 'Meydan okuma kartı çek', ' ', el('span', { class: 'odul' }, '+10'));
     filtre.disabled = kilitli;
     for (const s of sekmeler) s.setAttribute('aria-disabled', String(kilitli));
 
@@ -602,6 +690,21 @@ export function baslat(): void {
     bitti.rozet.hidden = true;
     kayitGoster();
 
+    // Puan
+    const temel: Omit<TurSonucu, 'gorevTamam'> = {
+      mod: s.mod,
+      zorluk: s.mod === 'arastirma' ? s.konu.zorluk : undefined,
+      alan: s.mod === 'arastirma' ? s.konu.alan : undefined,
+      pasKullanildi,
+      konusmaMs,
+      hedefMs: konusmaSuresi(),
+      meydan: !!meydan,
+    };
+    // Günün görevi kişiseldir: grup oyununda sayılmaz, günde bir kez ödül verir.
+    const gorevTamam = !grup && !gorevBugunTamam && gorevTamamMi(gorev, temel);
+    turKalemleri = turPuani({ ...temel, gorevTamam });
+    const puan = toplamPuan(turKalemleri);
+
     sonTur = {
       gun: yerelGun(),
       zaman: Date.now(),
@@ -612,12 +715,101 @@ export function baslat(): void {
       zorluk: s.mod === 'arastirma' ? s.konu.zorluk : undefined,
       pasKullanildi,
       konusmaMs,
+      meydan: !!meydan,
+      gorev: gorevTamam,
+      puan,
     };
-    const izin = ilerlemeIzni();
-    bitti.izin.hidden = izin !== null;
-    if (izin) ilerlemeyiKaydet(sonTur);
-    duyur(`Tur bitti. ${bitti.ozet.textContent}`);
+
+    oyunEl.alkis.hidden = !grup;
+    oyunEl.seviyeKap.hidden = true;
+    oyunEl.seviyeNot.hidden = true;
+    if (grup) {
+      // Grup: kişisel ilerleme kaydedilmez; alkışla birlikte oyuncunun hanesine yazılır.
+      bitti.izin.hidden = true;
+      alkisSecim = 0;
+      grupPuaniIslendi = false;
+      oyunEl.alkisAd.textContent = grup.oyuncular[grup.sira].ad;
+      const sonraki = grup.oyuncular[(grup.sira + 1) % grup.oyuncular.length];
+      oyunEl.yeniD.textContent = `Sıradaki: ${sonraki.ad}`;
+      alkisGuncelle();
+    } else {
+      oyunEl.yeniD.textContent = 'Yeni konu çevir';
+      oturumPuani += puan;
+      if (gorevTamam) {
+        gorevBugunTamam = true;
+        gorevGuncelle();
+      }
+      const izin = ilerlemeIzni();
+      bitti.izin.hidden = izin !== null;
+      const xpOnce = ozetOku().xp;
+      if (izin) ilerlemeyiKaydet(sonTur);
+      puanlariGoster(turKalemleri, izin ? { once: xpOnce, sonra: ozetOku().xp } : null);
+      karneGuncelle();
+    }
+    duyur(`Tur bitti. ${bitti.ozet.textContent} ${puan} puan kazandın.`);
+    window.setTimeout(() => yildizSerpintisi(sahne, 18), kayitVardi ? 250 : 60);
     bitti.baslik.focus();
+  }
+
+  /** Puan kalemlerini tek tek, küçük notalarla sayar; ardından seviye çubuğunu doldurur. */
+  function puanlariGoster(kalemler: PuanKalemi[], xp: { once: number; sonra: number } | null): void {
+    const jeton = ++puanAnimasyonu;
+    const hizli = hareketAz.matches;
+    oyunEl.puanKalemleri.replaceChildren();
+    oyunEl.puanToplam.textContent = '0';
+    let toplam = 0;
+    const kalemEkle = (k: PuanKalemi, i: number) => {
+      const li = el('li');
+      li.append(el('span', {}, k.ad), el('span', { class: 'puan-deger' }, `+${k.puan}`));
+      oyunEl.puanKalemleri.append(li);
+      toplam += k.puan;
+      oyunEl.puanToplam.textContent = String(toplam);
+      if (!hizli) ses.puanNotu(i);
+    };
+    const bitir = () => {
+      if (xp) seviyeGoster(xp.once, xp.sonra, !hizli);
+      else if (!grup) {
+        oyunEl.seviyeNot.hidden = false;
+        oyunEl.seviyeNot.textContent =
+          ilerlemeIzni() === false
+            ? `Bu oturumda ${oturumPuani} puan topladın.`
+            : `Bu oturumda ${oturumPuani} puan topladın. İlerlemeni tutarsan puanların birikir ve seviye atlarsın.`;
+      }
+    };
+    if (hizli) {
+      kalemler.forEach(kalemEkle);
+      bitir();
+      return;
+    }
+    kalemler.forEach((k, i) =>
+      window.setTimeout(() => {
+        if (jeton !== puanAnimasyonu) return;
+        kalemEkle(k, i);
+        if (i === kalemler.length - 1) window.setTimeout(() => jeton === puanAnimasyonu && bitir(), 250);
+      }, 700 + i * 260),
+    );
+  }
+
+  function seviyeGoster(once: number, sonra: number, animasyonlu: boolean): void {
+    const s0 = seviye(once);
+    const s1 = seviye(sonra);
+    oyunEl.seviyeKap.hidden = false;
+    oyunEl.seviyeAd.textContent = `Seviye ${s1.sira} · ${s1.ad}`;
+    oyunEl.seviyeXp.textContent = `${sonra} / ${s1.ust}`;
+    const baslangic = s1.sira === s0.sira ? s0.oran : 0;
+    oyunEl.seviyeCubuk.style.setProperty('--oran', String(animasyonlu ? baslangic : s1.oran));
+    if (animasyonlu) requestAnimationFrame(() => requestAnimationFrame(() => oyunEl.seviyeCubuk.style.setProperty('--oran', String(s1.oran))));
+    oyunEl.seviyeNot.hidden = false;
+    if (s1.sira > s0.sira) {
+      oyunEl.seviyeNot.textContent = `Seviye atladın! Yeni unvanın: ${s1.ad}.`;
+      oyunEl.seviyeNot.classList.add('atladi');
+      ses.seviyeAtladi();
+      yildizSerpintisi(sahne, 34, true);
+      duyur(`Seviye atladın: ${s1.ad}.`);
+    } else {
+      oyunEl.seviyeNot.classList.remove('atladi');
+      oyunEl.seviyeNot.textContent = `${s1.sonraki} seviyesine ${s1.ust - sonra} puan kaldı.`;
+    }
   }
 
   function ilerlemeyiKaydet(t: Tur): void {
@@ -643,7 +835,7 @@ export function baslat(): void {
     bitti.rozet.hidden = !parcalar.length;
     if (yeni.length) {
       duyur(`Yeni rozet: ${yeni.map((r) => r.ad).join(', ')}`);
-      window.setTimeout(ses.rozetSesi, 750);
+      window.setTimeout(ses.rozetSesi, 2200);
     }
   }
 
@@ -656,12 +848,239 @@ export function baslat(): void {
     pasKullanildi = false;
     konusmaMs = 0;
     sonTur = null;
+    meydanBirak(true);
+    puanAnimasyonu++;
     cancelAnimationFrame(raf);
+  }
+
+  // ---------- Oyun: karne, görev, meydan okuma ----------
+  function karneGuncelle(): void {
+    oyunEl.karne.hidden = !!grup;
+    if (grup) return;
+    if (ilerlemeIzni()) {
+      const o = ozetOku();
+      const sv = seviye(o.xp);
+      const seri = seriHesapla(o.gunler, yerelGun()).guncel;
+      oyunEl.karneSeviye.textContent = `Seviye ${sv.sira} · ${sv.ad}`;
+      oyunEl.karneXp.textContent = `${o.xp} puan`;
+      oyunEl.karneCubukKap.hidden = false;
+      oyunEl.karneCubuk.style.setProperty('--oran', String(sv.oran));
+      oyunEl.karneAlt.textContent = `${sv.sonraki} seviyesine ${sv.ust - o.xp} puan${seri > 0 ? ` · Seri: ${seri} gün` : ''}`;
+    } else {
+      oyunEl.karneSeviye.textContent = 'Oturum puanı';
+      oyunEl.karneXp.textContent = `${oturumPuani} puan`;
+      oyunEl.karneCubukKap.hidden = true;
+      oyunEl.karneAlt.textContent =
+        oturumPuani === 0
+          ? 'Her tur puan kazandırır. Zor konu, pas kullanmamak ve meydan okuma kartları ekstra puan getirir.'
+          : 'İlerlemeni bu cihazda tutarsan puanların birikir, seviye atlarsın.';
+    }
+  }
+
+  function gorevGuncelle(): void {
+    oyunEl.gorev.hidden = !!grup;
+    oyunEl.gorevMetin.textContent = gorev.metin;
+    oyunEl.gorev.classList.toggle('tamam', gorevBugunTamam);
+    oyunEl.gorevOdul.textContent = gorevBugunTamam ? 'Tamamlandı' : '+20 puan';
+  }
+
+  function meydanCek(): void {
+    if (durum !== 'secili' || !meydanlar.length) return;
+    sesiHazirla();
+    meydan = meydanTekrar.sec(meydanlar, (m) => m.id) ?? null;
+    if (!meydan) return;
+    oyunEl.meydanMetin.textContent = meydan.metin;
+    oyunEl.meydan.classList.remove('belirdi');
+    void oyunEl.meydan.offsetWidth;
+    oyunEl.meydan.classList.add('belirdi');
+    ses.kartCek();
+    durumaGec('secili');
+    duyur(`Meydan okuma: ${meydan.metin}`);
+  }
+
+  function meydanBirak(sessiz = false): void {
+    meydan = null;
+    oyunEl.meydan.hidden = true;
+    if (!sessiz && durum === 'secili') durumaGec('secili');
+  }
+
+  function kartBelirsin(): void {
+    const k = $('[data-kart]', kok);
+    k.classList.remove('belirdi');
+    void k.offsetWidth;
+    k.classList.add('belirdi');
+  }
+
+  // ---------- Grup oyunu ----------
+  function grupKurGoster(ac: boolean): void {
+    oyunEl.grupKur.hidden = !ac;
+    oyunEl.grupGiris.hidden = ac;
+    if (ac) {
+      oyuncuListesiCiz();
+      oyunEl.oyuncuAdi.focus();
+    }
+  }
+
+  function oyuncuEkle(): void {
+    const ad = oyunEl.oyuncuAdi.value.trim().replace(/\s+/g, ' ').slice(0, 20);
+    if (!ad || taslakOyuncular.length >= 8) return;
+    if (taslakOyuncular.some((x) => x.toLocaleLowerCase('tr') === ad.toLocaleLowerCase('tr'))) {
+      duyur(`${ad} zaten listede.`);
+      return;
+    }
+    taslakOyuncular.push(ad);
+    oyunEl.oyuncuAdi.value = '';
+    oyuncuListesiCiz();
+    oyunEl.oyuncuAdi.focus();
+  }
+
+  function oyuncuListesiCiz(): void {
+    oyunEl.oyuncular.replaceChildren(
+      ...taslakOyuncular.map((ad, i) => {
+        const li = el('li');
+        const sil = el('button', { type: 'button', class: 'oyuncu-sil', 'aria-label': `${ad} adlı oyuncuyu çıkar` }, '×');
+        sil.addEventListener('click', () => {
+          taslakOyuncular.splice(i, 1);
+          oyuncuListesiCiz();
+          oyunEl.oyuncuAdi.focus();
+        });
+        li.append(el('span', {}, ad), sil);
+        return li;
+      }),
+    );
+    oyunEl.grupBasla.disabled = taslakOyuncular.length < 2;
+    oyunEl.oyuncuAdi.disabled = taslakOyuncular.length >= 8;
+  }
+
+  function grupBaslat(): void {
+    if (taslakOyuncular.length < 2) return;
+    sesiHazirla();
+    grup = { oyuncular: taslakOyuncular.map((ad) => ({ ad, puan: 0, pas: PAS_HAKKI, tur: 0 })), sira: 0 };
+    grupKurGoster(false);
+    turuTemizle();
+    durumaGec('bos');
+    grupCiz();
+    ses.basladi();
+    duyur(`Grup oyunu başladı. Sıra ${grup.oyuncular[0].ad} adlı oyuncuda.`);
+  }
+
+  function grupCiz(): void {
+    oyunEl.grupSeridi.hidden = !grup;
+    oyunEl.grupGiris.hidden = !!grup || !oyunEl.grupKur.hidden;
+    karneGuncelle();
+    gorevGuncelle();
+    if (!grup) {
+      oyunEl.bosBaslik.textContent = 'Hazırsan çevir.';
+      return;
+    }
+    const g = grup;
+    const siradaki = g.oyuncular[g.sira];
+    oyunEl.siraAd.textContent = siradaki.ad;
+    oyunEl.bosBaslik.textContent = `Sıra: ${siradaki.ad}`;
+    oyunEl.skor.replaceChildren(
+      ...g.oyuncular.map((o, i) => {
+        const li = el('li', i === g.sira ? { class: 'siradaki', 'aria-current': 'true' } : {});
+        li.append(el('span', { class: 'skor-ad' }, o.ad), el('span', { class: 'skor-puan' }, String(o.puan)));
+        return li;
+      }),
+    );
+    pasGuncelle();
+  }
+
+  /** Grup turunda puan listesini alkışla birlikte anında yeniden çizer. */
+  function alkisGuncelle(): void {
+    for (const d of oyunEl.alkisDugmeler) d.setAttribute('aria-pressed', String(Number(d.dataset.alkisN) === alkisSecim));
+    const t = sonTurSonucu();
+    if (!grup || !t) return;
+    puanAnimasyonu++;
+    const kalemler = turPuani({ ...t, alkis: alkisSecim });
+    oyunEl.puanKalemleri.replaceChildren(
+      ...kalemler.map((k) => {
+        const li = el('li');
+        li.append(el('span', {}, k.ad), el('span', { class: 'puan-deger' }, `+${k.puan}`));
+        return li;
+      }),
+    );
+    oyunEl.puanToplam.textContent = String(toplamPuan(kalemler));
+  }
+
+  function sonTurSonucu(): TurSonucu | null {
+    if (!sonTur) return null;
+    return {
+      mod: sonTur.mod,
+      zorluk: sonTur.zorluk,
+      alan: sonTur.alan,
+      pasKullanildi: sonTur.pasKullanildi,
+      konusmaMs: sonTur.konusmaMs,
+      hedefMs: konusmaSuresi(),
+      meydan: !!sonTur.meydan,
+      gorevTamam: false,
+    };
+  }
+
+  /** Bitmiş turun puanını (alkış dahil) sıradaki oyuncunun hanesine bir kez yazar. */
+  function grupPuaniIsle(): void {
+    if (!grup || grupPuaniIslendi) return;
+    const t = sonTurSonucu();
+    if (!t) return;
+    const o = grup.oyuncular[grup.sira];
+    o.puan += toplamPuan(turPuani({ ...t, alkis: alkisSecim }));
+    o.tur++;
+    grupPuaniIslendi = true;
+  }
+
+  /** Bitmiş bir grup turunun puanını işler ve sırayı bir sonraki oyuncuya geçirir. */
+  function grupSirayiIlerlet(): void {
+    if (!grup || grupPuaniIslendi) return;
+    grupPuaniIsle();
+    grup.sira = (grup.sira + 1) % grup.oyuncular.length;
+    grupCiz();
+    duyur(`Sıra ${grup.oyuncular[grup.sira].ad} adlı oyuncuda.`);
+  }
+
+  function grupBitir(): void {
+    if (!grup) return;
+    if (durum !== 'bos' && durum !== 'secili' && durum !== 'bitti') return;
+    grupPuaniIsle();
+    const g = grup;
+    turuTemizle();
+    const sirali = [...g.oyuncular].sort((a, b) => b.puan - a.puan || a.ad.localeCompare(b.ad, 'tr'));
+    const enIyi = sirali[0].puan;
+    const kazananlar = sirali.filter((o) => o.puan === enIyi);
+    oyunEl.kazanan.textContent =
+      enIyi === 0 ? 'Oyun bitti.' : kazananlar.length > 1 ? `Berabere: ${kazananlar.map((o) => o.ad).join(' ve ')}` : `Kazanan: ${kazananlar[0].ad}`;
+    oyunEl.siralama.replaceChildren(
+      ...sirali.map((o) => {
+        const li = el('li', o.puan === enIyi && enIyi > 0 ? { class: 'birinci' } : {});
+        li.append(el('span', { class: 'skor-ad' }, o.ad), el('span', { class: 'soluk kucuk' }, `${o.tur} tur`), el('span', { class: 'skor-puan' }, `${o.puan} puan`));
+        return li;
+      }),
+    );
+    oyunEl.grupSeridi.hidden = true;
+    dilimiVurgula(null);
+    durumaGec('grup-sonuc');
+    ses.seviyeAtladi();
+    yildizSerpintisi(sahne, 40, true);
+    duyur(`${oyunEl.kazanan.textContent}. Sıralama: ${sirali.map((o) => `${o.ad} ${o.puan} puan`).join(', ')}.`);
+    oyunEl.kazanan.focus();
+  }
+
+  function grupKapat(ayniEkip: boolean): void {
+    const adlarListesi = grup?.oyuncular.map((o) => o.ad) ?? [];
+    grup = null;
+    if (ayniEkip && adlarListesi.length >= 2) {
+      taslakOyuncular = adlarListesi;
+      grupBaslat();
+      return;
+    }
+    durumaGec('bos');
+    grupCiz();
   }
 
   // ---------- Mod ----------
   function modDegistir(yeni: Mod, odakla = false): void {
     if (donuyor) return;
+    if (durum === 'bitti') grupSirayiIlerlet();
     turuTemizle();
     mod = yeni;
     ayarlar = ayarYaz('mod', yeni);
@@ -760,6 +1179,30 @@ export function baslat(): void {
   $('[data-tamekran]', kok).addEventListener('click', () => tamEkran());
   $('[data-anlat]', kok).addEventListener('click', () => fazBaslat('konusma', konusmaSuresi()));
   $('[data-yeni]', kok).addEventListener('click', () => void cevir());
+  oyunEl.meydanCek.addEventListener('click', meydanCek);
+  oyunEl.meydanBirak.addEventListener('click', () => meydanBirak());
+  $('[data-grup-ac]', kok).addEventListener('click', () => grupKurGoster(true));
+  $('[data-grup-vazgec]', kok).addEventListener('click', () => grupKurGoster(false));
+  $('[data-oyuncu-ekle]', kok).addEventListener('click', oyuncuEkle);
+  oyunEl.oyuncuAdi.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      oyuncuEkle();
+    }
+  });
+  oyunEl.grupBasla.addEventListener('click', grupBaslat);
+  oyunEl.grupBitir.addEventListener('click', grupBitir);
+  $('[data-grup-tekrar]', kok).addEventListener('click', () => grupKapat(true));
+  $('[data-grup-kapat]', kok).addEventListener('click', () => grupKapat(false));
+  for (const d of oyunEl.alkisDugmeler) {
+    d.addEventListener('click', () => {
+      const n = Number(d.dataset.alkisN);
+      alkisSecim = alkisSecim === n ? 0 : n;
+      alkisGuncelle();
+      sesiHazirla();
+      if (alkisSecim) ses.alkis(alkisSecim);
+    });
+  }
   kaydetD.addEventListener('click', () => void kayitDegistir());
   gununD.addEventListener('click', async () => {
     if (donuyor || (durum !== 'bos' && durum !== 'secili' && durum !== 'bitti')) return;
@@ -779,12 +1222,20 @@ export function baslat(): void {
   $('[data-izin-evet]', kok).addEventListener('click', () => {
     ilerlemeIzniYaz(true);
     bitti.izin.hidden = true;
-    if (sonTur) ilerlemeyiKaydet(sonTur);
+    if (sonTur) {
+      const once = ozetOku().xp;
+      ilerlemeyiKaydet(sonTur);
+      oyunEl.seviyeNot.hidden = true;
+      seviyeGoster(once, ozetOku().xp, !hareketAz.matches);
+    }
+    gorevBugunTamam = gorevBugunTamam || ozetOku().gorevGunleri.includes(yerelGun());
+    karneGuncelle();
     duyur('İlerlemen bu cihazda tutulacak.');
   });
   $('[data-izin-hayir]', kok).addEventListener('click', () => {
     ilerlemeIzniYaz(false);
     bitti.izin.hidden = true;
+    karneGuncelle();
     duyur('İlerlemen tutulmayacak. Ayarlardan değiştirebilirsin.');
   });
   $('[data-paylas]', kok).addEventListener('click', async () => {
@@ -832,6 +1283,7 @@ export function baslat(): void {
     if (e.key === ' ' || e.code === 'Space') {
       if (etkilesimli) return; // odaktaki düğme kendi işini yapsın
       e.preventDefault();
+      if (durum === 'grup-sonuc') return;
       if (durum === 'bos' || durum === 'bitti') void cevir();
       else if (durum === 'secili') turaBasla();
       else if (durum === 'notlari-kapat') fazBaslat('konusma', konusmaSuresi());
@@ -878,6 +1330,8 @@ export function baslat(): void {
   sesDurumu();
 
   // ---------- İlk kurulum ----------
+  karneGuncelle();
+  gorevGuncelle();
   if (!kayitDestekleniyor()) {
     kaydetD.hidden = true;
     $('[data-kayit-not]', kok).hidden = true;

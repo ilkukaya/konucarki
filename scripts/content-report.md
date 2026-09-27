@@ -446,3 +446,30 @@ Otomatik üretildi (`npm run validate`). 120 araştırma konusu, 200 doğaçlama
 - **dut yemiş bülbüle dönmek** (deyim) — Normalde konuşkan olan birinin birden susup tek kelime edemez hâle gelmesi.
 - **göze girmek** (deyim) — Davranışlarıyla birinin beğenisini ve güvenini kazanmak.
 - **ağırdan almak** (deyim) — Bir işi aceleye getirmeden, bilerek yavaş yürütmek.
+
+## Meydan okuma kartları
+
+- Tek bir kez bile "şey" demeden anlat.
+- Hiç "yani" demeden anlat.
+- En az bir benzetme kullan: "tıpkı ... gibi".
+- Konuşmana bir soruyla başla.
+- Beş yaşındaki bir çocuğa anlatır gibi anlat.
+- Akşam haberlerindeki spiker gibi anlat.
+- Maç anlatıcısı heyecanıyla anlat.
+- Büyükannene çay içerken anlatır gibi anlat.
+- Bir doğa belgeselinin anlatıcısı gibi, sakin ve ağır anlat.
+- Sonunda üç maddelik bir özetle bitir.
+- Konuşmanın ortasında kısa bir anını anlat.
+- Önce karşı görüşü savun, sonra kendi fikrine dön.
+- Konuyu bir yemek tarifine benzeterek anlat.
+- Bitirirken dinleyene düşündürücü bir soru sor.
+- Ellerini hiç kullanmadan anlat.
+- Tek cümlelik bir özetle başla, sonra aç.
+- "Peki ama neden?" sorusunu kendine üç kez sor ve yanıtla.
+- En az bir kez "mesela" de ve somut bir örnek ver.
+- Konuyu bir reklam filmindeymiş gibi sat.
+- Bu fikrin işlemediği bir durumla bitir.
+- Anlatırken hayali bir nesneyi elinde tutuyormuş gibi göster.
+- Her cümlen on kelimeyi geçmesin.
+- Konuyu yüz yıl sonrasından bakan biri gibi anlat.
+- Dinleyenlerden birine adıyla seslenip ona anlatır gibi konuş.

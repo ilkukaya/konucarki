@@ -8,6 +8,8 @@ import {
   atasozleriniDogrula,
   dogaclamaDogrula,
   konulariDogrula,
+  meydanOkumalariDogrula,
+  type MeydanOkuma,
   ZORLUK_ADI,
   type Alan,
   type ArastirmaKonusu,
@@ -67,6 +69,9 @@ hatalar.push(...dogaclamaDogrula(kategoriler, sorular));
 const atasozleri = oku<AtasozuDeyim[]>(join(veri, 'atasozleri.json'));
 hatalar.push(...atasozleriniDogrula(atasozleri));
 
+const meydanlar = oku<MeydanOkuma[]>(join(veri, 'meydan-okumalar.json'));
+hatalar.push(...meydanOkumalariDogrula(meydanlar));
+
 // Yasaklı terim taraması: her veri dosyasını satır satır tara.
 const terimler = terimleriAyristir(readFileSync(join(kok, 'scripts/banned-terms.txt'), 'utf8'));
 const taranacak = [
@@ -74,6 +79,7 @@ const taranacak = [
   'dogaclama-kategoriler.json',
   'dogaclama-sorular.json',
   'atasozleri.json',
+  'meydan-okumalar.json',
   ...readdirSync(konuKlasoru).map((f) => `konular/${f}`),
 ];
 for (const dosya of taranacak) {
@@ -109,6 +115,8 @@ for (const kat of kategoriler) {
 }
 rapor.push('## Atasözleri ve deyimler', '');
 for (const a of atasozleri) rapor.push(`- **${a.metin}** (${a.tur}) — ${a.anlam}`);
+rapor.push('', '## Meydan okuma kartları', '');
+for (const m of meydanlar) rapor.push(`- ${m.metin}`);
 rapor.push('');
 writeFileSync(join(kok, 'scripts/content-report.md'), rapor.join('\n'));
 

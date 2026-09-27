@@ -45,8 +45,16 @@ const sss = [
     c: 'İpuçları kapıyı aralamak için yazıldı; bilerek tarih, sayı ve kesin iddia içermez. Asıl bilgiyi sen kaynaklardan bulacaksın. Yine de bir yanlış görürsen iletişim sayfasındaki adrese yazabilirsin.',
   },
   {
-    s: 'Pas hakkı ne işe yarıyor?',
-    c: 'Her oturumda üç pas hakkın var. Gelen konu hiç içine sinmediyse pas geçip yeniden çevirirsin. Hak bitince konu senindir; yine de çevirmeye devam edebilirsin, ceza yok.',
+    s: 'Puanlar ve seviyeler nasıl işliyor?',
+    c: 'Her tur 10 puan. Zor konu, pas kullanmadan bitirmek, süreyi sonuna kadar doldurmak ve meydan okuma kartı ekstra puan getirir; günün görevi 20 puan daha. İlerlemeni bu cihazda tutmayı seçersen puanların birikir ve Çırak\'tan Bilge\'ye kadar seviye atlarsın.',
+  },
+  {
+    s: 'Arkadaşlarla ya da sınıfta birlikte oynayabilir miyiz?',
+    c: '"Arkadaşlarla oyna" düğmesiyle 2 ile 8 kişilik bir grup kur. Çark sırayla herkese döner, her konuşmanın sonunda grup 1 ile 3 arası alkış verir, puanlar toplanır ve oyun sonunda kazanan açıklanır. İsimler yalnızca sayfanın belleğinde durur, hiçbir yere kaydedilmez.',
+  },
+  {
+    s: 'Pas hakkı ve meydan okuma kartı ne?',
+    c: 'Her oturumda üç pas jetonun var; gelen konu içine sinmediyse pas geçip yeniden çevirirsin. Meydan okuma kartı ise işi zorlaştırır: "şey demeden anlat" ya da "maç spikeri gibi anlat" gibi. Kartla bitirdiğin tur 10 puan fazla kazandırır.',
   },
 ];
 ---
@@ -86,6 +94,7 @@ const sss = [
         <p><strong>Öğrenciler</strong> sözlü sınav pratiği ve sunum konuları için. Bir konuyu başkasına anlatabiliyorsan, onu gerçekten öğrenmişsindir; Feynman tekniği de bu fikre dayanır.</p>
         <p><strong>Öğretmenler</strong> sınıf içi konuşma etkinliği için. Tam ekranda konu ve sayaç büyük görünür, çark sırayla herkese döner.</p>
         <p><strong>Mülakata hazırlananlar</strong> hazırlıksız soru karşısında toparlanmayı çalışmak için. Doğaçlama modunda {dogaclamaSorulari.length} soru var.</p>
+        <p><strong>Aileler ve arkadaş grupları</strong> için. Grup modunda sırayla konuşup birbirinize alkış verirsiniz; "Hayal et" kategorisi ve meydan okuma kartları sofrada bile kahkaha çıkarır.</p>
         <p><strong>Merak edenler</strong> için de. Kütüphanede <a href="/arastirma-konulari/">{konular.length} araştırma konusu</a> ve <a href="/atasozleri-ve-deyimler/">{atasozleri.length} atasözü ile deyim</a> var; hepsi Türkçe ve bu site için yazıldı.</p>
         <p><a href="/nasil-calisir/">Yöntemin ayrıntıları ve öğretmenler için öneriler</a></p>
       </div>

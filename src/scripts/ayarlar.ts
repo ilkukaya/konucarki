@@ -11,6 +11,7 @@ import {
   type Ayarlar,
 } from '../lib/depo.ts';
 import { ROZETLER, seriHesapla, type RozetId } from '../lib/ilerleme.ts';
+import { seviye } from '../lib/oyun.ts';
 import { yerelGun } from '../lib/tarih.ts';
 import { rozetSvg } from './rozet-svg.ts';
 import { temaUygula } from './tema.ts';
@@ -39,8 +40,11 @@ export function ayarlariSayfasi(): void {
 
     const ozet = ozetOku();
     const seri = seriHesapla(ozet.gunler, yerelGun());
+    const sv = seviye(ozet.xp);
     q('[data-seri]').textContent =
-      ozet.toplamTur === 0 ? 'Henüz tur yok.' : `${ozet.toplamTur} tur · güncel seri ${seri.guncel} gün · en uzun seri ${seri.enUzun} gün`;
+      ozet.toplamTur === 0
+        ? 'Henüz tur yok.'
+        : `Seviye ${sv.sira} · ${sv.ad} · ${ozet.xp} puan · ${ozet.toplamTur} tur · güncel seri ${seri.guncel} gün · en uzun seri ${seri.enUzun} gün`;
 
     const kazanilan = new Set(kazanilanRozetler() as RozetId[]);
     q('[data-rozetler]').replaceChildren(
@@ -70,7 +74,7 @@ export function ayarlariSayfasi(): void {
         baslik.textContent = t.baslik;
         const bilgi = document.createElement('span');
         bilgi.className = 'soluk kucuk';
-        bilgi.textContent = `${MOD[t.mod] ?? t.mod} · ${new Date(t.zaman).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' })}`;
+        bilgi.textContent = `${MOD[t.mod] ?? t.mod} · ${new Date(t.zaman).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' })}${t.puan ? ` · +${t.puan} puan` : ''}`;
         const sil = document.createElement('button');
         sil.type = 'button';
         sil.className = 'dugme sade';

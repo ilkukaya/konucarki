@@ -214,3 +214,54 @@ export function isaret(acik_: boolean): void {
   if (!c) return;
   can(acik_ ? NOTA.A6 : NOTA.E6, c.currentTime, 0.06, 0.35, false);
 }
+
+/** Meydan okuma kartı çekildi: kâğıt hışırtısı + tek nota. */
+export function kartCek(): void {
+  const c = hazir();
+  if (!c) return;
+  const t = c.currentTime;
+  tahta(t, 0.7, 0.06);
+  tahta(t + 0.05, 0.85, 0.05);
+  can(NOTA.D6, t + 0.08, 0.1, 0.8);
+}
+
+const PUAN_DIZISI = [NOTA.C6, NOTA.D6, NOTA.E6, NOTA.G6, NOTA.A6, NOTA.C7];
+/** Puan kalemleri tek tek sayılırken yükselen minik notalar. */
+export function puanNotu(i: number): void {
+  const c = hazir();
+  if (!c) return;
+  can(PUAN_DIZISI[Math.min(i, PUAN_DIZISI.length - 1)], c.currentTime, 0.06, 0.45, false);
+}
+
+/** Seviye atlandı: iki oktavlık parlak bir yükseliş. */
+export function seviyeAtladi(): void {
+  const c = hazir();
+  if (!c) return;
+  const t = c.currentTime + 0.05;
+  [NOTA.C5, NOTA.E5, NOTA.G5, NOTA.C6, NOTA.E6, NOTA.G6, NOTA.C7].forEach((f, i) => can(f, t + i * 0.075, 0.08 + i * 0.008, 1 + i * 0.15));
+}
+
+/** Grup alkışı: birkaç yumuşak el çırpma. `kez` 1–3. */
+export function alkis(kez: number): void {
+  const c = hazir();
+  if (!c) return;
+  const t0 = c.currentTime;
+  const adet = 3 + kez * 3;
+  for (let i = 0; i < adet; i++) {
+    const t = t0 + i * 0.07 + Math.random() * 0.03;
+    const n = Math.floor(c.sampleRate * 0.04);
+    const b = c.createBuffer(1, n, c.sampleRate);
+    const v = b.getChannelData(0);
+    for (let j = 0; j < n; j++) v[j] = (Math.random() * 2 - 1) * Math.pow(1 - j / n, 6);
+    const k = c.createBufferSource();
+    k.buffer = b;
+    const f = c.createBiquadFilter();
+    f.type = 'bandpass';
+    f.frequency.value = 1100 + Math.random() * 600;
+    f.Q.value = 1.4;
+    const g = c.createGain();
+    g.gain.value = 0.12;
+    k.connect(f).connect(g).connect(ana!);
+    k.start(t);
+  }
+}

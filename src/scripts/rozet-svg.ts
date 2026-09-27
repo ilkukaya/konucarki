@@ -12,6 +12,10 @@ const SEMBOL: Record<RozetId, string> = {
   'passiz-5': 'M-5 0 L-1.5 4 L5.5 -4', // tik
   'ilk-zor': 'M-6 5 L0 -5 L6 5 Z', // dağ
   'atasozu-10': 'M-6 -4 H6 V3 H0 L-3 6 V3 H-6 Z', // konuşma balonu
+  'on-alan': 'M0 -6 L2 -2 L6 0 L2 2 L0 6 L-2 2 L-6 0 L-2 -2 Z', // pusula yıldızı
+  'dogaclama-10': 'M-6 -5 H2 V1 H-2 L-4 3 V1 H-6 Z M3 -2 H6 V4 H5 V6 L3 4 H0 V2 H3 Z', // iki balon
+  'meydan-5': 'M1 -6 L-4 1 H0 L-1 6 L4 -1 H0 Z', // şimşek
+  'gorev-3': 'M-4 -6 H-2.5 V6 H-4 Z M-2.5 -6 H5 L3 -3 L5 0 H-2.5 Z', // bayrak
 };
 
 export function rozetSvg(id: RozetId, kazanildi = true): SVGSVGElement {
